@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hi on Jigeng&#39;s Blog</title>
+    <link>https://jiagengding.github.io/en/tags/hi/</link>
+    <description>Recent content in Hi on Jigeng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>JiagengDing</copyright>
+    <lastBuildDate>Thu, 15 Oct 2020 20:54:15 +0800</lastBuildDate><atom:link href="https://jiagengding.github.io/en/tags/hi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First</title>
+      <link>https://jiagengding.github.io/en/post/first/</link>
+      <pubDate>Thu, 15 Oct 2020 20:54:15 +0800</pubDate>
+      
+      <guid>https://jiagengding.github.io/en/post/first/</guid>
+      <description>&lt;p&gt;hello this is my first&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

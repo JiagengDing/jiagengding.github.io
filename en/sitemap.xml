@@ -1,0 +1,74 @@
+<?xml-stylesheet type="text/xsl" href="https://jiagengding.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://jiagengding.github.io/en/about/</loc>
+    <lastmod>2021-10-15T20:49:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.github.io/en/categories/</loc>
+    <lastmod>2020-10-15T20:54:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.github.io/en/post/first/</loc>
+    <lastmod>2020-10-15T20:54:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.github.io/en/tags/hello/</loc>
+    <lastmod>2020-10-15T20:54:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.github.io/en/categories/hello/</loc>
+    <lastmod>2020-10-15T20:54:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.github.io/en/tags/hi/</loc>
+    <lastmod>2020-10-15T20:54:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.github.io/en/</loc>
+    <lastmod>2020-10-15T20:54:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.github.io/en/post/</loc>
+    <lastmod>2020-10-15T20:54:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.github.io/en/tags/</loc>
+    <lastmod>2020-10-15T20:54:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.github.io/en/categories/test/</loc>
+    <lastmod>2020-10-15T20:54:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

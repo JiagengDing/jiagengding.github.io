@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://jiagengding.github.io/sitemap.xml
