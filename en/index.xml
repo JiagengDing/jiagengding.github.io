@@ -34,9 +34,10 @@
       <guid>https://jiagengding.github.io/en/about/</guid>
       <description>Welcome! This is my personal website for recording daily life and sharing knowledge.
 About Me I am a mathematics student and avid dreamer, lived in China.
-I am interested in mathematics computer science, software, Linux and Vim.
-About the Website Contact  Comment under my posts with a github account. jiageng.ding AT Gmail, please encrypt you message with PGP if necessary.   My PGP public key:
-My PGP keyfinger:</description>
+I am interested in mathematics, computer science, software, Linux and Vim.
+I got my Bachelor&amp;rsquo;s in Mathematics and Bachelor&amp;rsquo;s in Finance from SDUFE.
+About the Website This blog I built with hugo and hosted by Cloudflare Pages.
+The performance of Hugo really shocked me!</description>
     </item>
     
     <item>
