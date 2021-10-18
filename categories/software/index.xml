@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Jiageng&#39;s Blog</title>
-    <link>https://jiagengding.github.io/post/</link>
-    <description>Recent content in Posts on Jiageng&#39;s Blog</description>
+    <title>software on Jiageng&#39;s Blog</title>
+    <link>https://jiagengding.github.io/categories/software/</link>
+    <description>Recent content in software on Jiageng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sun, 17 Oct 2021 16:09:06 +0800</lastBuildDate><atom:link href="https://jiagengding.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 16:09:06 +0800</lastBuildDate><atom:link href="https://jiagengding.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MacOS Apps Recommended</title>
       <link>https://jiagengding.github.io/post/mac-app/</link>
