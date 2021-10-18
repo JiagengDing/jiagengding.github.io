@@ -7,23 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sat, 16 Oct 2021 20:52:25 +0800</lastBuildDate><atom:link href="https://jiagengding.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 16:08:59 +0800</lastBuildDate><atom:link href="https://jiagengding.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My Article</title>
-      <link>https://jiagengding.github.io/post/my-article/</link>
-      <pubDate>Sat, 16 Oct 2021 20:52:25 +0800</pubDate>
+      <title>Mac应用推荐</title>
+      <link>https://jiagengding.github.io/post/mac-app/</link>
+      <pubDate>Sun, 17 Oct 2021 16:08:59 +0800</pubDate>
       
-      <guid>https://jiagengding.github.io/post/my-article/</guid>
-      <description>&lt;p&gt;测试一下&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>测试</title>
-      <link>https://jiagengding.github.io/post/test/</link>
-      <pubDate>Sat, 16 Oct 2021 19:56:50 +0800</pubDate>
-      
-      <guid>https://jiagengding.github.io/post/test/</guid>
-      <description>汉语测试</description>
+      <guid>https://jiagengding.github.io/post/mac-app/</guid>
+      <description>&lt;p&gt;这是我推荐的Mac应用&lt;/p&gt;</description>
     </item>
     
     <item>
