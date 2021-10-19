@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Jiageng&#39;s Blog</title>
-    <link>https://jiagengding.github.io/categories/</link>
+    <link>https://jiagengding.pages.dev/categories/</link>
     <description>Recent content in Categories on Jiageng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sun, 17 Oct 2021 16:09:06 +0800</lastBuildDate><atom:link href="https://jiagengding.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 16:09:06 +0800</lastBuildDate><atom:link href="https://jiagengding.pages.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>software</title>
-      <link>https://jiagengding.github.io/categories/software/</link>
+      <link>https://jiagengding.pages.dev/categories/software/</link>
       <pubDate>Sun, 17 Oct 2021 16:09:06 +0800</pubDate>
       
-      <guid>https://jiagengding.github.io/categories/software/</guid>
+      <guid>https://jiagengding.pages.dev/categories/software/</guid>
       <description></description>
     </item>
     

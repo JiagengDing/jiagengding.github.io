@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jiageng&#39;s Blog</title>
-    <link>https://jiagengding.github.io/</link>
+    <link>https://jiagengding.pages.dev/</link>
     <description>Recent content on Jiageng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sun, 17 Oct 2021 16:09:06 +0800</lastBuildDate><atom:link href="https://jiagengding.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 16:09:06 +0800</lastBuildDate><atom:link href="https://jiagengding.pages.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MacOS Apps Recommended</title>
-      <link>https://jiagengding.github.io/post/mac-app/</link>
+      <link>https://jiagengding.pages.dev/post/mac-app/</link>
       <pubDate>Sun, 17 Oct 2021 16:09:06 +0800</pubDate>
       
-      <guid>https://jiagengding.github.io/post/mac-app/</guid>
+      <guid>https://jiagengding.pages.dev/post/mac-app/</guid>
       <description>&lt;p&gt;Here are some useful Mac apps I recommended! Continually updated.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://jiagengding.github.io/about/</link>
+      <link>https://jiagengding.pages.dev/about/</link>
       <pubDate>Fri, 15 Oct 2021 20:49:34 +0800</pubDate>
       
-      <guid>https://jiagengding.github.io/about/</guid>
+      <guid>https://jiagengding.pages.dev/about/</guid>
       <description>Welcome! This is my personal website for recording daily life and sharing knowledge.
 About Me I am a mathematics student and avid dreamer, lived in China.
 I am interested in mathematics, computer science, software, Linux and Vim.

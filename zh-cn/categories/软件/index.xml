@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>软件 on Jiageng&#39;s Blog</title>
-    <link>https://jiagengding.github.io/zh-cn/categories/%E8%BD%AF%E4%BB%B6/</link>
+    <link>https://jiagengding.pages.dev/zh-cn/categories/%E8%BD%AF%E4%BB%B6/</link>
     <description>Recent content in 软件 on Jiageng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sun, 17 Oct 2021 16:08:59 +0800</lastBuildDate><atom:link href="https://jiagengding.github.io/zh-cn/categories/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 16:08:59 +0800</lastBuildDate><atom:link href="https://jiagengding.pages.dev/zh-cn/categories/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MacOS 应用推荐</title>
-      <link>https://jiagengding.github.io/zh-cn/post/mac-app/</link>
+      <link>https://jiagengding.pages.dev/zh-cn/post/mac-app/</link>
       <pubDate>Sun, 17 Oct 2021 16:08:59 +0800</pubDate>
       
-      <guid>https://jiagengding.github.io/zh-cn/post/mac-app/</guid>
+      <guid>https://jiagengding.pages.dev/zh-cn/post/mac-app/</guid>
       <description>&lt;p&gt;这是我推荐的Mac应用，持续更新&lt;/p&gt;</description>
     </item>
     
