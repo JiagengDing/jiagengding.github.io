@@ -2,21 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jiagengding.pages.dev/tags/apple/</loc>
-    <lastmod>2021-10-18T00:00:00+00:00</lastmod>
+    <loc>https://jiagengding.pages.dev/post/git-guide/</loc>
+    <lastmod>2021-12-20T11:06:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://jiagengding.pages.dev/categories/</loc>
-    <lastmod>2021-10-18T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-20T11:06:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.pages.dev/tags/git/</loc>
+    <lastmod>2021-12-20T11:06:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://jiagengding.pages.dev/</loc>
+    <lastmod>2021-12-20T11:06:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.pages.dev/post/</loc>
+    <lastmod>2021-12-20T11:06:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.pages.dev/categories/simple-guide/</loc>
+    <lastmod>2021-12-20T11:06:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.pages.dev/tags/</loc>
+    <lastmod>2021-12-20T11:06:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiagengding.pages.dev/tags/apple/</loc>
     <lastmod>2021-10-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -30,21 +65,7 @@
   </url>
   
   <url>
-    <loc>https://jiagengding.pages.dev/post/</loc>
-    <lastmod>2021-10-18T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://jiagengding.pages.dev/categories/software/</loc>
-    <lastmod>2021-10-18T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiagengding.pages.dev/tags/</loc>
     <lastmod>2021-10-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

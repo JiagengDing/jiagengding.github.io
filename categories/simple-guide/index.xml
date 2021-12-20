@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simple-Guide on Jiageng&#39;s Blog</title>
+    <link>https://jiagengding.pages.dev/categories/simple-guide/</link>
+    <description>Recent content in Simple-Guide on Jiageng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>JiagengDing</copyright>
+    <lastBuildDate>Sat, 23 Oct 2021 11:06:21 +0800</lastBuildDate><atom:link href="https://jiagengding.pages.dev/categories/simple-guide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Simple Guide for Git</title>
+      <link>https://jiagengding.pages.dev/post/git-guide/</link>
+      <pubDate>Sat, 23 Oct 2021 11:06:21 +0800</pubDate>
+      
+      <guid>https://jiagengding.pages.dev/post/git-guide/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
