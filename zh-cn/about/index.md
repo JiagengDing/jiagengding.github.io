@@ -7,8 +7,6 @@
 
 空余时间会用这个网站来记录自己的学习和生活。
 
-> OS: macOS 12.0
->
 > Shell: Zsh 5.8
 >
 > Terminal: Alacritty and iTerm2
@@ -21,9 +19,11 @@
 
 ## 关于网站
 
-我使用Hugo来生成这个网站，并托管在Cloudflare Pages。
+我使用[Hugo](https://gohugo.io)来生成这个网站，采用[even 主题](https://github.com/olOwOlo/hugo-theme-even)并托管在 Cloudflare Pages。
 
 Hugo的性能令人震撼！
+
+如非特别标注，本网站所有内容保留所有权利。
 
 ## 联系方式
 

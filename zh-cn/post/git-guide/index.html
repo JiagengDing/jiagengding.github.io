@@ -50,7 +50,7 @@
 <meta itemprop="name" content="Git 简单指南">
 <meta itemprop="description" content="Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。日常使用Git仅需要看下文第一部分并掌握10条左右的命令即可。"><meta itemprop="datePublished" content="2021-10-23T11:06:14+08:00" />
 <meta itemprop="dateModified" content="2021-12-20T11:06:14+08:00" />
-<meta itemprop="wordCount" content="543">
+<meta itemprop="wordCount" content="582">
 <meta itemprop="keywords" content="Git," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Git 简单指南"/>
 <meta name="twitter:description" content="Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。日常使用Git仅需要看下文第一部分并掌握10条左右的命令即可。"/>
@@ -99,18 +99,18 @@
 		
 		
 
-		<li class="language-item ">
+		<li class="language-item active">
 			
-			<a href="https://jiagengding.pages.dev/post/git-guide/">English</a>
+			<a href="https://jiagengding.pages.dev/zh-cn/post/git-guide/">中文</a>
 			
 		</li>
 		
 		
 		
 
-		<li class="language-item active">
+		<li class="language-item ">
 			
-			<a href="https://jiagengding.pages.dev/zh-cn/post/git-guide/">中文</a>
+			<a href="https://jiagengding.pages.dev/">English</a>
 			
 		</li>
 		
@@ -134,18 +134,18 @@
 		
 		
 
-		<li class="language-item ">
+		<li class="language-item active">
 			
-			<a href="https://jiagengding.pages.dev/post/git-guide/">English</a>
+			<a href="https://jiagengding.pages.dev/zh-cn/post/git-guide/">中文</a>
 			
 		</li>
 		
 		
 		
 
-		<li class="language-item active">
+		<li class="language-item ">
 			
-			<a href="https://jiagengding.pages.dev/zh-cn/post/git-guide/">中文</a>
+			<a href="https://jiagengding.pages.dev/">English</a>
 			
 		</li>
 		
@@ -185,7 +185,7 @@
         <div class="post-category">
             <a href="/zh-cn/categories/%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"> 简单教程 </a>
             </div>
-          <span class="more-meta"> 约 543 字 </span>
+          <span class="more-meta"> 约 582 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -218,7 +218,9 @@
       <p>Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。日常使用Git仅需要看下文第一部分并掌握10条左右的命令即可。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/jiagengding/pictures@main/uPic/pATn74.jpg" alt="工作流"></p>
 <h2 id="初始化或克隆">初始化或克隆</h2>
-<p>使用命令<code>git init</code> 来初始化一个文件夹，或者使用命令<code>git clone host:/path/to/repo</code>从远程服务器克隆一个仓库。</p>
+<p>使用命令<code>git init</code> 来初始化一个文件夹，或者使用命令<code>git clone [url]</code>从远程服务器克隆一个仓库。</p>
+<p><code>git config --global user.name &quot;[name]&quot;</code>配置用户名</p>
+<p><code>git config --global user.email &quot;[email address]&quot;</code>配置用户邮箱</p>
 <h2 id="添加和提交更改">添加和提交更改</h2>
 <ol>
 <li><code>git add .</code> 将工作目录中的全部更改提交到<strong>暂存区INDEX</strong>。</li>
