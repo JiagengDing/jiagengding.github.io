@@ -2,7 +2,6 @@
 Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. If you just want to learn simple use, you could only read first chapter and master about 10 commands.
 
 <!--more-->
-{{< toc >}}
 
 ![工作流](https://cdn.jsdelivr.net/gh/jiagengding/pictures@main/uPic/pATn74.jpg)
 

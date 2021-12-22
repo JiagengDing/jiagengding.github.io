@@ -2,7 +2,6 @@
 Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。日常使用Git仅需要看下文第一部分并掌握10条左右的命令即可。
 
 <!--more-->
-{{< toc >}}
 
 ![工作流](https://cdn.jsdelivr.net/gh/jiagengding/pictures@main/uPic/pATn74.jpg)
 
