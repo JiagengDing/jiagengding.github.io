@@ -61,6 +61,7 @@ Here are some useful Mac apps I recommended! Continually updated.
 
 [ Syncthing ](https://syncthing.net):  A powerful and safe file synchronization program
 
+[ Amethyst ](https://github.com/ianyh/Amethyst): Automatic tiling window manager
 ## Coding
 
 [ NeoVim ](https://neovim.io): Hyperextensible Vim-based text editor

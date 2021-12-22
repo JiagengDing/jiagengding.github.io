@@ -63,6 +63,8 @@
 
 [ Syncthing ](https://syncthing.net):  简单安全的多设备文件同步软件
 
+[ Amethyst ](https://github.com/ianyh/Amethyst): 自动平铺窗口管理器，类似LINUX上的i3wm
+
 ## 编程
 
 [ NeoVim ](https://neovim.io): 支持更多插件的 vim 编辑器
