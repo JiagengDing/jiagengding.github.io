@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Jiageng.Ding" /><meta name="description" content="Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。日常使用Git仅需要看下文第一部分并掌握10条左右的命令即可。
+<meta name="author" content="Jiageng.Ding" /><meta name="description" content="Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。尽管Git的功能非常强大，但是日常使用仅需要掌握10条左右的命令。
 " /><meta name="keywords" content="share knowledge, record life" />
 
 
@@ -41,19 +41,19 @@
 
 
 <meta property="og:title" content="Git 简单指南" />
-<meta property="og:description" content="Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。日常使用Git仅需要看下文第一部分并掌握10条左右的命令即可。" />
+<meta property="og:description" content="Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。尽管Git的功能非常强大，但是日常使用仅需要掌握10条左右的命令。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jiagengding.pages.dev/zh-cn/post/git-guide/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-10-23T11:06:14+08:00" />
 <meta property="article:modified_time" content="2021-12-21T11:06:14+08:00" />
 
 <meta itemprop="name" content="Git 简单指南">
-<meta itemprop="description" content="Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。日常使用Git仅需要看下文第一部分并掌握10条左右的命令即可。"><meta itemprop="datePublished" content="2021-10-23T11:06:14+08:00" />
+<meta itemprop="description" content="Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。尽管Git的功能非常强大，但是日常使用仅需要掌握10条左右的命令。"><meta itemprop="datePublished" content="2021-10-23T11:06:14+08:00" />
 <meta itemprop="dateModified" content="2021-12-21T11:06:14+08:00" />
-<meta itemprop="wordCount" content="584">
+<meta itemprop="wordCount" content="659">
 <meta itemprop="keywords" content="Git," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Git 简单指南"/>
-<meta name="twitter:description" content="Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。日常使用Git仅需要看下文第一部分并掌握10条左右的命令即可。"/>
+<meta name="twitter:description" content="Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。尽管Git的功能非常强大，但是日常使用仅需要掌握10条左右的命令。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -185,7 +185,7 @@
         <div class="post-category">
             <a href="/zh-cn/categories/%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"> 简单教程 </a>
             </div>
-          <span class="more-meta"> 约 584 字 </span>
+          <span class="more-meta"> 约 659 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -208,8 +208,44 @@
   </div>
 </div>
     <div class="post-content">
-      <p>Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。日常使用Git仅需要看下文第一部分并掌握10条左右的命令即可。</p>
+      <p>Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。尽管Git的功能非常强大，但是日常使用仅需要掌握10条左右的命令。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/jiagengding/pictures@main/uPic/pATn74.jpg" alt="工作流"></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>最简单的工作流</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>初始化仓库</td>
+<td><code>git init</code> 或 <code>git clone &lt;url&gt;</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>添加更改到INDEX</td>
+<td><code>git add .</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>提交至HEAD</td>
+<td><code>git commit -m &quot;info&quot;</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>推送到远程服务器</td>
+<td><code>git push</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>从HEAD中替换文件</td>
+<td><code>git checkout -- &lt;filename&gt;</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="初始化或克隆">初始化或克隆</h2>
 <p>使用命令<code>git init</code> 来初始化一个文件夹，或者使用命令<code>git clone [url]</code>从远程服务器克隆一个仓库。</p>
 <p><code>git config --global user.name &quot;[name]&quot;</code>配置用户名</p>

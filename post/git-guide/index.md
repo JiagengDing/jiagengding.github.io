@@ -1,9 +1,18 @@
 
-Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. If you just want to learn simple use, you could only read first chapter and master about 10 commands.
+Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Simple use just need to master about 10 commands.
 
 <!--more-->
 
 ![工作流](https://cdn.jsdelivr.net/gh/jiagengding/pictures@main/uPic/pATn74.jpg)
+
+|   | Simple Workflow   | Command                         |
+|---|-------------------|---------------------------------|
+| 1 | Initialize repo   | `git init` or `git clone <url>` |
+| 2 | Add to INDEX      | `git add .`                     |
+| 3 | Commit to HEAD    | `git commit -m "info"`          |
+| 4 | Push to remote    | `git push`                      |
+| 5 | Replace from HEAD | `git checkout -- <filename>`    |
+
 
 ## Initialize or Clone
 

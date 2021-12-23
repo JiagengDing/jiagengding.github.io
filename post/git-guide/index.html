@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Jiageng Ding" /><meta name="description" content="Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. If you just want to learn simple use, you could only read first chapter and master about 10 commands.
+<meta name="author" content="Jiageng Ding" /><meta name="description" content="Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Simple use just need to master about 10 commands.
 " /><meta name="keywords" content="share knowledge, record life" />
 
 
@@ -41,19 +41,19 @@
 
 
 <meta property="og:title" content="A Simple Guide for Git" />
-<meta property="og:description" content="Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. If you just want to learn simple use, you could only read first chapter and master about 10 commands." />
+<meta property="og:description" content="Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Simple use just need to master about 10 commands." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jiagengding.pages.dev/post/git-guide/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-10-23T11:06:21+08:00" />
 <meta property="article:modified_time" content="2021-12-21T11:06:21+08:00" />
 
 <meta itemprop="name" content="A Simple Guide for Git">
-<meta itemprop="description" content="Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. If you just want to learn simple use, you could only read first chapter and master about 10 commands."><meta itemprop="datePublished" content="2021-10-23T11:06:21+08:00" />
+<meta itemprop="description" content="Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Simple use just need to master about 10 commands."><meta itemprop="datePublished" content="2021-10-23T11:06:21+08:00" />
 <meta itemprop="dateModified" content="2021-12-21T11:06:21+08:00" />
-<meta itemprop="wordCount" content="294">
+<meta itemprop="wordCount" content="325">
 <meta itemprop="keywords" content="Git," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="A Simple Guide for Git"/>
-<meta name="twitter:description" content="Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. If you just want to learn simple use, you could only read first chapter and master about 10 commands."/>
+<meta name="twitter:description" content="Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Simple use just need to master about 10 commands."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -185,7 +185,7 @@
         <div class="post-category">
             <a href="/categories/simple-guide/"> Simple-Guide </a>
             </div>
-          <span class="more-meta"> 294 words </span>
+          <span class="more-meta"> 325 words </span>
           <span class="more-meta"> 1 min read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -208,8 +208,44 @@
   </div>
 </div>
     <div class="post-content">
-      <p>Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. If you just want to learn simple use, you could only read first chapter and master about 10 commands.</p>
+      <p>Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Simple use just need to master about 10 commands.</p>
 <p><img src="https://cdn.jsdelivr.net/gh/jiagengding/pictures@main/uPic/pATn74.jpg" alt="工作流"></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Simple Workflow</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Initialize repo</td>
+<td><code>git init</code> or <code>git clone &lt;url&gt;</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Add to INDEX</td>
+<td><code>git add .</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Commit to HEAD</td>
+<td><code>git commit -m &quot;info&quot;</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Push to remote</td>
+<td><code>git push</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Replace from HEAD</td>
+<td><code>git checkout -- &lt;filename&gt;</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="initialize-or-clone">Initialize or Clone</h2>
 <p>Create a	new directory and run <code>git init</code> in this directory to create a repo.</p>
 <p>Or use <code>git clone &lt;url&gt;</code> to clone from a remote server.</p>
