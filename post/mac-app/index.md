@@ -41,6 +41,10 @@ Here are some useful Mac apps I recommended! Continually updated.
 
 [ Free Download Manager ](https://www.freedownloadmanager.org): Powerful modern download accelerator and organizer
 
+[ LuLu ](https://github.com/objective-see/LuLu): A free MacOS firewall
+
+[ HandShaker ](https://www.smartisan.com/apps/#/handshaker): Manage and transfer the content on Android easily
+
 ## Documents
 
 [ Skim ](https://skim-app.sourceforge.io): PDF reader
@@ -62,12 +66,14 @@ Here are some useful Mac apps I recommended! Continually updated.
 [ Syncthing ](https://syncthing.net):  A powerful and safe file synchronization program
 
 [ Amethyst ](https://github.com/ianyh/Amethyst): Automatic tiling window manager
+
+[ Secretive ](https://github.com/maxgoedjen/secretive): An app for storing and managing SSH keys in the Secure Enclave.
+
 ## Coding
 
 [ NeoVim ](https://neovim.io): Hyperextensible Vim-based text editor
 
 [ VS code ](https://code.visualstudio.com): You must know how wonderful it is
-
 
 ## Messaging
 

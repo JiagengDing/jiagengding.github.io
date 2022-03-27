@@ -43,6 +43,10 @@
 
 [ Free Download Manager ](https://www.freedownloadmanager.org): 多线程下载软件
 
+[ LuLu ](https://github.com/objective-see/LuLu): MacOS 开源防火墙
+
+[ HandShaker ](https://www.smartisan.com/apps/#/handshaker): 管理和传输 Android 中的文件
+
 ## 文档
 
 [ Skim ](https://skim-app.sourceforge.io): PDF 阅读器
@@ -64,6 +68,8 @@
 [ Syncthing ](https://syncthing.net):  简单安全的多设备文件同步软件
 
 [ Amethyst ](https://github.com/ianyh/Amethyst): 自动平铺窗口管理器，类似LINUX上的i3wm
+
+[ Secretive ](https://github.com/maxgoedjen/secretive): 用来存储和管理 SSH 密钥的应用，并可以使用指纹快速登陆
 
 ## 编程
 
