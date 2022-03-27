@@ -21,7 +21,11 @@ Here are some useful Mac apps I recommended! Continually updated.
 
 [ Ubersicht ](tracesof.net/uebersicht/): Display output on your desktop in widgets
 
-[ ClashX ](https://github.com/yichengchen/clashX): Client-side for clash
+[ ClashX ](https://github.com/yichengchen/clashX): Client-side for Clash, open-source and free
+
+[ ClashX Pro ](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public): Client-side for Clash Premium Core, free but closed-source
+
+> [ Config-for-Clash ](https://github.com/JiagengDing/config-for-clash-shadowrocket): My config of Clash Premium and ShadowRocket, including AD filtering
 
 [ Karabiner ](https://karabiner-elements.pqrs.org): Powerful and stable keyboard customizer
 
@@ -53,6 +57,8 @@ Here are some useful Mac apps I recommended! Continually updated.
 
 [ Obsidian ](https://obsidian.md): Powerful knowledge base with many plugins
 
+[ Cubox ](https://cubox.pro): Collect, read, manage and review the information like Pocket ( I used it to be the upstream of Obsidian )
+
 ## Efficiency
 
 [ Raycast ](https://www.raycast.com): A replacement for Spotlight and [ Alfred ](https://www.alfredapp.com)
@@ -60,6 +66,8 @@ Here are some useful Mac apps I recommended! Continually updated.
 [ Toggl Track ](https://toggl.com): Time tracking software
 
 [ Hammerspoon ](https://www.hammerspoon.org): A tool for powerful automation, used to simplify operations
+
+> [ Hammerspoon-config ](https://github.com/JiagengDing/hammerspoon-config)
 
 [ Hazel ](https://www.noodlesoft.com): Automated Organization for Mac, used to manage files
 

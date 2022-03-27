@@ -22,7 +22,11 @@
 
 [ Ubersicht ](tracesof.net/uebersicht/): 用于在桌面上显示自定义widgets
 
-[ ClashX ](https://github.com/yichengchen/clashX): Clash客户端，用于学习？
+[ ClashX ](https://github.com/yichengchen/clashX): Clash客户端，用于学习？免费且开源
+
+[ ClashX Pro ](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public): Clash Premium 客户端，ClashX 进阶版本，免费但不开源
+
+> [ Config-for-Clash ](https://github.com/JiagengDing/config-for-clash-shadowrocket): 我使用的 Clash Premium 配置，包括分流和轻度广告过滤
 
 [ Karabiner ](https://karabiner-elements.pqrs.org): 键盘键位修改器
 
@@ -55,6 +59,8 @@
 
 [ Obsidian ](https://obsidian.md): 有非常多插件的双链笔记软件（我同时用来做日程管理）
 
+[ Cubox ](https://cubox.pro): 收集、阅读、管理和回顾网络碎片（我用作Obsidian的上游）
+
 ## 效率
 
 [ Raycast ](https://www.raycast.com): Spotlight 和 [ Alfred ](https://www.alfredapp.com) 的替代品
@@ -62,6 +68,8 @@
 [ Toggl Track ](https://toggl.com): 时间跟踪软件
 
 [ Hammerspoon ](https://www.hammerspoon.org): 自动化工具，用于简化操作
+
+> [ Hammerspoon-config ](https://github.com/JiagengDing/hammerspoon-config)
 
 [ Hazel ](https://www.noodlesoft.com): 自动化工具，主要用在文件管理
 
