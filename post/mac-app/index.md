@@ -8,6 +8,8 @@ Here are some useful Mac apps I recommended! Continually updated.
 > 2. Long-term maintenance by developers
 > 3. Only one application with the same function
 > 4. Simple and beautiful
+>
+> ** It is recommended to use [ Homebrew ](https://brew.sh) to install and manage your applications **
 
 ## Tools
 
