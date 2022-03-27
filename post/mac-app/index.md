@@ -2,11 +2,11 @@
 Here are some useful Mac apps I recommended! Continually updated.
 <!--more-->
 
-**It is recommended to use [ Homebrew ](https://brew.sh) to install and manage your applications**
+**It is recommended to use [ Homebrew ](https://brew.sh) to install and manage your applications( e.g. `brew install vim`)**
 
-> My application selection criteria (the importance decreases in order):
+> My application selection criteria ( the importance decreases in order ):
 >
-> 1. Open source application (could payable)
+> 1. Open source application ( can be a paid app )
 > 2. Long-term maintenance by developers
 > 3. Only one application with the same function
 > 4. Simple and beautiful
@@ -23,7 +23,7 @@ Here are some useful Mac apps I recommended! Continually updated.
 
 [ Ubersicht ](tracesof.net/uebersicht/): Display output on your desktop in widgets
 
-[ ClashX ](https://github.com/yichengchen/clashX): Client-side for Clash, open-source and free
+~~[ ClashX ](https://github.com/yichengchen/clashX): Client-side for Clash Core, open-source and free~~
 
 [ ClashX Pro ](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public): Client-side for Clash Premium Core, free but closed-source
 
@@ -83,7 +83,11 @@ Here are some useful Mac apps I recommended! Continually updated.
 
 [ NeoVim ](https://neovim.io): Hyperextensible Vim-based text editor
 
+> [ NeoVim-Config ](https://github.com/JiagengDing/nvim): My config for Colemak Users
+
 [ VS code ](https://code.visualstudio.com): You must know how wonderful it is
+
+[Ranger](https://github.com/ranger/ranger): A VIM-inspired filemanager for the console
 
 ## Messaging
 

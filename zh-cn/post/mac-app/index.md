@@ -2,7 +2,7 @@
 这是我推荐的Mac应用，持续更新
 <!--more-->
 
-**推荐使用[ Homebrew ](https://brew.sh) 来安装和管理 MacOS 上的应用**
+**推荐使用[ Homebrew ](https://brew.sh) 来安装和管理 MacOS 上的应用(e.g. `brew install vim`)**
 
 > 我的应用选择标准，重要性依次降低：
 >
@@ -24,7 +24,7 @@
 
 [ Ubersicht ](tracesof.net/uebersicht/): 用于在桌面上显示自定义widgets
 
-[ ClashX ](https://github.com/yichengchen/clashX): Clash客户端，用于学习？免费且开源
+~~[ ClashX ](https://github.com/yichengchen/clashX): Clash客户端，用于学习？免费且开源~~
 
 [ ClashX Pro ](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public): Clash Premium 客户端，ClashX 进阶版本，免费但不开源
 
@@ -71,7 +71,7 @@
 
 [ Hammerspoon ](https://www.hammerspoon.org): 自动化工具，用于简化操作
 
-> [ Hammerspoon-config ](https://github.com/JiagengDing/hammerspoon-config)
+> [ Hammerspoon-config ](https://github.com/JiagengDing/hammerspoon-config): 我使用的 Hammerspoon 配置
 
 [ Hazel ](https://www.noodlesoft.com): 自动化工具，主要用在文件管理
 
@@ -85,10 +85,12 @@
 
 [ NeoVim ](https://neovim.io): 支持更多插件的 vim 编辑器
 
+> [ NeoVim-Config ](https://github.com/JiagengDing/nvim): 基于 Colemak 布局的 Nvim 配置
+
 [ VS code ](https://code.visualstudio.com): 可以通过插件几乎扩展成IDE的编辑器
 
 
-
+[Ranger](https://github.com/ranger/ranger): 终端类似 vim 的文件管理器
 
 ## 通讯
 
