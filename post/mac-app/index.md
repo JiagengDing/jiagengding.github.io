@@ -27,7 +27,7 @@ Here are some useful Mac apps I recommended! Continually updated.
 
 [ ClashX Pro ](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public): Client-side for Clash Premium Core, free but closed-source
 
-> [ Config-for-Clash ](https://github.com/JiagengDing/config-for-clash-shadowrocket): My config of Clash Premium and ShadowRocket, including AD filtering
+> [ Config-for-Clash ](https://github.com/JiagengDing/config-for-clash-shadowrocket): My config for Clash Premium and ShadowRocket, including AD filtering
 
 [ Karabiner ](https://karabiner-elements.pqrs.org): Powerful and stable keyboard customizer
 
