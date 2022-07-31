@@ -69,7 +69,7 @@ Here are some useful Mac apps I recommended! Continually updated.
 
 [ Hammerspoon ](https://www.hammerspoon.org): A tool for powerful automation, used to simplify operations
 
-> [ Hammerspoon-config ](https://github.com/JiagengDing/hammerspoon-config)
+> [ Hammerspoon-config ](https://github.com/JiagengDing/hammerspoon-config): My Hammerspoon config
 
 [ Hazel ](https://www.noodlesoft.com): Automated Organization for Mac, used to manage files
 

@@ -30,6 +30,6 @@ Contents on this website reserves all rights, unless otherwise specified.
 - **Comment under my posts** with a github account.
 - jiageng.ding **AT Gmail**, encrypt your message **with PGP** if necessary.
 
-> My PGP public key: [openpgp.org](https://keys.openpgp.org/search?q=50DF99E3FE5D8E51FF3C28728339D77EBA95E4CF)
+> My PGP public key: [GPG public key](https://jiagengding.pages.dev/.well-known/gpg-publickey.asc)
 >
-> My PGP keyfinger: 50DF 99E3 FE5D 8E51 FF3C  2872 8339 D77E BA95 E4CF
+> My PGP keyfinger: 064F 1C44 1AF1 2ADD 7894  4BDC 1E65 80A3 1F13 0DA1

@@ -30,6 +30,6 @@ Hugo的性能令人震撼！
 - 如果你有一个Github账号，可以在**博客下面评论**。
 - 也可以发送邮件到我的**Gmail邮箱**，用户名是**jiageng.ding**，如果需要请使用**PGP加密**你的信息。
 
-> 我的 PGP public key: [openpgp.org](https://keys.openpgp.org/search?q=50DF99E3FE5D8E51FF3C28728339D77EBA95E4CF)
+> 我的 PGP 公钥: [GPG public key](https://jiagengding.pages.dev/.well-known/gpg-publickey.asc)
 >
-> 我的 PGP keyfinger: 50DF 99E3 FE5D 8E51 FF3C  2872 8339 D77E BA95 E4CF
+> 我的 PGP keyfinger: 064F 1C44 1AF1 2ADD 7894  4BDC 1E65 80A3 1F13 0DA1
