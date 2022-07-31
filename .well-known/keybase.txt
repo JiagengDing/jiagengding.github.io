@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jiageng
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jiagengding.pages.dev
+  * I am jiageng (https://keybase.io/jiageng) on keybase.
+  * I have a public key ASD9h_EswD2Qcu2vDvqKQLMQdpud1GUBZnrEMazsJCV26Qo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120fd87f12cc03d9072edaf0efa8a40b310769b9dd46501667ac431acec242576e90a",
+      "host": "keybase.io",
+      "kid": "0120fd87f12cc03d9072edaf0efa8a40b310769b9dd46501667ac431acec242576e90a",
+      "uid": "86b84f4065ebd10555fa10160c49a019",
+      "username": "jiageng"
+    },
+    "merkle_root": {
+      "ctime": 1659246091,
+      "hash": "f3aac65fc23279fa3bd220217a355d994006219b837c5f1084819317c6de75a242ef244f8b8c6b186fbeec5c8b3410d55f039701a727ccdf45010352eb5b358b",
+      "hash_meta": "03b95caf876d5a223b93320d4865e85cebd549cd24bacd858cf9430c3bdd5da7",
+      "seqno": 22941802
+    },
+    "service": {
+      "entropy": "H3lO0PIKi8VfAlv3qgmfvBiN",
+      "hostname": "jiagengding.pages.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1659246118,
+  "expire_in": 504576000,
+  "prev": "c7c2190db5490f0c9b405029ef06b92565404d80cbff3319d907a3b00eb69fc2",
+  "seqno": 36,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/YfxLMA9kHLtrw76ikCzEHabndRlAWZ6xDGs7CQldukKp3BheWxvYWTESpcCJMQgx8IZDbVJDwybQFAp7wa5JWVATYDL/zMZ2QejsA62n8LEIM6xYtnNn5vyo2S/arRkCHz9od8XENSQXCVRX6ber0uIAgHCo3NpZ8RAWhqw4/gVI0Vc2Z7FQlAhNMgzKuOHT1rBJ8Prb4QpTgZ7xkJMCuVZvhOwv0cHzjPD5hRoQFwd5JJLD7uqbtqJA6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJdSa2QKc6GFgqaChj9uaRFWrwZhooF4ZawBBT0BYuj4o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jiageng
+
+==================================================================
