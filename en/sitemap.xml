@@ -1,81 +1,150 @@
-<?xml-stylesheet type="text/xsl" href="https://blog.diing.uk/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.diing.uk/post/git-guide/</loc>
+    <loc>https://jiagengding.pages.dev/post/git-guide/</loc>
     <lastmod>2021-12-21T11:06:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://jiagengding.pages.dev/zh-cn/post/git-guide/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jiagengding.pages.dev/post/git-guide/"
+                />
+  </url><url>
+    <loc>https://jiagengding.pages.dev/categories/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/tags/git/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://jiagengding.pages.dev/zh-cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jiagengding.pages.dev/categories/"
+                />
+  </url><url>
+    <loc>https://jiagengding.pages.dev/tags/git/</loc>
     <lastmod>2021-12-21T11:06:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://jiagengding.pages.dev/zh-cn/tags/git/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jiagengding.pages.dev/tags/git/"
+                />
+  </url><url>
+    <loc>https://jiagengding.pages.dev/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/post/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://jiagengding.pages.dev/zh-cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jiagengding.pages.dev/"
+                />
+  </url><url>
+    <loc>https://jiagengding.pages.dev/post/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/categories/simple-guide/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://jiagengding.pages.dev/zh-cn/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jiagengding.pages.dev/post/"
+                />
+  </url><url>
+    <loc>https://jiagengding.pages.dev/categories/simple-guide/</loc>
     <lastmod>2021-12-21T11:06:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/tags/</loc>
+  </url><url>
+    <loc>https://jiagengding.pages.dev/tags/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/tags/apple/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://jiagengding.pages.dev/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jiagengding.pages.dev/tags/"
+                />
+  </url><url>
+    <loc>https://jiagengding.pages.dev/tags/apple/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/post/mac-app/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://jiagengding.pages.dev/zh-cn/tags/apple/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jiagengding.pages.dev/tags/apple/"
+                />
+  </url><url>
+    <loc>https://jiagengding.pages.dev/post/mac-app/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/categories/software/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://jiagengding.pages.dev/zh-cn/post/mac-app/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jiagengding.pages.dev/post/mac-app/"
+                />
+  </url><url>
+    <loc>https://jiagengding.pages.dev/categories/software/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/about/</loc>
+  </url><url>
+    <loc>https://jiagengding.pages.dev/about/</loc>
     <lastmod>2021-10-15T20:49:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://jiagengding.pages.dev/zh-cn/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jiagengding.pages.dev/about/"
+                />
   </url>
-  
 </urlset>
