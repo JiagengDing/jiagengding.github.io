@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://jiagengding.pages.dev/sitemap.xml
+Sitemap: https://blog.diing.uk/sitemap.xml
