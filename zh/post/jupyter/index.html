@@ -49,7 +49,7 @@
 <meta itemprop="name" content="在服务器安装 Jupyter Lab">
 <meta itemprop="description" content=""><meta itemprop="datePublished" content="2022-09-22T15:18:49+08:00" />
 <meta itemprop="dateModified" content="2022-09-22T15:18:49+08:00" />
-<meta itemprop="wordCount" content="448">
+<meta itemprop="wordCount" content="451">
 <meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="在服务器安装 Jupyter Lab"/>
 <meta name="twitter:description" content=""/>
@@ -182,7 +182,7 @@
       <div class="post-meta">
         <span class="post-time"> 2022-09-22 </span>
         
-          <span class="more-meta"> 448 words </span>
+          <span class="more-meta"> 451 words </span>
           <span class="more-meta"> 1 min read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -270,6 +270,7 @@ passwd(algorithm='sha1')
 <p><code>vim ~/.jupyter/jupyter_lab_config.py</code></p>
 <p>修改并取消注释（可以用vim搜索关键词）</p>
 <pre><code>c.NotebookApp.allow_root = True
+c.NotebookApp.base_url = '/jupyter'
 c.NotebookApp.ip = '0.0.0.0'
 c.NotebookApp.notebook_dir = 'JupyterLab'
 c.NotebookApp.open_browser = False
@@ -286,8 +287,8 @@ c.NotebookApp.port = 8080
 <h2 id="使用-https-访问">使用 https 访问</h2>
 <p>将下列代码添加到 nginx 配置文件</p>
 <pre><code>client_max_body_size 1G;
-location /lab {
-        proxy_pass   http://127.0.0.1:8080/lab;
+location /jupyter {
+        proxy_pass   http://127.0.0.1:8080;
         proxy_connect_timeout 3s;
         proxy_read_timeout 5s;
         proxy_send_timeout 3s;

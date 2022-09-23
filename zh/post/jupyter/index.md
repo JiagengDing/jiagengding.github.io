@@ -65,6 +65,7 @@ passwd(algorithm='sha1')
 
 ```
 c.NotebookApp.allow_root = True
+c.NotebookApp.base_url = '/jupyter'
 c.NotebookApp.ip = '0.0.0.0'
 c.NotebookApp.notebook_dir = 'JupyterLab'
 c.NotebookApp.open_browser = False
@@ -88,8 +89,8 @@ c.NotebookApp.port = 8080
 
 ```
 client_max_body_size 1G;
-location /lab {
-        proxy_pass   http://127.0.0.1:8080/lab;
+location /jupyter {
+        proxy_pass   http://127.0.0.1:8080;
         proxy_connect_timeout 3s;
         proxy_read_timeout 5s;
         proxy_send_timeout 3s;
