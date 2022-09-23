@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sat, 23 Oct 2021 11:06:14 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/zh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Sep 2022 15:18:49 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在服务器安装 Jupyter Lab</title>
+      <link>https://blog.diing.uk/zh/post/jupyter/</link>
+      <pubDate>Thu, 22 Sep 2022 15:18:49 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/zh/post/jupyter/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Git 入门指南</title>
       <link>https://blog.diing.uk/zh/post/git-guide/</link>
