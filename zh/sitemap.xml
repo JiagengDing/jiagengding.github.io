@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.diing.uk/</loc>
+    <lastmod>2022-09-24T19:38:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/post/</loc>
+    <lastmod>2022-09-24T19:38:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/post/dns/</loc>
+    <lastmod>2022-09-24T19:38:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.diing.uk/categories/</loc>
     <lastmod>2022-09-24T17:51:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -10,20 +31,6 @@
   
   <url>
     <loc>https://blog.diing.uk/tags/dns/</loc>
-    <lastmod>2022-09-24T17:51:04+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/</loc>
-    <lastmod>2022-09-24T17:51:04+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/post/</loc>
     <lastmod>2022-09-24T17:51:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
