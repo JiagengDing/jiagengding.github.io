@@ -3,11 +3,13 @@
 
 ## 关于我
 
-我是一个喜欢编程的数学学生。
+我是一个喜欢编程的数学学生，目前就读于 [ University of Bristol ](https://www.bristol.ac.uk) 的 [计算机系](https://www.bris.ac.uk/engineering/departments/computerscience/)。
+
+我本科期间在[山东财经大学](https://sdufe.edu.cn)学习了数学与应用数学专业和金融学专业，并通过了 CFA level 1 考试。
 
 空余时间会用这个网站来记录自己的学习和生活。
 
-> Shell: Zsh 5.8
+> Shell: Zsh
 >
 > Terminal: Alacritty and iTerm2
 >
