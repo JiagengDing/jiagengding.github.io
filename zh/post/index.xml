@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Thu, 22 Sep 2022 15:18:49 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/zh/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Sep 2022 17:51:04 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/zh/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Mac、Linux、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）</title>
+      <link>https://blog.diing.uk/zh/post/doh/</link>
+      <pubDate>Sat, 24 Sep 2022 17:51:04 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/zh/post/doh/</guid>
+      <description>&lt;p&gt;传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。
+后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。&lt;/p&gt;
+&lt;p&gt;使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>在服务器安装 Jupyter Lab</title>
       <link>https://blog.diing.uk/zh/post/jupyter/</link>
