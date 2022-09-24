@@ -1,98 +1,101 @@
 
-Here are some useful Mac apps I recommended! Continually updated.
+这是我推荐的Mac应用，持续更新
 <!--more-->
 
-**It is recommended to use [ Homebrew ](https://brew.sh) to install and manage your applications( e.g. `brew install vim`)**
+**推荐使用[ Homebrew ](https://brew.sh) 来安装和管理 MacOS 上的应用(e.g. `brew install vim`)**
 
-> My application selection criteria ( the importance decreases in order ):
+> 我的应用选择标准，重要性依次降低：
 >
-> 1. Open source application ( can be a paid app )
-> 2. Long-term maintenance by developers
-> 3. Only one application with the same function
-> 4. Simple and beautiful
+> 1. 开源应用（可以付费）
+> 2. 开发者长期维护
+> 3. 只保留一个同功能的应用
+> 4. 简洁且漂亮的界面
 
-## Tools
 
-[ Homebrew ](https://brew.sh): Package Manager for macOS
+## 工具
 
-[ Zsh ](https://www.zsh.org): Zsh is an extended Bourne shell with many improvements
+[ Homebrew ](https://brew.sh): MacOS 上的包管理器
 
-[iTerm2](https://iterm2.com): A replacement for Terminal and the successor to iTerm
+[ Zsh ](https://www.zsh.org): 用于替代Bash的交互式shell
 
-[Stats](https://github.com/exelban/stats): System monitor in menu bar
+[iTerm2](https://iterm2.com): 用于替代Terminal的终端模拟器
 
-[ Ubersicht ](tracesof.net/uebersicht/): Display output on your desktop in widgets
+[Stats](https://github.com/exelban/stats): 菜单栏上的状态监控器
 
-~~[ ClashX ](https://github.com/yichengchen/clashX): Client-side for Clash Core, open-source and free~~
+[ Ubersicht ](tracesof.net/uebersicht/): 用于在桌面上显示自定义widgets
 
-[ ClashX Pro ](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public): Client-side for Clash Premium Core, free but closed-source
+~~[ ClashX ](https://github.com/yichengchen/clashX): Clash客户端，用于学习？免费且开源~~
 
-> [ Config-for-Clash ](https://github.com/JiagengDing/config-for-clash-shadowrocket): My config for Clash Premium and ShadowRocket, including AD filtering
+[ ClashX Pro ](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public): Clash Premium 客户端，ClashX 进阶版本，免费但不开源
 
-[ Karabiner ](https://karabiner-elements.pqrs.org): Powerful and stable keyboard customizer
+> [ Config-for-Clash ](https://github.com/JiagengDing/config-for-clash-shadowrocket): 我使用的 Clash Premium 配置，包括分流和轻度广告过滤
 
-[ GPG tools ](https://gpgtools.org): Manage GPG Keychain
+[ Karabiner ](https://karabiner-elements.pqrs.org): 键盘键位修改器
 
-[ KeeWeb ](https://keeweb.info): Free cross-platform password manager compatible with KeePass
+[ GPG tools ](https://gpgtools.org): 管理 GPG 密钥
 
-[ Kdeconnect ](https://kdeconnect.kde.org): Communication between all your devices
+[ KeeWeb ](https://keeweb.info): 基于KeePass的密码管理器
 
-[ Lazygit ](https://github.com/jesseduffield/lazygit): Simple terminal UI for git commands
+[ Kdeconnect ](https://kdeconnect.kde.org): 多设备间传送文件和消息同步
 
-[ IINA ](https://iina.io): The modern media player
+[ Lazygit ](https://github.com/jesseduffield/lazygit): Git命令的终端UI
 
-[ Keka ](https://www.keka.io/en/): File archiver
+[ IINA ](https://iina.io): 媒体播放器
 
-[ Hidden Bar ](https://github.com/dwarvesf/hidden/): An ultra-light MacOS utility that helps hide menu bar icons
+[ Keka ](https://www.keka.io/en/): 高性能文件压缩应用
 
-[ Free Download Manager ](https://www.freedownloadmanager.org): Powerful modern download accelerator and organizer
+[ Hidden Bar ](https://github.com/dwarvesf/hidden/): 隐藏菜单栏图标
 
-[ LuLu ](https://github.com/objective-see/LuLu): A free MacOS firewall
 
-[ HandShaker ](https://www.smartisan.com/apps/#/handshaker): Manage and transfer the content on Android easily
+[ Free Download Manager ](https://www.freedownloadmanager.org): 多线程下载软件
 
-## Documents
+[ LuLu ](https://github.com/objective-see/LuLu): MacOS 开源防火墙
 
-[ Skim ](https://skim-app.sourceforge.io): PDF reader
+[ HandShaker ](https://www.smartisan.com/apps/#/handshaker): 管理和传输 Android 中的文件
 
-[ Typora ](https://typora.io): Simple and powerful markdown editor
+## 文档
 
-[ Obsidian ](https://obsidian.md): Powerful knowledge base with many plugins
+[ Skim ](https://skim-app.sourceforge.io): PDF 阅读器
 
-[ Cubox ](https://cubox.pro): Collect, read, manage and review the information like Pocket ( I used it to be the upstream of Obsidian )
+[ Typora ](https://typora.io): 所见即所想的 markdown 编辑器
 
-## Efficiency
+[ Obsidian ](https://obsidian.md): 有非常多插件的双链笔记软件（我同时用来做日程管理）
 
-[ Raycast ](https://www.raycast.com): A replacement for Spotlight and [ Alfred ](https://www.alfredapp.com)
+[ Cubox ](https://cubox.pro): 收集、阅读、管理和回顾网络碎片（我用作Obsidian的上游）
 
-[ Toggl Track ](https://toggl.com): Time tracking software
+## 效率
 
-[ Hammerspoon ](https://www.hammerspoon.org): A tool for powerful automation, used to simplify operations
+[ Raycast ](https://www.raycast.com): Spotlight 和 [ Alfred ](https://www.alfredapp.com) 的替代品
 
-> [ Hammerspoon-config ](https://github.com/JiagengDing/hammerspoon-config): My Hammerspoon config
+[ Toggl Track ](https://toggl.com): 时间跟踪软件
 
-[ Hazel ](https://www.noodlesoft.com): Automated Organization for Mac, used to manage files
+[ Hammerspoon ](https://www.hammerspoon.org): 自动化工具，用于简化操作
 
-[ Syncthing ](https://syncthing.net):  A powerful and safe file synchronization program
+> [ Hammerspoon-config ](https://github.com/JiagengDing/hammerspoon-config): 我使用的 Hammerspoon 配置
 
-[ Amethyst ](https://github.com/ianyh/Amethyst): Automatic tiling window manager
+[ Hazel ](https://www.noodlesoft.com): 自动化工具，主要用在文件管理
 
-[ Secretive ](https://github.com/maxgoedjen/secretive): An app for storing and managing SSH keys in the Secure Enclave.
+[ Syncthing ](https://syncthing.net):  简单安全的多设备文件同步软件
 
-## Coding
+[ Amethyst ](https://github.com/ianyh/Amethyst): 自动平铺窗口管理器，类似LINUX上的i3wm
 
-[ NeoVim ](https://neovim.io): Hyperextensible Vim-based text editor
+[ Secretive ](https://github.com/maxgoedjen/secretive): 用来存储和管理 SSH 密钥的应用，并可以使用指纹快速登陆
 
-> [ NeoVim-Config ](https://github.com/JiagengDing/nvim): My config for Colemak Users
+## 编程
 
-[ VS code ](https://code.visualstudio.com): You must know how wonderful it is
+[ NeoVim ](https://neovim.io): 支持更多插件的 vim 编辑器
 
-[Ranger](https://github.com/ranger/ranger): A VIM-inspired filemanager for the console
+> [ NeoVim-Config ](https://github.com/JiagengDing/nvim): 基于 Colemak 布局的 Nvim 配置
 
-## Messaging
+[ VS code ](https://code.visualstudio.com): 可以通过插件几乎扩展成IDE的编辑器
 
-Mail: Simple mail software
 
-[ Telegram ](https://telegram.org): Cross-platform instant messaging system, provided E2EE messaging
+[Ranger](https://github.com/ranger/ranger): 终端类似 vim 的文件管理器
 
-[ Keybase ](https://keybase.io): E2EE for messaging and file
+## 通讯
+
+Mail: Mac自带的邮件应用，简单又足够用
+
+[ Telegram ](https://telegram.org): E2EE（需要在加密通讯下）即时通讯应用
+
+[ Keybase ](https://keybase.io): E2EE 文件传输和通讯（所有情况下）

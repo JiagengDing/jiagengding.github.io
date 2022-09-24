@@ -1,60 +1,58 @@
 
-Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Simple use just need to master about 10 commands.
+Git作为一个分布式版本控制软件，可以帮助你或你的团队更好的管理代码和历史记录，并且可以和远程服务器同步。尽管Git的功能非常强大，但是日常使用仅需要掌握10条左右的命令。
 
 <!--more-->
 
 ![工作流](https://cdn.jsdelivr.net/gh/jiagengding/pictures@main/uPic/pATn74.jpg)
 
-|   | Simple Workflow   | Command                         |
-|---|-------------------|---------------------------------|
-| 1 | Initialize repo   | `git init` or `git clone <url>` |
-| 2 | Add to INDEX      | `git add .`                     |
-| 3 | Commit to HEAD    | `git commit -m "info"`          |
-| 4 | Push to remote    | `git push`                      |
-| 5 | Replace from HEAD | `git checkout -- <filename>`    |
+|   | 最简单的工作流   | 命令                            |
+|---|------------------|---------------------------------|
+| 1 | 初始化仓库       | `git init` 或 `git clone <url>` |
+| 2 | 添加更改到INDEX  | `git add .`                     |
+| 3 | 提交至HEAD       | `git commit -m "info"`          |
+| 4 | 推送到远程服务器 | `git push`                      |
+| 5 | 从HEAD中替换文件 | `git checkout -- <filename>`    |
 
 
-## Initialize or Clone
+## 初始化或克隆
 
-Create a	new directory and run `git init` in this directory to create a repo.
+使用命令`git init` 来初始化一个文件夹，或者使用命令`git clone [url]`从远程服务器克隆一个仓库。
 
-Or use `git clone <url>` to clone from a remote server.
+`git config --global user.name "[name]"`配置用户名
 
-`git config --global user.name "<name>"` sets your user name.
+`git config --global user.email "[email address]"`配置用户邮箱
 
-`git config --global user.email "<email address>"` sets your email.
+## 添加和提交更改
 
-## Add and Commit Changes
+1. `git add .` 将工作目录中的全部更改提交到**暂存区INDEX**。
+2. `git commit -m "更改信息"` 用来将INDEX中的更改提交到**HEAD**。
 
-1. `git add .` to add all changes, `git add <filename>` to add this file, changes will be added to INDEX.
-2. `git commit -m "describe your changes"`, changes will be committed to HEAD.
+## 推送到远程仓库
 
-## Push Changes
+- 远端没有本地仓库，推送本地仓库使用命令 `git remote add origin <server>`。
+- 远端已有本地仓库使用命令`git push origin <branch name>`推送到该分支。
 
-- If the repo is not in remote server, you need to add it with `git remote add origin <server>`.
-- If the repo is in remote server, you can send it with `git push origin <server>`.
+## 更新仓库到本地
 
-## Update Local Repo
+- `git pull` 用来获取并合并远端仓库至本地仓库。
+- `git merge <branch name>` 将远程特定分支合并到本地。
 
-- Update and merge your local repo to newest with `git pull`.
-- Update specific remote branch to local with `git merge <branch name>`.
-
-## Checkout and Reset
+## 回退本地更改
 
 ![Reset](https://cdn.jsdelivr.net/gh/jiagengding/pictures@main/uPic/quwenf.jpg)
 
-- `git checkout -- <filename>` replaces your changes with the content in HEAD
-- `git reset --soft <commit>` moves current branch to the given commit, INDEX and DIRECTORY are not updated
-- `git reset <commit>` moves current branch to the given commit, INDEX will be updated
-- (Dangerous Command!!!) `git reset --hard <commit>` discards ALL history and changes back to the specified commit
+- 使用HEAD中内容替换目录文件 `git checkout -- <filename>`
+- `git reset --soft <commit>` 切换节点至commit, INDEX和目录不会改变
+- `git reset <commit>` 切换节点至commit, INDEX会改变, 目录不会改变
+- (**谨慎使用，除非你知道自己在做什么!!!**)`git reset --hard <commit>`, 丢弃commit之后的所有内容, INDEX和目录均会改变
 
-## View information
+## 查看信息
 
-- List history for current branch `git log`
-- List history for a specific file `git log --follow [file]`
-- Show content differences between two branches `git diff [first-branch]...[second-branch]`
+- 列出当前分支的历史记录 `git log`
+- 列出特定文件的历史记录 `git log --follow [file]`
+- 列出两个分支间的差异 `git diff [first-branch]...[second-branch]`
 
-## References and Recommended Articles
+## 参考资料和推荐阅读
 
 - [.gitignore templates](https://github.com/github/gitignore)
 - [ Community Book ](http://book.git-scm.com)

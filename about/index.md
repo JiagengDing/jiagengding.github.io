@@ -1,11 +1,11 @@
 
-Welcome! This is my personal website for recording daily life and sharing knowledge.
+这是我记录生活和分享知识的个人网站，希望你会喜欢！
 
-## About Me
+## 关于我
 
-I am a mathematics student and avid dreamer, got my Bachelor's in Mathematics and my Bachelor's in Finance from [SDUFE](https://www.sdufe.edu.cn).
+我是一个喜欢编程的数学学生。
 
-I am a nerd who loves Maths, Linux, Macintosh and Vim, interested in learning new technologies and tools.
+空余时间会用这个网站来记录自己的学习和生活。
 
 > Shell: Zsh 5.8
 >
@@ -13,23 +13,23 @@ I am a nerd who loves Maths, Linux, Macintosh and Vim, interested in learning ne
 >
 > Terminal Font: Fira Code Nerd Font
 >
-> Keyboard Layout: Colemak
+> Keyboard layout: Colemak
 >
-> Chinese Input Method: Weiruan Shuangpin
+> 汉语输入法：微软双拼
 
-## About the Website
+## 关于网站
 
-This blog I built with [hugo](https://gohugo.io), theme by [even](https://github.com/olOwOlo/hugo-theme-even) and hosted by Cloudflare Pages.
+我使用[Hugo](https://gohugo.io)来生成这个网站，采用[even 主题](https://github.com/olOwOlo/hugo-theme-even)并托管在 Cloudflare Pages。
 
-The performance of Hugo really shocked me!
+Hugo的性能令人震撼！
 
-Contents on this website reserves all rights, unless otherwise specified.
+如非特别标注，本网站所有内容保留所有权利。
 
-## Contact
+## 联系方式
 
-- **Comment under my posts** with a github account.
-- jiageng.ding **AT Gmail**, encrypt your message **with PGP** if necessary.
+- 如果你有一个Github账号，可以在**博客下面评论**。
+- 也可以发送邮件到我的**Gmail邮箱**，用户名是**jiageng.ding**，如果需要请使用**PGP加密**你的信息。
 
-> My PGP public key: [GPG public key](https://jiagengding.pages.dev/.well-known/gpg-publickey.asc)
+> 我的 PGP 公钥: [GPG public key](https://jiagengding.pages.dev/.well-known/gpg-publickey.asc)
 >
-> My PGP keyfinger: 064F 1C44 1AF1 2ADD 7894  4BDC 1E65 80A3 1F13 0DA1
+> 我的 PGP keyfinger: 064F 1C44 1AF1 2ADD 7894  4BDC 1E65 80A3 1F13 0DA1
