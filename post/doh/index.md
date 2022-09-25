@@ -118,3 +118,5 @@ nameserver 127.0.0.1
 ## 参考资料和推荐阅读
 
 [ Tutorial to setup your own DNS-over-HTTPS (DoH) server ](https://www.aaflalo.me/2018/10/tutorial-setup-dns-over-https-server/)
+
+[ DNS 推荐 ](https://blog.diing.uk/post/dns/)

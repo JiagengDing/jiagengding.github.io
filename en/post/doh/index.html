@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>在 Mac、Linux、iOS 和 Android 上使用加密 Dns（DOH 和 DOT） - Jiageng&#39;s Blog</title>
+  <title>How to use encrypt DNS - Jiageng&#39;s Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,9 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Jiageng Ding" /><meta name="description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。 后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
-使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。
-" /><meta name="keywords" content="share knowledge, record life" />
+<meta name="author" content="Jiageng Ding" /><meta name="description" content="" /><meta name="keywords" content="share knowledge, record life" />
 
 
 
@@ -28,7 +26,7 @@
 <meta name="generator" content="Hugo 0.104.0 with theme even" />
 
 
-<link rel="canonical" href="https://blog.diing.uk/post/doh/" />
+<link rel="canonical" href="https://blog.diing.uk/en/post/doh/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,26 +39,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="在 Mac、Linux、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）" />
-<meta property="og:description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。
-后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
-使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。" />
+<meta property="og:title" content="How to use encrypt DNS" />
+<meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.diing.uk/post/doh/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-09-24T17:51:04+08:00" />
-<meta property="article:modified_time" content="2022-09-24T17:51:04+08:00" />
+<meta property="og:url" content="https://blog.diing.uk/en/post/doh/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-09-25T15:32:21+08:00" />
+<meta property="article:modified_time" content="2022-09-25T15:32:21+08:00" />
 
-<meta itemprop="name" content="在 Mac、Linux、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）">
-<meta itemprop="description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。
-后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
-使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。"><meta itemprop="datePublished" content="2022-09-24T17:51:04+08:00" />
-<meta itemprop="dateModified" content="2022-09-24T17:51:04+08:00" />
-<meta itemprop="wordCount" content="506">
+<meta itemprop="name" content="How to use encrypt DNS">
+<meta itemprop="description" content=""><meta itemprop="datePublished" content="2022-09-25T15:32:21+08:00" />
+<meta itemprop="dateModified" content="2022-09-25T15:32:21+08:00" />
+<meta itemprop="wordCount" content="213">
 <meta itemprop="keywords" content="dns," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 Mac、Linux、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）"/>
-<meta name="twitter:description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。
-后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
-使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。"/>
+<meta name="twitter:title" content="How to use encrypt DNS"/>
+<meta name="twitter:description" content=""/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -75,7 +67,7 @@
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Jiageng&#39;s Blog</a>
+    <a href="/en/" class="logo">Jiageng&#39;s Blog</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -85,16 +77,16 @@
 </div>
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">主页</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">分类</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">标签</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">文章</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">关于</li>
+    <a href="/en">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/en/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/en/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/en/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/en/about/">
+        <li class="mobile-menu-item">About</li>
       </a>
   </ul>
 
@@ -106,7 +98,7 @@
 		
 		
 
-		<li class="language-item ">
+		<li class="language-item active">
 			
 			<a href="https://blog.diing.uk/en/post/doh/">English</a>
 			
@@ -115,7 +107,7 @@
 		
 		
 
-		<li class="language-item active">
+		<li class="language-item ">
 			
 			<a href="https://blog.diing.uk/post/doh/">中文</a>
 			
@@ -130,7 +122,7 @@
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Jiageng&#39;s Blog</a>
+  <a href="/en/" class="logo">Jiageng&#39;s Blog</a>
 </div>
 
 
@@ -141,7 +133,7 @@
 		
 		
 
-		<li class="language-item ">
+		<li class="language-item active">
 			
 			<a href="https://blog.diing.uk/en/post/doh/">English</a>
 			
@@ -150,7 +142,7 @@
 		
 		
 
-		<li class="language-item active">
+		<li class="language-item ">
 			
 			<a href="https://blog.diing.uk/post/doh/">中文</a>
 			
@@ -164,15 +156,15 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">主页</a>
+        <a class="menu-item-link" href="/en">Home</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">分类</a>
+        <a class="menu-item-link" href="/en/categories/">Categories</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">标签</a>
+        <a class="menu-item-link" href="/en/tags/">Tags</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">文章</a>
+        <a class="menu-item-link" href="/en/post/">Archives</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">关于</a>
+        <a class="menu-item-link" href="/en/about/">About</a>
       </li>
   </ul>
 </nav>
@@ -185,66 +177,61 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">在 Mac、Linux、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）</h1>
+      <h1 class="post-title">How to use encrypt DNS</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-09-24 </span>
+        <span class="post-time"> 2022-09-25 </span>
         <div class="post-category">
-            <a href="/categories/%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"> 简单教程 </a>
+            <a href="/en/categories/simple-guide/"> Simple-Guide </a>
             </div>
-          <span class="more-meta"> 约 506 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
-        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+          <span class="more-meta"> 213 words </span>
+          <span class="more-meta"> 1 min read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
     </header>
 
     <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
+  <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ol>
-    <li><a href="#在-gnulinux-设备上使用加密-dns">在 GNU/Linux 设备上使用加密 DNS</a></li>
-    <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
+    <li><a href="#use-dns-over-https-in-gnulinux">Use DNS-over-https in GNU/Linux</a></li>
+    <li><a href="#references-and-recommended-articles">References and Recommended Articles</a></li>
   </ol>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。
-后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。</p>
-<p>使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。</p>
-<p>HTTPS 的安全基础就是 TLS 协议，但是有了 HTTPS 协议的封装可以使得 DNS 查询与访问网页相同，并且使用与 https 网页443端口（ DOT 使用853端口）。
-<strong>因此相比 DOT 更加推荐使用 DOH</strong> ，除非是在只支持 DOT 的 Android 设备。</p>
-<div>
+      <div>
 	<h2>Table Of Contents</h2>
 	<nav id="TableOfContents">
   <ol>
-    <li><a href="#在-gnulinux-设备上使用加密-dns">在 GNU/Linux 设备上使用加密 DNS</a></li>
-    <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
+    <li><a href="#use-dns-over-https-in-gnulinux">Use DNS-over-https in GNU/Linux</a></li>
+    <li><a href="#references-and-recommended-articles">References and Recommended Articles</a></li>
   </ol>
 </nav>
 </div>
 
-<h2 id="在-gnulinux-设备上使用加密-dns">在 GNU/Linux 设备上使用加密 DNS</h2>
+<h2 id="use-dns-over-https-in-gnulinux">Use DNS-over-https in GNU/Linux</h2>
 <ol>
-<li>安装 Golang</li>
+<li>Install Golang</li>
 </ol>
 <p>Debian/Ubuntu:</p>
 <p><code>sudo apt install golang</code></p>
 <p>Arch/Manjaro:</p>
 <p>&lsquo;sudo pacman -S go&rsquo;</p>
 <ol start="2">
-<li>创建 GOPATH 路径</li>
+<li>Make GOPATH directory</li>
 </ol>
 <pre><code>mkdir ~/gopath
 export GOPATH=~/gopath
 </code></pre>
 <ol start="3">
-<li>从 GitHub 下载 <a href="https://github.com/m13253/dns-over-https"> dns-over-https </a></li>
+<li>Download <a href="https://github.com/m13253/dns-over-https"> dns-over-https </a> from GitHub</li>
 </ol>
 <p><code>git clone https://github.com/m13253/dns-over-https.git --depth=1</code></p>
 <ol start="4">
-<li>安装并开启自启动</li>
+<li>Install doh-client and enable</li>
 </ol>
 <pre><code>cd dns-over-https
 sudo make install
@@ -252,10 +239,10 @@ sudo systemctl start doh-client.service
 sudo systemctl enable doh-client.service
 </code></pre>
 <ol start="5">
-<li>编辑配置文件并重启 doh</li>
+<li>Edit config file and restart doh-client</li>
 </ol>
 <p><code>sudo vim /etc/dns-over-https/doh-client.conf</code></p>
-<p>写入如下配置</p>
+<p>copy and paste</p>
 <pre><code>listen = [
     &quot;127.0.0.1:53&quot;,
     &quot;[::1]:53&quot;,
@@ -265,20 +252,26 @@ sudo systemctl enable doh-client.service
 
 upstream_selector = &quot;random&quot;
 
-# DNSPod Public DNS（https://www.dnspod.cn/Products/Public.DNS）
+# Google DNS
 [[upstream.upstream_ietf]]
-    url = &quot;https://doh.pub/dns-query&quot;
+    url = &quot;https://dns.google/dns-query&quot;
     weight = 50
 
-# Ali DNS
+# Cloudflare DNS
 [[upstream.upstream_ietf]]
-    url = &quot;https://dns.alidns.com/dns-query&quot;
+    url = &quot;https://1.1.1.1/dns-query&quot;
+    weight = 50
+
+# DNS.SB DNS
+[[upstream.upstream_ietf]]
+    url = &quot;https://doh.dns.sb/dns-query&quot;
     weight = 50
 
 [others]
 bootstrap = [
-    &quot;223.5.5.5:53&quot;,
-    &quot;119.29.29:53&quot;,
+    &quot;8.8.8.8:53&quot;,
+		&quot;8.8.4.4:53&quot;,
+    &quot;1.1.1.1:53&quot;,
 ]
 
 passthrough = [
@@ -305,54 +298,50 @@ no_user_agent = false
 verbose = false
 insecure_tls_skip_verify = false
 </code></pre>
-<p><code>:wq</code>退出编辑器，<code>sudo systemctl restart doh-client.service</code> 重启 doh-client</p>
+<p><code>:wq</code> quit vim，<code>sudo systemctl restart doh-client.service</code> restart doh-client</p>
 <ol start="6">
-<li>修改系统配置</li>
+<li>Change the system dns config</li>
 </ol>
-<p>打开 /etc/resolv.conf 文件并在首行加入：</p>
+<p>open /etc/resolv.conf file and insert in the first line：</p>
 <pre><code>nameserver ::1
 nameserver 127.0.0.1
 </code></pre>
 <ol start="7">
-<li>使用 dig 命令查看是否完成修改（可选）</li>
+<li>Use <code>dig</code> to check (Option)</li>
 </ol>
 <p><code>dig baidu.com</code></p>
-<h2 id="参考资料和推荐阅读">参考资料和推荐阅读</h2>
+<h2 id="references-and-recommended-articles">References and Recommended Articles</h2>
 <p><a href="https://www.aaflalo.me/2018/10/tutorial-setup-dns-over-https-server/"> Tutorial to setup your own DNS-over-HTTPS (DoH) server </a></p>
-<p><a href="https://blog.diing.uk/post/dns/"> DNS 推荐 </a></p>
+<p><a href="https://blog.diing.uk/post/dns/"> DNS recommended </a></p>
     </div>
 
     <div class="post-copyright">
   <p class="copyright-item">
-    <span class="item-title">文章作者</span>
+    <span class="item-title">Author</span>
     <span class="item-content">Jiageng Ding</span>
   </p>
   <p class="copyright-item">
-    <span class="item-title">上次更新</span>
+    <span class="item-title">LastMod</span>
     <span class="item-content">
-        2022-09-24
+        2022-09-25
         
     </span>
   </p>
   
   <p class="copyright-item">
-    <span class="item-title">许可协议</span>
+    <span class="item-title">License</span>
     <span class="item-content"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></span>
   </p>
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/dns/">dns</a>
+          <a href="/en/tags/dns/">dns</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/dns/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">常用 Dns 推荐</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/jupyter/">
-            <span class="next-text nav-default">访问服务器 Jupyter Lab 并使用 Nginx 反向代理</span>
-            <span class="next-text nav-mobile">下一篇</span>
+        
+        <a class="next" href="/en/post/dns/">
+            <span class="next-text nav-default">Dns</span>
+            <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
       </nav>
@@ -382,16 +371,17 @@ nameserver 127.0.0.1
 	<a href="https://github.com/jiagengding" class="iconfont icon-github" title="github"></a>
 	<a href="https://www.instagram.com/ding.jg/" class="iconfont icon-instagram" title="instagram"></a>
 	<a href="https://space.bilibili.com/37440196" class="iconfont icon-bilibili" title="bilibili"></a>
-	<a href="https://blog.diing.uk/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+	<a href="https://blog.diing.uk/en/index.xml" type="application/rss+xml" class="iconfont icon-rss"
+		title="rss"></a>
 </div>
 
 
 <div class="copyright">
 
 	<div class="busuanzi-footer">
-		<span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg" /></span> 次 </span>
+		<span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg" /></span> </span>
 		<span class="division">|</span>
-		<span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg" /></span> 人 </span>
+		<span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg" /></span> </span>
 	</div>
 
 
