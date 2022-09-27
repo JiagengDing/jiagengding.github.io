@@ -1,4 +1,5 @@
 
+A simple guide about using encrypted dns in Linux、Mac、iOSand Android.
 
 <!--more-->
 {{< toc >}}
