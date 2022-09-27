@@ -30,6 +30,6 @@
 - 如果你有一个Github账号，可以在**博客下面评论**。
 - 也可以发送邮件到我的**Gmail邮箱**，用户名是**jiageng.ding**，如果需要请使用**PGP加密**你的信息。
 
-> 我的 PGP 公钥: [GPG public key](https://blog.diing.uk/.well-known/gpg-publickey.asc)
+> 我的 PGP 公钥: [GPG public key](https://blog.diing.uk/.well-known/gpg-publickey.txt)
 >
 > 我的 PGP keyfinger: 064F 1C44 1AF1 2ADD 7894  4BDC 1E65 80A3 1F13 0DA1

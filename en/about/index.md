@@ -31,6 +31,6 @@ Contents on this website reserves all rights, unless otherwise specified.
 - **Comment under my posts** with a github account.
 - jiageng.ding **AT Gmail**, encrypt your message **with PGP** if necessary.
 
-> My PGP public key: [GPG public key](https://blog.diing.uk/.well-known/gpg-publickey.asc)
+> My PGP public key: [GPG public key](https://blog.diing.uk/.well-known/gpg-publickey.txt)
 >
 > My PGP keyfinger: 064F 1C44 1AF1 2ADD 7894  4BDC 1E65 80A3 1F13 0DA1
