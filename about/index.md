@@ -5,7 +5,7 @@
 
 我是一个喜欢编程的数学学生，目前就读于 [ University of Bristol ](https://www.bristol.ac.uk) 的 [计算机系](https://www.bris.ac.uk/engineering/departments/computerscience/)。
 
-我本科期间在[山东财经大学](https://sdufe.edu.cn)学习了数学与应用数学专业和金融学专业，并通过了 CFA level 1 考试。
+我本科期间在[山东财经大学](https://sdufe.edu.cn)修读了数学与应用数学专业和金融学专业，并通过了 CFA level 1 考试。
 
 > Shell: Zsh
 >
@@ -22,8 +22,6 @@
 我使用[Hugo](https://gohugo.io)来生成这个网站，采用[even 主题](https://github.com/olOwOlo/hugo-theme-even)并托管在 Cloudflare Pages。
 
 空余时间会用这个网站来记录自己的学习和生活。
-
-如非特别标注，本网站所有内容保留所有权利。
 
 ## 联系方式
 

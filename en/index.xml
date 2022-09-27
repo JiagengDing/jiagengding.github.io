@@ -18,7 +18,7 @@
     </item>
     
     <item>
-      <title>Dns</title>
+      <title>Dns Recommended</title>
       <link>https://blog.diing.uk/en/post/dns/</link>
       <pubDate>Sat, 24 Sep 2022 19:58:19 +0800</pubDate>
       
@@ -51,7 +51,8 @@
       
       <guid>https://blog.diing.uk/en/about/</guid>
       <description>Welcome! This is my personal website for recording daily life and sharing knowledge.
-About Me I am a mathematics student and avid dreamer, studying in the Computer Science Faculty of University of Bristol. I got my Bachelor&amp;rsquo;s in Mathematics and my Bachelor&amp;rsquo;s in Finance from SDUFE.
+About Me I am a mathematics student and avid dreamer, studying in the Computer Science Faculty of University of Bristol.
+I got my Bachelor&amp;rsquo;s in Mathematics and my Bachelor&amp;rsquo;s in Finance from SDUFE.
 I am a nerd who loves Maths, Linux, Macintosh and Vim, interested in learning new technologies and tools.
 Shell: Zsh
 Terminal: Alacritty and iTerm2</description>

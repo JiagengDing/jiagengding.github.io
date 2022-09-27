@@ -26,6 +26,8 @@
 | chsh -s | chsh -s /usr/bin/zsh | 修改当前用户 shell   |
 | login   | login bob            | 登陆用户             |
 | crontab | crontab -e           | 修改定时自动执行任务 |
+| free -h | free -h              | 显示 swap 分区大小   |
+| top     | top                  | 动态显示当前进程     |
 
 ## 新建用户和修改用户密码
 
@@ -73,8 +75,7 @@ P.S. [ 详细内容 ](https://www.runoob.com/linux/linux-comm-chmod.html)
 | -z           | 使用gzip压缩  | .gz    | Deflate(结合了LZSS和霍夫曼编码)                                       | 快       |
 | -j           | 使用bzip2压缩 | .bz2   | Burrows–Wheeler transform, move-to-front transform and Huffman coding | 高压缩率 |
 
+## 查找与杀死进程
 
-
-
-
-## 参考资料和推荐阅读
+- `ps -aux | grep <name> ` 查找与 name 相关的进程
+- `kill -9 $(ps -aux | grep <name>)` 查找并杀死进程

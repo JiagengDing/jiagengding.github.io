@@ -50,7 +50,7 @@
 <meta itemprop="name" content=" Linux 常用命令">
 <meta itemprop="description" content="基本命令、创建用户、修改文件权限、解压缩、grep"><meta itemprop="datePublished" content="2022-09-27T15:18:08+08:00" />
 <meta itemprop="dateModified" content="2022-09-27T15:18:08+08:00" />
-<meta itemprop="wordCount" content="584">
+<meta itemprop="wordCount" content="629">
 <meta itemprop="keywords" content="linux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=" Linux 常用命令"/>
 <meta name="twitter:description" content="基本命令、创建用户、修改文件权限、解压缩、grep"/>
@@ -185,7 +185,7 @@
         <div class="post-category">
             <a href="/categories/%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"> 简单教程 </a>
             </div>
-          <span class="more-meta"> 约 584 字 </span>
+          <span class="more-meta"> 约 629 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -200,7 +200,7 @@
     <li><a href="#新建用户和修改用户密码">新建用户和修改用户密码</a></li>
     <li><a href="#修改文件所有者和权限">修改文件所有者和权限</a></li>
     <li><a href="#打包和解压缩">打包和解压缩</a></li>
-    <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
+    <li><a href="#查找与杀死进程">查找与杀死进程</a></li>
   </ol>
 </nav>
   </div>
@@ -215,7 +215,7 @@
     <li><a href="#新建用户和修改用户密码">新建用户和修改用户密码</a></li>
     <li><a href="#修改文件所有者和权限">修改文件所有者和权限</a></li>
     <li><a href="#打包和解压缩">打包和解压缩</a></li>
-    <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
+    <li><a href="#查找与杀死进程">查找与杀死进程</a></li>
   </ol>
 </nav>
 </div>
@@ -315,6 +315,16 @@
 <td>crontab</td>
 <td>crontab -e</td>
 <td>修改定时自动执行任务</td>
+</tr>
+<tr>
+<td>free -h</td>
+<td>free -h</td>
+<td>显示 swap 分区大小</td>
+</tr>
+<tr>
+<td>top</td>
+<td>top</td>
+<td>动态显示当前进程</td>
 </tr>
 </tbody>
 </table>
@@ -430,7 +440,11 @@
 </tr>
 </tbody>
 </table>
-<h2 id="参考资料和推荐阅读">参考资料和推荐阅读</h2>
+<h2 id="查找与杀死进程">查找与杀死进程</h2>
+<ul>
+<li><code>ps -aux | grep &lt;name&gt; </code> 查找与 name 相关的进程</li>
+<li><code>kill -9 $(ps -aux | grep &lt;name&gt;)</code> 查找并杀死进程</li>
+</ul>
     </div>
 
     <div class="post-copyright">
