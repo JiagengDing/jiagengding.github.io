@@ -17,7 +17,7 @@ sudo apt install golang
 
 Arch/Manjaro:
 
-'sudo pacman -S go'
+`sudo pacman -S go`
 
 2. Make GOPATH directory
 
