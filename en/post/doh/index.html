@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>How to use encrypt DNS - Jiageng&#39;s Blog</title>
+  <title>How to use encrypted DNS - Jiageng&#39;s Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.104.0 with theme even" />
+<meta name="generator" content="Hugo 0.104.1 with theme even" />
 
 
 <link rel="canonical" href="https://blog.diing.uk/en/post/doh/" />
@@ -39,19 +39,19 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="How to use encrypt DNS" />
+<meta property="og:title" content="How to use encrypted DNS" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.diing.uk/en/post/doh/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-09-25T15:32:21+08:00" />
 <meta property="article:modified_time" content="2022-09-25T15:32:21+08:00" />
 
-<meta itemprop="name" content="How to use encrypt DNS">
+<meta itemprop="name" content="How to use encrypted DNS">
 <meta itemprop="description" content=""><meta itemprop="datePublished" content="2022-09-25T15:32:21+08:00" />
 <meta itemprop="dateModified" content="2022-09-25T15:32:21+08:00" />
-<meta itemprop="wordCount" content="213">
+<meta itemprop="wordCount" content="361">
 <meta itemprop="keywords" content="dns," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How to use encrypt DNS"/>
+<meta name="twitter:title" content="How to use encrypted DNS"/>
 <meta name="twitter:description" content=""/>
 
 <!--[if lte IE 9]>
@@ -177,14 +177,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">How to use encrypt DNS</h1>
+      <h1 class="post-title">How to use encrypted DNS</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2022-09-25 </span>
         <div class="post-category">
             <a href="/en/categories/simple-guide/"> Simple-Guide </a>
             </div>
-          <span class="more-meta"> 213 words </span>
+          <span class="more-meta"> 361 words </span>
           <span class="more-meta"> 1 min read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -196,6 +196,8 @@
     <nav id="TableOfContents">
   <ol>
     <li><a href="#use-dns-over-https-in-gnulinux">Use DNS-over-https in GNU/Linux</a></li>
+    <li><a href="#use-doh-in-macosipadosios">Use DOH in MacOS/iPadOS/IOS</a></li>
+    <li><a href="#use-dot-or-dns-over-https3-in-android">Use DOT or DNS-over-HTTPS/3 in Android</a></li>
     <li><a href="#references-and-recommended-articles">References and Recommended Articles</a></li>
   </ol>
 </nav>
@@ -207,6 +209,8 @@
 	<nav id="TableOfContents">
   <ol>
     <li><a href="#use-dns-over-https-in-gnulinux">Use DNS-over-https in GNU/Linux</a></li>
+    <li><a href="#use-doh-in-macosipadosios">Use DOH in MacOS/iPadOS/IOS</a></li>
+    <li><a href="#use-dot-or-dns-over-https3-in-android">Use DOT or DNS-over-HTTPS/3 in Android</a></li>
     <li><a href="#references-and-recommended-articles">References and Recommended Articles</a></li>
   </ol>
 </nav>
@@ -310,9 +314,75 @@ nameserver 127.0.0.1
 <li>Use <code>dig</code> to check (Option)</li>
 </ol>
 <p><code>dig baidu.com</code></p>
+<h2 id="use-doh-in-macosipadosios">Use DOH in MacOS/iPadOS/IOS</h2>
+<ol>
+<li><a href="https://raw.githubusercontent.com/paulmillr/encrypted-dns/master/profiles/cloudflare-https.mobileconfig"> Download </a> or edit profile</li>
+</ol>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+	&lt;key&gt;PayloadContent&lt;/key&gt;
+	&lt;array&gt;
+		&lt;dict&gt;
+			&lt;key&gt;DNSSettings&lt;/key&gt;
+			&lt;dict&gt;
+				&lt;key&gt;DNSProtocol&lt;/key&gt;
+				&lt;string&gt;HTTPS&lt;/string&gt;
+				&lt;key&gt;ServerAddresses&lt;/key&gt;
+				&lt;array&gt;
+					&lt;string&gt;2606:4700:4700::1111&lt;/string&gt;
+					&lt;string&gt;2606:4700:4700::1001&lt;/string&gt;
+					&lt;string&gt;1.1.1.1&lt;/string&gt;
+					&lt;string&gt;1.0.0.1&lt;/string&gt;
+				&lt;/array&gt;
+				&lt;key&gt;ServerURL&lt;/key&gt;
+				&lt;string&gt;https://cloudflare-dns.com/dns-query&lt;/string&gt;
+			&lt;/dict&gt;
+			&lt;key&gt;PayloadDescription&lt;/key&gt;
+			&lt;string&gt;Configures device to use Cloudflare Encrypted DNS over HTTPS&lt;/string&gt;
+			&lt;key&gt;PayloadDisplayName&lt;/key&gt;
+			&lt;string&gt;Cloudflare DNS over HTTPS&lt;/string&gt;
+			&lt;key&gt;PayloadIdentifier&lt;/key&gt;
+			&lt;string&gt;com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4&lt;/string&gt;
+			&lt;key&gt;PayloadType&lt;/key&gt;
+			&lt;string&gt;com.apple.dnsSettings.managed&lt;/string&gt;
+			&lt;key&gt;PayloadUUID&lt;/key&gt;
+			&lt;string&gt;35d5c8a0-afa6-4b36-a9fe-099a997b44ad&lt;/string&gt;
+			&lt;key&gt;PayloadVersion&lt;/key&gt;
+			&lt;integer&gt;1&lt;/integer&gt;
+			&lt;key&gt;ProhibitDisablement&lt;/key&gt;
+			&lt;false/&gt;
+		&lt;/dict&gt;
+	&lt;/array&gt;
+	&lt;key&gt;PayloadDescription&lt;/key&gt;
+	&lt;string&gt;Adds the Cloudflare DNS to Big Sur and iOS 14 based systems&lt;/string&gt;
+	&lt;key&gt;PayloadDisplayName&lt;/key&gt;
+	&lt;string&gt;Cloudflare DNS over HTTPS&lt;/string&gt;
+	&lt;key&gt;PayloadIdentifier&lt;/key&gt;
+	&lt;string&gt;com.paulmillr.apple-dns&lt;/string&gt;
+	&lt;key&gt;PayloadRemovalDisallowed&lt;/key&gt;
+	&lt;false/&gt;
+	&lt;key&gt;PayloadType&lt;/key&gt;
+	&lt;string&gt;Configuration&lt;/string&gt;
+	&lt;key&gt;PayloadUUID&lt;/key&gt;
+	&lt;string&gt;A4475135-633A-4F15-A79B-BE15093DC97A&lt;/string&gt;
+	&lt;key&gt;PayloadVersion&lt;/key&gt;
+	&lt;integer&gt;1&lt;/integer&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+<ol start="2">
+<li>Open this profile and Install in <code>system preference - profiles</code>.</li>
+</ol>
+<h2 id="use-dot-or-dns-over-https3-in-android">Use DOT or DNS-over-HTTPS/3 in Android</h2>
+<p>Open system setting - private dns and input the provider hostname, such as <code>dns.google</code> or &lsquo;one.one.one.one&rsquo;.</p>
+<p><a href="https://blog.diing.uk/post/dns/"> Here </a> are some DNS provider.</p>
 <h2 id="references-and-recommended-articles">References and Recommended Articles</h2>
 <p><a href="https://www.aaflalo.me/2018/10/tutorial-setup-dns-over-https-server/"> Tutorial to setup your own DNS-over-HTTPS (DoH) server </a></p>
 <p><a href="https://blog.diing.uk/post/dns/"> DNS recommended </a></p>
+<p><a href="https://github.com/paulmillr/encrypted-dns"> MacOS encrypted-dns configs </a></p>
+<p><a href="https://security.googleblog.com/2022/07/dns-over-http3-in-android.html"> DNS-over-HTTP/3 in Android </a></p>
     </div>
 
     <div class="post-copyright">

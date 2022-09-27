@@ -115,8 +115,81 @@ nameserver 127.0.0.1
 
 `dig baidu.com`
 
+## 在 MacOS/iPadOS/IOS 上通过安装描述文件使用 DOH
+
+1. [下载](https://raw.githubusercontent.com/paulmillr/encrypted-dns/master/profiles/alibaba-https.mobileconfig) 或自行编辑下列证书
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2400:3200::1</string>
+					<string>2400:3200:baba::1</string>
+					<string>223.5.5.5</string>
+					<string>223.6.6.6</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://dns.alidns.com/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use AliDNS Encrypted DNS over TLS</string>
+			<key>PayloadDisplayName</key>
+			<string>AliDNS DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>35d5c8a0-afa6-4b36-a9fe-099a997b44ad</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Adds the AliDNS to Big Sur and iOS 14 based systems</string>
+	<key>PayloadDisplayName</key>
+	<string>AliDNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>A4475135-633A-4F15-A79B-BE15093DC97A</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
+```
+
+2. 打开描述文件并在`设置-描述文件`中安装证书
+
+## 在 Android 设备上使用 DOT 或 DNS-over-HTTPS/3
+
+打开系统设置-连接与共享-私人 DNS 并输入 DNS 提供商地址
+
+`dns.alidns.com` 或 `dot.pub`
+
+
 ## 参考资料和推荐阅读
 
-[ Tutorial to setup your own DNS-over-HTTPS (DoH) server ](https://www.aaflalo.me/2018/10/tutorial-setup-dns-over-https-server/)
+[ 配置私有 DOH 服务器 ](https://www.aaflalo.me/2018/10/tutorial-setup-dns-over-https-server/)
 
 [ DNS 推荐 ](https://blog.diing.uk/post/dns/)
+
+[ MacOS 其他加密 DNS 描述文件 ](https://github.com/paulmillr/encrypted-dns)
+
+[ DNS-over-HTTP/3 in Android ](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html)

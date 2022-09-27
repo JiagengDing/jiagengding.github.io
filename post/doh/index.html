@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.104.0 with theme even" />
+<meta name="generator" content="Hugo 0.104.1 with theme even" />
 
 
 <link rel="canonical" href="https://blog.diing.uk/post/doh/" />
@@ -55,7 +55,7 @@
 后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
 使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。"><meta itemprop="datePublished" content="2022-09-24T17:51:04+08:00" />
 <meta itemprop="dateModified" content="2022-09-24T17:51:04+08:00" />
-<meta itemprop="wordCount" content="506">
+<meta itemprop="wordCount" content="711">
 <meta itemprop="keywords" content="dns," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="在 Mac、Linux、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）"/>
 <meta name="twitter:description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。
@@ -192,7 +192,7 @@
         <div class="post-category">
             <a href="/categories/%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"> 简单教程 </a>
             </div>
-          <span class="more-meta"> 约 506 字 </span>
+          <span class="more-meta"> 约 711 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -204,6 +204,8 @@
     <nav id="TableOfContents">
   <ol>
     <li><a href="#在-gnulinux-设备上使用加密-dns">在 GNU/Linux 设备上使用加密 DNS</a></li>
+    <li><a href="#在-macosipadosios-上通过安装描述文件使用-doh">在 MacOS/iPadOS/IOS 上通过安装描述文件使用 DOH</a></li>
+    <li><a href="#在-android-设备上使用-dot-或-dns-over-https3">在 Android 设备上使用 DOT 或 DNS-over-HTTPS/3</a></li>
     <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
   </ol>
 </nav>
@@ -220,6 +222,8 @@
 	<nav id="TableOfContents">
   <ol>
     <li><a href="#在-gnulinux-设备上使用加密-dns">在 GNU/Linux 设备上使用加密 DNS</a></li>
+    <li><a href="#在-macosipadosios-上通过安装描述文件使用-doh">在 MacOS/iPadOS/IOS 上通过安装描述文件使用 DOH</a></li>
+    <li><a href="#在-android-设备上使用-dot-或-dns-over-https3">在 Android 设备上使用 DOT 或 DNS-over-HTTPS/3</a></li>
     <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
   </ol>
 </nav>
@@ -317,9 +321,75 @@ nameserver 127.0.0.1
 <li>使用 dig 命令查看是否完成修改（可选）</li>
 </ol>
 <p><code>dig baidu.com</code></p>
+<h2 id="在-macosipadosios-上通过安装描述文件使用-doh">在 MacOS/iPadOS/IOS 上通过安装描述文件使用 DOH</h2>
+<ol>
+<li><a href="https://raw.githubusercontent.com/paulmillr/encrypted-dns/master/profiles/alibaba-https.mobileconfig">下载</a> 或自行编辑下列证书</li>
+</ol>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+	&lt;key&gt;PayloadContent&lt;/key&gt;
+	&lt;array&gt;
+		&lt;dict&gt;
+			&lt;key&gt;DNSSettings&lt;/key&gt;
+			&lt;dict&gt;
+				&lt;key&gt;DNSProtocol&lt;/key&gt;
+				&lt;string&gt;HTTPS&lt;/string&gt;
+				&lt;key&gt;ServerAddresses&lt;/key&gt;
+				&lt;array&gt;
+					&lt;string&gt;2400:3200::1&lt;/string&gt;
+					&lt;string&gt;2400:3200:baba::1&lt;/string&gt;
+					&lt;string&gt;223.5.5.5&lt;/string&gt;
+					&lt;string&gt;223.6.6.6&lt;/string&gt;
+				&lt;/array&gt;
+				&lt;key&gt;ServerURL&lt;/key&gt;
+				&lt;string&gt;https://dns.alidns.com/dns-query&lt;/string&gt;
+			&lt;/dict&gt;
+			&lt;key&gt;PayloadDescription&lt;/key&gt;
+			&lt;string&gt;Configures device to use AliDNS Encrypted DNS over TLS&lt;/string&gt;
+			&lt;key&gt;PayloadDisplayName&lt;/key&gt;
+			&lt;string&gt;AliDNS DNS over HTTPS&lt;/string&gt;
+			&lt;key&gt;PayloadIdentifier&lt;/key&gt;
+			&lt;string&gt;com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4&lt;/string&gt;
+			&lt;key&gt;PayloadType&lt;/key&gt;
+			&lt;string&gt;com.apple.dnsSettings.managed&lt;/string&gt;
+			&lt;key&gt;PayloadUUID&lt;/key&gt;
+			&lt;string&gt;35d5c8a0-afa6-4b36-a9fe-099a997b44ad&lt;/string&gt;
+			&lt;key&gt;PayloadVersion&lt;/key&gt;
+			&lt;integer&gt;1&lt;/integer&gt;
+			&lt;key&gt;ProhibitDisablement&lt;/key&gt;
+			&lt;false/&gt;
+		&lt;/dict&gt;
+	&lt;/array&gt;
+	&lt;key&gt;PayloadDescription&lt;/key&gt;
+	&lt;string&gt;Adds the AliDNS to Big Sur and iOS 14 based systems&lt;/string&gt;
+	&lt;key&gt;PayloadDisplayName&lt;/key&gt;
+	&lt;string&gt;AliDNS over HTTPS&lt;/string&gt;
+	&lt;key&gt;PayloadIdentifier&lt;/key&gt;
+	&lt;string&gt;com.paulmillr.apple-dns&lt;/string&gt;
+	&lt;key&gt;PayloadRemovalDisallowed&lt;/key&gt;
+	&lt;false/&gt;
+	&lt;key&gt;PayloadType&lt;/key&gt;
+	&lt;string&gt;Configuration&lt;/string&gt;
+	&lt;key&gt;PayloadUUID&lt;/key&gt;
+	&lt;string&gt;A4475135-633A-4F15-A79B-BE15093DC97A&lt;/string&gt;
+	&lt;key&gt;PayloadVersion&lt;/key&gt;
+	&lt;integer&gt;1&lt;/integer&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+<ol start="2">
+<li>打开描述文件并在<code>设置-描述文件</code>中安装证书</li>
+</ol>
+<h2 id="在-android-设备上使用-dot-或-dns-over-https3">在 Android 设备上使用 DOT 或 DNS-over-HTTPS/3</h2>
+<p>打开系统设置-连接与共享-私人 DNS 并输入 DNS 提供商地址</p>
+<p><code>dns.alidns.com</code> 或 <code>dot.pub</code></p>
 <h2 id="参考资料和推荐阅读">参考资料和推荐阅读</h2>
-<p><a href="https://www.aaflalo.me/2018/10/tutorial-setup-dns-over-https-server/"> Tutorial to setup your own DNS-over-HTTPS (DoH) server </a></p>
+<p><a href="https://www.aaflalo.me/2018/10/tutorial-setup-dns-over-https-server/"> 配置私有 DOH 服务器 </a></p>
 <p><a href="https://blog.diing.uk/post/dns/"> DNS 推荐 </a></p>
+<p><a href="https://github.com/paulmillr/encrypted-dns"> MacOS 其他加密 DNS 描述文件 </a></p>
+<p><a href="https://security.googleblog.com/2022/07/dns-over-http3-in-android.html"> DNS-over-HTTP/3 in Android </a></p>
     </div>
 
     <div class="post-copyright">
