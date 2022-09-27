@@ -13,11 +13,15 @@ HTTPS 的安全基础就是 TLS 协议，但是有了 HTTPS 协议的封装可�
 
 ## 在 GNU/Linux 设备上使用加密 DNS
 
-1. 安装 Golang
+1. 安装 Golang(version>=1.17)
 
 Debian/Ubuntu:
 
-`sudo apt install golang`
+```
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt update
+sudo apt install golang
+```
 
 Arch/Manjaro:
 

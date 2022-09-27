@@ -5,11 +5,15 @@
 
 ## Use DNS-over-https in GNU/Linux
 
-1. Install Golang
+1. Install Golang(version>=1.17)
 
 Debian/Ubuntu:
 
-`sudo apt install golang`
+```
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt update
+sudo apt install golang
+```
 
 Arch/Manjaro:
 
