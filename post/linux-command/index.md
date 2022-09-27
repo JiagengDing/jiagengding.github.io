@@ -86,5 +86,7 @@ P.S. [ 详细内容 ](https://www.runoob.com/linux/linux-comm-chmod.html)
 - `echo $PATH` 显示所有 PATH
 
 以加入 /usr/bin 为例
+
 - `export PATH=$PATH:/usr/bin` 仅对当前用户的当前会话有效
 - 编辑 `~/.profile` 或 `~/.bashrc` 文件，最后一行加入 `export PATH=$PATH:/usr/bin` 并通过 `source .profile` 立即永久生效
+- 在项目目录下新建 `project.profile` 文件并写入环境变量（ `export PATH=$PATH:/usr/bin`），在 `~/.profile` 最后一行加入 `source ~/project/project.profile`

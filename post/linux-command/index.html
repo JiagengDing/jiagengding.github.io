@@ -50,7 +50,7 @@
 <meta itemprop="name" content=" Linux 常用命令">
 <meta itemprop="description" content="基本命令、创建用户、修改文件权限、解压缩、grep"><meta itemprop="datePublished" content="2022-09-27T15:18:08+08:00" />
 <meta itemprop="dateModified" content="2022-09-27T15:18:08+08:00" />
-<meta itemprop="wordCount" content="706">
+<meta itemprop="wordCount" content="757">
 <meta itemprop="keywords" content="linux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=" Linux 常用命令"/>
 <meta name="twitter:description" content="基本命令、创建用户、修改文件权限、解压缩、grep"/>
@@ -99,18 +99,18 @@
 		
 		
 
-		<li class="language-item active">
+		<li class="language-item ">
 			
-			<a href="https://blog.diing.uk/post/linux-command/">中文</a>
+			<a href="https://blog.diing.uk/en/">English</a>
 			
 		</li>
 		
 		
 		
 
-		<li class="language-item ">
+		<li class="language-item active">
 			
-			<a href="https://blog.diing.uk/en/">English</a>
+			<a href="https://blog.diing.uk/post/linux-command/">中文</a>
 			
 		</li>
 		
@@ -134,18 +134,18 @@
 		
 		
 
-		<li class="language-item active">
+		<li class="language-item ">
 			
-			<a href="https://blog.diing.uk/post/linux-command/">中文</a>
+			<a href="https://blog.diing.uk/en/">English</a>
 			
 		</li>
 		
 		
 		
 
-		<li class="language-item ">
+		<li class="language-item active">
 			
-			<a href="https://blog.diing.uk/en/">English</a>
+			<a href="https://blog.diing.uk/post/linux-command/">中文</a>
 			
 		</li>
 		
@@ -185,7 +185,7 @@
         <div class="post-category">
             <a href="/categories/%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"> 简单教程 </a>
             </div>
-          <span class="more-meta"> 约 706 字 </span>
+          <span class="more-meta"> 约 757 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -456,6 +456,7 @@
 <ul>
 <li><code>export PATH=$PATH:/usr/bin</code> 仅对当前用户的当前会话有效</li>
 <li>编辑 <code>~/.profile</code> 或 <code>~/.bashrc</code> 文件，最后一行加入 <code>export PATH=$PATH:/usr/bin</code> 并通过 <code>source .profile</code> 立即永久生效</li>
+<li>在项目目录下新建 <code>project.profile</code> 文件并写入环境变量（ <code>export PATH=$PATH:/usr/bin</code>），在 <code>~/.profile</code> 最后一行加入 <code>source ~/project/project.profile</code></li>
 </ul>
     </div>
 

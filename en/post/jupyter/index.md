@@ -1,14 +1,13 @@
 
-安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。
 
 <!--more-->
 {{< toc >}}
 
-> 本文以 **Debian/Ubuntu** 为例
+> This article uses **Debian/Ubuntu** as an example.
 
-## 安装 JupyterLab
+## Install JupyterLab
 
-1. 安装 pip 与 JupyterLab
+1. Install pip & JupyterLab
 
 ```
 sudo apt update
@@ -17,51 +16,51 @@ sudo apt install pip3
 pip3 install jupyterlab
 ```
 
-2. 添加PATH
+2. Add PATH
 
 `export PATH=$PATH:/path/to/jupyterlab`
 
 `echo $PATH`
 
-## 安装较新版本 nodejs
+## Install the latest version of nodejs
 
-1. 添加 apt 源文件并更新源:
+1. Add apt repository and update:
 
-`curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -`
+`curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - `
 
-2. 安装 nodejs 与 npm
+2. Install nodejs & npm
 
 `sudo apt install nodejs`
 
-3. 查看 nodejs 版本
+3. Check nodejs version
 
 `npm --version`
 
-## 配置 JupyterLab
+## Configure JupyterLab
 
-1. 生成配置文件
+1. Generate config file
 
 `jupyter lab --generate-config`
 
-2. 创建哈希密码
+2. Generate HASH key
 
-利用`ipython`创建密码
+Use `ipython` generate
 
 ```python
 from jupyter_server.auth import passwd
 passwd(algorithm='sha1')
-# 输入两次密码并保存sha1值
+# input password twice and save the HASH key
 ```
 
-3. 修改 JupyterLab 配置文件
+3. Modify JupyterLab config file
 
 `mkdir ~/JupyterLab`
 
-打开配置文件
+open config file by vim or nano
 
 `vim ~/.jupyter/jupyter_lab_config.py`
 
-修改并取消注释（可以用vim搜索关键词）
+modify and uncomment ( Using vim to search keyword )
 
 ```
 c.NotebookApp.allow_root = True
@@ -69,23 +68,23 @@ c.NotebookApp.base_url = '/jupyter'
 c.NotebookApp.ip = '0.0.0.0'
 c.NotebookApp.notebook_dir = 'JupyterLab'
 c.NotebookApp.open_browser = False
-c.NotebookApp.password = '<上面保存的sha1值>'
+c.NotebookApp.password = '<HASH key>'
 c.NotebookApp.port = 8080
 ```
 
-`:wq` 保存并退出
+`:wq` save and quit
 
-## 构建 JupyterLab 并启动
+## Build JupyterLab and start
 
 `jupyter lab build --dev-build=False --minimize=False`
 
 `nohup jupyter lab &`
 
-> 到现在为止已经可以用 http://公网ip:8080 访问 JupyterLab，后文介绍使用 https 访问以及开机自启动
+> So far JupyterLab can be accessed using http://public-ip:8080, access using https and auto-start will be described later.
 
-## 使用 https 访问
+## Access by https
 
-将下列代码添加到 nginx 配置文件 (`/etc/nginx/nginx.conf`)
+Add the followed config into nginx-config-file (`/etc/nginx/nginx.conf`)
 
 ```
 client_max_body_size 1G;
@@ -104,13 +103,13 @@ location /jupyter {
     }
 ```
 
-## 开机自启动
+## Auto start
 
-使用 systemctl 管理
+Manage by systemctl
 
 `vim /etc/systemd/system/jupyter.service`
 
-写入如下代码
+Write followed codes
 
 ```bash
 [Unit]
@@ -127,15 +126,12 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
-> 将aaa改为自己的用户名，路径等自行修改
+> Change aaa to your own username, and change the path to yourself.
 
-启动 JupyterLab
+Start JupyterLab
 
 ```
 systemctl enable jupyter
 systemctl start jupyter
 ```
-
-## 参考资料和推荐阅读
-
-[添加 swap 空间 ](https://cloud.tencent.com/developer/article/1835500)
+## References and Recommended Articles

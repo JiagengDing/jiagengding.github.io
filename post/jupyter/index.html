@@ -50,7 +50,7 @@
 <meta itemprop="name" content="访问服务器 Jupyter Lab 并使用 Nginx 反向代理">
 <meta itemprop="description" content="安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。"><meta itemprop="datePublished" content="2022-09-22T15:18:49+08:00" />
 <meta itemprop="dateModified" content="2022-09-22T15:18:49+08:00" />
-<meta itemprop="wordCount" content="506">
+<meta itemprop="wordCount" content="507">
 <meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="访问服务器 Jupyter Lab 并使用 Nginx 反向代理"/>
 <meta name="twitter:description" content="安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。"/>
@@ -99,18 +99,18 @@
 		
 		
 
-		<li class="language-item active">
+		<li class="language-item ">
 			
-			<a href="https://blog.diing.uk/post/jupyter/">中文</a>
+			<a href="https://blog.diing.uk/en/post/jupyter/">English</a>
 			
 		</li>
 		
 		
 		
 
-		<li class="language-item ">
+		<li class="language-item active">
 			
-			<a href="https://blog.diing.uk/en/">English</a>
+			<a href="https://blog.diing.uk/post/jupyter/">中文</a>
 			
 		</li>
 		
@@ -134,18 +134,18 @@
 		
 		
 
-		<li class="language-item active">
+		<li class="language-item ">
 			
-			<a href="https://blog.diing.uk/post/jupyter/">中文</a>
+			<a href="https://blog.diing.uk/en/post/jupyter/">English</a>
 			
 		</li>
 		
 		
 		
 
-		<li class="language-item ">
+		<li class="language-item active">
 			
-			<a href="https://blog.diing.uk/en/">English</a>
+			<a href="https://blog.diing.uk/post/jupyter/">中文</a>
 			
 		</li>
 		
@@ -185,7 +185,7 @@
         <div class="post-category">
             <a href="/categories/%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"> 简单教程 </a>
             </div>
-          <span class="more-meta"> 约 506 字 </span>
+          <span class="more-meta"> 约 507 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -224,7 +224,9 @@
 </nav>
 </div>
 
-<p>本文以 Debian/Ubantu 为例</p>
+<blockquote>
+<p>本文以 <strong>Debian/Ubuntu</strong> 为例</p>
+</blockquote>
 <h2 id="安装-jupyterlab">安装 JupyterLab</h2>
 <ol>
 <li>安装 pip 与 JupyterLab</li>
@@ -264,7 +266,6 @@ pip3 install jupyterlab
 <pre><code class="language-python">from jupyter_server.auth import passwd
 passwd(algorithm='sha1')
 # 输入两次密码并保存sha1值
-
 </code></pre>
 <ol start="3">
 <li>修改 JupyterLab 配置文件</li>
@@ -289,7 +290,7 @@ c.NotebookApp.port = 8080
 <p>到现在为止已经可以用 http://公网ip:8080 访问 JupyterLab，后文介绍使用 https 访问以及开机自启动</p>
 </blockquote>
 <h2 id="使用-https-访问">使用 https 访问</h2>
-<p>将下列代码添加到 nginx 配置文件</p>
+<p>将下列代码添加到 nginx 配置文件 (<code>/etc/nginx/nginx.conf</code>)</p>
 <pre><code>client_max_body_size 1G;
 location /jupyter {
         proxy_pass   http://127.0.0.1:8080;
@@ -315,7 +316,7 @@ After=network.target
 [Service]
 Type=simple
 ExecStart=/home/aaa/.local/bin/jupyter-lab --config=/home/aaa/.jupyter/jupyter_lab_config.py
-User=jiageng
+User=aaa
 WorkingDirectory=/home/aaa/
 Restart=always
 RestartSec=10
