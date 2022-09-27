@@ -195,3 +195,5 @@ Open system setting - private dns and input the provider hostname, such as `dns.
 [ MacOS encrypted-dns configs ](https://github.com/paulmillr/encrypted-dns)
 
 [ DNS-over-HTTP/3 in Android ](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html)
+
+[DNS Encryption Explained](https://blog.cloudflare.com/dns-encryption-explained/)
