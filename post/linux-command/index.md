@@ -21,13 +21,14 @@
 | which  | which cat      | 查找可执行文件路径    |
 | find   | find a.txt     | 查找文件位置          |
 
-| 命令    | 举例                 | 作用                 |
-| ---     | ---                  | ---                  |
-| chsh -s | chsh -s /usr/bin/zsh | 修改当前用户 shell   |
-| login   | login bob            | 登陆用户             |
-| crontab | crontab -e           | 修改定时自动执行任务 |
-| free -h | free -h              | 显示 swap 分区大小   |
-| top     | top                  | 动态显示当前进程     |
+| 命令               | 举例                 | 作用                 |
+| ---                | ---                  | ---                  |
+| chsh -s            | chsh -s /usr/bin/zsh | 修改当前用户 shell   |
+| login              | login bob            | 登陆用户             |
+| crontab            | crontab -e           | 修改定时自动执行任务 |
+| free -h            | free -h              | 显示 swap 分区大小   |
+| top                | top                  | 动态显示当前进程     |
+| do-release-upgrade | do-release-upgrade   | 更新系统             |
 
 ## 新建用户和修改用户密码
 
@@ -90,3 +91,33 @@ P.S. [ 详细内容 ](https://www.runoob.com/linux/linux-comm-chmod.html)
 - `export PATH=$PATH:/usr/bin` 仅对当前用户的当前会话有效
 - 编辑 `~/.profile` 或 `~/.bashrc` 文件，最后一行加入 `export PATH=$PATH:/usr/bin` 并通过 `source .profile` 立即永久生效
 - 在项目目录下新建 `project.profile` 文件并写入环境变量（ `export PATH=$PATH:/usr/bin`），在 `~/.profile` 最后一行加入 `source ~/project/project.profile`
+
+## 使用 UFW 管理防火墙
+
+- `ufw allow 1022` 开放 1022 端口
+- `ufw deny 1022` 关闭 1022 端口
+- `ufw show status` 显示防火墙状态
+- `ufw enable` 打开防火墙
+- `ufw disable` 关闭防火墙
+
+## 添加 SWAP 分区
+
+1. 添加交换文件并设置权限
+
+`sudo fallocate -l 1G /swapfile`
+
+`sudo chmod 600 /swapfile`
+
+2. 设置和启用 SWAP
+
+`sudo mkswap /swapfile`
+
+`sudo swapon /swapfile`
+
+3. 打开 `/etc/fstab` 并在结尾添加
+
+`/swapfile swap swap defaults 0 0`
+
+4. 检查 SWAP
+
+`sudo free -h`
