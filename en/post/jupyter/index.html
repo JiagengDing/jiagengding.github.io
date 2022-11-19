@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> Build Remote JupyterLab and Reverse Proxy by Nginx  - Jiageng&#39;s Blog</title>
+  <title> Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy - Jiageng&#39;s Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.104.1 with theme even" />
+<meta name="generator" content="Hugo 0.105.0 with theme even" />
 
 
 <link rel="canonical" href="https://blog.diing.uk/en/post/jupyter/" />
@@ -39,19 +39,19 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content=" Build Remote JupyterLab and Reverse Proxy by Nginx " />
+<meta property="og:title" content=" Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.diing.uk/en/post/jupyter/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-09-27T21:14:23+08:00" />
 <meta property="article:modified_time" content="2022-09-27T21:14:23+08:00" />
 
-<meta itemprop="name" content=" Build Remote JupyterLab and Reverse Proxy by Nginx ">
+<meta itemprop="name" content=" Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy">
 <meta itemprop="description" content=""><meta itemprop="datePublished" content="2022-09-27T21:14:23+08:00" />
 <meta itemprop="dateModified" content="2022-09-27T21:14:23+08:00" />
-<meta itemprop="wordCount" content="291">
+<meta itemprop="wordCount" content="314">
 <meta itemprop="keywords" content="python,linux," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=" Build Remote JupyterLab and Reverse Proxy by Nginx "/>
+<meta name="twitter:title" content=" Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy"/>
 <meta name="twitter:description" content=""/>
 
 <!--[if lte IE 9]>
@@ -177,14 +177,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title"> Build Remote JupyterLab and Reverse Proxy by Nginx </h1>
+      <h1 class="post-title"> Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2022-09-27 </span>
         <div class="post-category">
             <a href="/en/categories/simple-guide/"> simple-guide </a>
             </div>
-          <span class="more-meta"> 291 words </span>
+          <span class="more-meta"> 314 words </span>
           <span class="more-meta"> 1 min read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -199,7 +199,12 @@
     <li><a href="#install-the-latest-version-of-nodejs">Install the latest version of nodejs</a></li>
     <li><a href="#configure-jupyterlab">Configure JupyterLab</a></li>
     <li><a href="#build-jupyterlab-and-start">Build JupyterLab and start</a></li>
-    <li><a href="#access-by-https">Access by https</a></li>
+    <li><a href="#access-by-https">Access by https</a>
+      <ol>
+        <li><a href="#nginx">Nginx</a></li>
+        <li><a href="#caddy">Caddy</a></li>
+      </ol>
+    </li>
     <li><a href="#auto-start">Auto start</a></li>
     <li><a href="#references-and-recommended-articles">References and Recommended Articles</a></li>
   </ol>
@@ -215,7 +220,12 @@
     <li><a href="#install-the-latest-version-of-nodejs">Install the latest version of nodejs</a></li>
     <li><a href="#configure-jupyterlab">Configure JupyterLab</a></li>
     <li><a href="#build-jupyterlab-and-start">Build JupyterLab and start</a></li>
-    <li><a href="#access-by-https">Access by https</a></li>
+    <li><a href="#access-by-https">Access by https</a>
+      <ol>
+        <li><a href="#nginx">Nginx</a></li>
+        <li><a href="#caddy">Caddy</a></li>
+      </ol>
+    </li>
     <li><a href="#auto-start">Auto start</a></li>
     <li><a href="#references-and-recommended-articles">References and Recommended Articles</a></li>
   </ol>
@@ -288,6 +298,7 @@ c.NotebookApp.port = 8080
 <p>So far JupyterLab can be accessed using http://public-ip:8080, access using https and auto-start will be described later.</p>
 </blockquote>
 <h2 id="access-by-https">Access by https</h2>
+<h3 id="nginx">Nginx</h3>
 <p>Add the followed config into nginx-config-file (<code>/etc/nginx/nginx.conf</code>)</p>
 <pre><code>client_max_body_size 1G;
 location /jupyter {
@@ -304,6 +315,14 @@ location /jupyter {
         proxy_redirect off;
     }
 </code></pre>
+<h3 id="caddy">Caddy</h3>
+<p>Appending this codes to Caddyfile</p>
+<pre><code>your_domain_name
+
+reverse_proxy /jupyter/* 127.0.0.1:8080
+</code></pre>
+<p>Reload Caddyfile and start Caddy</p>
+<p><code>caddy reload &amp;&amp; caddy start</code></p>
 <h2 id="auto-start">Auto start</h2>
 <p>Manage by systemctl</p>
 <p><code>vim /etc/systemd/system/jupyter.service</code></p>

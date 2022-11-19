@@ -5,7 +5,7 @@ Welcome! This is my personal website for recording daily life and sharing knowle
 
 I am a mathematics student and avid dreamer, studying in the [ Computer Science Faculty ](https://www.bristol.ac.uk/engineering/departments/computerscience/) of [University of Bristol](https://www.bristol.ac.uk).
 
-I got my Bachelor's in Mathematics and my Bachelor's in Finance from [SDUFE](https://www.sdufe.edu.cn).
+I got my Bachelor's in Mathematics and Bachelor's in Finance from [SDUFE](https://www.sdufe.edu.cn).
 
 I am a nerd who loves Maths, Linux, Macintosh and Vim, interested in learning new technologies and tools.
 

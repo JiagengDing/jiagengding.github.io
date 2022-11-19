@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.104.1 with theme even" />
+<meta name="generator" content="Hugo 0.105.0 with theme even" />
 
 
 <link rel="canonical" href="https://blog.diing.uk/post/doh/" />
@@ -55,7 +55,7 @@
 后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
 使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。"><meta itemprop="datePublished" content="2022-09-24T17:51:04+08:00" />
 <meta itemprop="dateModified" content="2022-09-24T17:51:04+08:00" />
-<meta itemprop="wordCount" content="720">
+<meta itemprop="wordCount" content="733">
 <meta itemprop="keywords" content="dns," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="在 Linux、Mac、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）"/>
 <meta name="twitter:description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。
@@ -192,7 +192,7 @@
         <div class="post-category">
             <a href="/categories/%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"> 简单教程 </a>
             </div>
-          <span class="more-meta"> 约 720 字 </span>
+          <span class="more-meta"> 约 733 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -320,6 +320,7 @@ insecure_tls_skip_verify = false
 <pre><code>nameserver ::1
 nameserver 127.0.0.1
 </code></pre>
+<p><code>sudo chattr +i /etc/resolv.conf</code> 禁止修改 DNS　配置文件</p>
 <ol start="7">
 <li>使用 dig 命令查看是否完成修改（可选）</li>
 </ol>
@@ -425,7 +426,7 @@ nameserver 127.0.0.1
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         <a class="next" href="/post/jupyter/">
-            <span class="next-text nav-default">访问服务器 Jupyter Lab 并使用 Nginx 反向代理</span>
+            <span class="next-text nav-default">访问服务器 Jupyter Lab 并使用 Nginx/Caddy 反向代理</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

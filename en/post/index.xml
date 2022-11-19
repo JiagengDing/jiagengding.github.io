@@ -9,7 +9,7 @@
     <copyright>JiagengDing</copyright>
     <lastBuildDate>Tue, 27 Sep 2022 21:14:23 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/en/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title> Build Remote JupyterLab and Reverse Proxy by Nginx </title>
+      <title> Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy</title>
       <link>https://blog.diing.uk/en/post/jupyter/</link>
       <pubDate>Tue, 27 Sep 2022 21:14:23 +0800</pubDate>
       
@@ -23,7 +23,9 @@
       <pubDate>Sun, 25 Sep 2022 15:32:21 +0800</pubDate>
       
       <guid>https://blog.diing.uk/en/post/doh/</guid>
-      <description>&lt;p&gt;A simple guide about using encrypted dns in Linux、Mac、iOSand Android.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A simple guide about using encrypted dns in Linux、Mac、iOS and Android.&lt;/p&gt;
+&lt;p&gt;Traditional DNS queries and responses are sent over UDP or TCP without encryption. This is vulnerable to eavesdropping and spoofing (including DNS-based Internet filtering).&lt;/p&gt;
+&lt;p&gt;Encrypted DNS can make DNS queries and responses more safe.&lt;/p&gt;</description>
     </item>
     
     <item>

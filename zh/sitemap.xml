@@ -86,6 +86,13 @@
   </url>
   
   <url>
+    <loc>https://blog.diing.uk/post/encrypt-dns/</loc>
+    <lastmod>2022-09-15T21:31:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.diing.uk/tags/git/</loc>
     <lastmod>2022-02-21T11:06:14+08:00</lastmod>
     <changefreq>weekly</changefreq>

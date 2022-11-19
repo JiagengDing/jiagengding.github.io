@@ -1,5 +1,9 @@
 
-A simple guide about using encrypted dns in Linux、Mac、iOSand Android.
+A simple guide about using encrypted dns in Linux、Mac、iOS and Android.
+
+Traditional DNS queries and responses are sent over UDP or TCP without encryption. This is vulnerable to eavesdropping and spoofing (including DNS-based Internet filtering).
+
+Encrypted DNS can make DNS queries and responses more safe.
 
 <!--more-->
 {{< toc >}}
@@ -113,6 +117,8 @@ open /etc/resolv.conf file and insert in the first line：
 nameserver ::1
 nameserver 127.0.0.1
 ```
+
+`sudo chattr +i /etc/resolv.conf` to prohibit modification
 
 7. Use `dig` to check (Option)
 

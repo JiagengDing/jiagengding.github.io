@@ -14,7 +14,7 @@
       <pubDate>Tue, 27 Sep 2022 15:18:08 +0800</pubDate>
       
       <guid>https://blog.diing.uk/post/linux-command/</guid>
-      <description>&lt;p&gt;基本命令、创建用户、修改文件权限、解压缩、grep&lt;/p&gt;</description>
+      <description>&lt;p&gt;基本命令、创建用户、修改文件权限、解压缩、grep、防火墙、SWAP&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -38,12 +38,21 @@
     </item>
     
     <item>
-      <title>访问服务器 Jupyter Lab 并使用 Nginx 反向代理</title>
+      <title>访问服务器 Jupyter Lab 并使用 Nginx/Caddy 反向代理</title>
       <link>https://blog.diing.uk/post/jupyter/</link>
       <pubDate>Thu, 22 Sep 2022 15:18:49 +0800</pubDate>
       
       <guid>https://blog.diing.uk/post/jupyter/</guid>
       <description>&lt;p&gt;安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何在各终端使用加密DNS</title>
+      <link>https://blog.diing.uk/post/encrypt-dns/</link>
+      <pubDate>Thu, 15 Sep 2022 21:31:17 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/post/encrypt-dns/</guid>
+      <description></description>
     </item>
     
     <item>

@@ -115,6 +115,8 @@ nameserver ::1
 nameserver 127.0.0.1
 ```
 
+`sudo chattr +i /etc/resolv.conf` 禁止修改 DNS　配置文件
+
 7. 使用 dig 命令查看是否完成修改（可选）
 
 `dig baidu.com`

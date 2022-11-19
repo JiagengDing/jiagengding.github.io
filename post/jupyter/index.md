@@ -83,8 +83,9 @@ c.NotebookApp.port = 8080
 
 > 到现在为止已经可以用 http://公网ip:8080 访问 JupyterLab，后文介绍使用 https 访问以及开机自启动
 
-## 使用 https 访问
+## https 访问
 
+### Nginx
 将下列代码添加到 nginx 配置文件 (`/etc/nginx/nginx.conf`)
 
 ```
@@ -103,6 +104,20 @@ location /jupyter {
         proxy_redirect off;
     }
 ```
+
+### Caddy
+
+将下列代码添加到 Caddyfile
+
+```
+your_domain_name
+
+reverse_proxy /jupyter/* 127.0.0.1:8080
+```
+
+重新读取 Caddyfile 并启动 Caddy
+
+`caddy reload && caddy start`
 
 ## 开机自启动
 

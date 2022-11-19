@@ -9,7 +9,7 @@
     <copyright>JiagengDing</copyright>
     <lastBuildDate>Tue, 27 Sep 2022 21:14:23 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title> Build Remote JupyterLab and Reverse Proxy by Nginx </title>
+      <title> Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy</title>
       <link>https://blog.diing.uk/en/post/jupyter/</link>
       <pubDate>Tue, 27 Sep 2022 21:14:23 +0800</pubDate>
       
@@ -23,7 +23,9 @@
       <pubDate>Sun, 25 Sep 2022 15:32:21 +0800</pubDate>
       
       <guid>https://blog.diing.uk/en/post/doh/</guid>
-      <description>&lt;p&gt;A simple guide about using encrypted dns in Linux、Mac、iOSand Android.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A simple guide about using encrypted dns in Linux、Mac、iOS and Android.&lt;/p&gt;
+&lt;p&gt;Traditional DNS queries and responses are sent over UDP or TCP without encryption. This is vulnerable to eavesdropping and spoofing (including DNS-based Internet filtering).&lt;/p&gt;
+&lt;p&gt;Encrypted DNS can make DNS queries and responses more safe.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -61,10 +63,11 @@
       <guid>https://blog.diing.uk/en/about/</guid>
       <description>Welcome! This is my personal website for recording daily life and sharing knowledge.
 About Me I am a mathematics student and avid dreamer, studying in the Computer Science Faculty of University of Bristol.
-I got my Bachelor&amp;rsquo;s in Mathematics and my Bachelor&amp;rsquo;s in Finance from SDUFE.
+I got my Bachelor&amp;rsquo;s in Mathematics and Bachelor&amp;rsquo;s in Finance from SDUFE.
 I am a nerd who loves Maths, Linux, Macintosh and Vim, interested in learning new technologies and tools.
 Shell: Zsh
-Terminal: Alacritty and iTerm2</description>
+Terminal: Alacritty and iTerm2
+Terminal Font: Fira Code Nerd Font</description>
     </item>
     
   </channel>

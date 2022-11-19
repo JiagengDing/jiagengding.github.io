@@ -84,6 +84,8 @@ c.NotebookApp.port = 8080
 
 ## Access by https
 
+### Nginx
+
 Add the followed config into nginx-config-file (`/etc/nginx/nginx.conf`)
 
 ```
@@ -102,6 +104,20 @@ location /jupyter {
         proxy_redirect off;
     }
 ```
+
+### Caddy
+
+Appending this codes to Caddyfile
+
+```
+your_domain_name
+
+reverse_proxy /jupyter/* 127.0.0.1:8080
+```
+
+Reload Caddyfile and start Caddy
+
+`caddy reload && caddy start`
 
 ## Auto start
 
