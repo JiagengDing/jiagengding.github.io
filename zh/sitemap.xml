@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.diing.uk/post/my-arch/</loc>
+    <lastmod>2022-12-01T23:05:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/</loc>
+    <lastmod>2022-12-01T23:05:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/tags/linux/</loc>
+    <lastmod>2022-12-01T23:05:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/post/</loc>
+    <lastmod>2022-12-01T23:05:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/tags/</loc>
+    <lastmod>2022-12-01T23:05:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.diing.uk/post/linux-command/</loc>
     <lastmod>2022-09-27T15:18:08+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -10,34 +45,6 @@
   
   <url>
     <loc>https://blog.diing.uk/categories/</loc>
-    <lastmod>2022-09-27T15:18:08+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/</loc>
-    <lastmod>2022-09-27T15:18:08+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/tags/linux/</loc>
-    <lastmod>2022-09-27T15:18:08+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/post/</loc>
-    <lastmod>2022-09-27T15:18:08+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/tags/</loc>
     <lastmod>2022-09-27T15:18:08+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -81,13 +88,6 @@
   <url>
     <loc>https://blog.diing.uk/post/jupyter/</loc>
     <lastmod>2022-09-22T15:18:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/post/encrypt-dns/</loc>
-    <lastmod>2022-09-15T21:31:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

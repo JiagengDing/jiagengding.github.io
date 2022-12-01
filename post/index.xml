@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Tue, 27 Sep 2022 15:18:08 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Dec 2022 23:05:04 +0000</lastBuildDate><atom:link href="https://blog.diing.uk/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch Linux 安装指南</title>
+      <link>https://blog.diing.uk/post/my-arch/</link>
+      <pubDate>Thu, 01 Dec 2022 23:05:04 +0000</pubDate>
+      
+      <guid>https://blog.diing.uk/post/my-arch/</guid>
+      <description>&lt;p&gt;安装 + lightDM + i3wm&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title> Linux 常用命令</title>
       <link>https://blog.diing.uk/post/linux-command/</link>
@@ -44,15 +53,6 @@
       
       <guid>https://blog.diing.uk/post/jupyter/</guid>
       <description>&lt;p&gt;安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>如何在各终端使用加密DNS</title>
-      <link>https://blog.diing.uk/post/encrypt-dns/</link>
-      <pubDate>Thu, 15 Sep 2022 21:31:17 +0800</pubDate>
-      
-      <guid>https://blog.diing.uk/post/encrypt-dns/</guid>
-      <description></description>
     </item>
     
     <item>
