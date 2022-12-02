@@ -1,5 +1,5 @@
 
-安装 + lightDM + i3wm
+安装 + yay + lightDM + i3wm
 
 <!--more-->
 {{< toc >}}
@@ -83,11 +83,53 @@ kill wpa_supplican dhcpcd
 reboot
 ```
 
+### yay
 
+1. 安装依赖 `sudo pacman -S --needed base-devel git`
+2. 克隆仓库 `git clone https://aur.archlinux.org/yay.git`
+3. 安装 `cd yay && makepkg -si`
 
+### i3wm
 
+- 安装 `sudo pacman -S i3wm rofi xorg xorg-xinit alacritty`
+- 安装输入法 `sudo pacman -S fcitx5-im fcitx5-rime fcitx5-configtool`
+- 安装桌面壁纸应用 `sudo pacman -S feh variety`
+- 安装字体 `sudo pacman -S ttf-droid wqy-microhei wqy-zenhei noto-fonts-emoji ttf-font-awesome `
+- 配置 xinitrc `cp /etc/X11/xinit/xinitrc ~/.xinitrc`
+- 编辑 .xinitrc 文件 
+```
+# twm &
+# xclock -geometry 50x50-1+1 &
+# xterm -geometry 80x50+494+51 &
+# xterm -geometry 80x20+494-0 &
+# exec xterm -geometry 80x66+0+0 -name login
+
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS="@im=fcitx5"
+fcitx5 &
+exec i3
+```
+
+此时输入 `startx` 即可进入 i3wm
+
+### LightDM
+
+1. 安装 lightDM `sudo pacman -S lightdm`
+2. 安装 greeter `sudo pacman -S lightdm-webkit2-greeter` 或者其他 greeter
+3. 修改配置文件 /etc/lightdm/lightdm.conf
+```
+[Seat:*]
+...
+greeter-session=lightdm-webkit2-greeter
+...
+```
+4. 开机自启 `sudo systemctl enable lightdm.service && sudo systemctl start lightdm.service `
+5. 可选修改主题 /etc/lightdm/lightdm-webkit2-greeter.conf
 
 
 ## 参考资料和推荐阅读
 
 - https://wiki.archlinux.org/title/Installation_guide
+- https://wiki.archlinux.org/title/I3
+- https://wiki.archlinux.org/title/LightDM

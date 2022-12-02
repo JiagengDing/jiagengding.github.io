@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Jiageng Ding" /><meta name="description" content="安装 &#43; lightDM &#43; i3wm
+<meta name="author" content="Jiageng Ding" /><meta name="description" content="安装 &#43; yay &#43; lightDM &#43; i3wm
 " /><meta name="keywords" content="share knowledge, record life" />
 
 
@@ -41,19 +41,19 @@
 
 
 <meta property="og:title" content="Arch Linux 安装指南" />
-<meta property="og:description" content="安装 &#43; lightDM &#43; i3wm" />
+<meta property="og:description" content="安装 &#43; yay &#43; lightDM &#43; i3wm" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.diing.uk/post/my-arch/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-12-01T23:05:04+00:00" />
 <meta property="article:modified_time" content="2022-12-01T23:05:04+00:00" />
 
 <meta itemprop="name" content="Arch Linux 安装指南">
-<meta itemprop="description" content="安装 &#43; lightDM &#43; i3wm"><meta itemprop="datePublished" content="2022-12-01T23:05:04+00:00" />
+<meta itemprop="description" content="安装 &#43; yay &#43; lightDM &#43; i3wm"><meta itemprop="datePublished" content="2022-12-01T23:05:04+00:00" />
 <meta itemprop="dateModified" content="2022-12-01T23:05:04+00:00" />
-<meta itemprop="wordCount" content="363">
+<meta itemprop="wordCount" content="549">
 <meta itemprop="keywords" content="linux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Arch Linux 安装指南"/>
-<meta name="twitter:description" content="安装 &#43; lightDM &#43; i3wm"/>
+<meta name="twitter:description" content="安装 &#43; yay &#43; lightDM &#43; i3wm"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -183,8 +183,8 @@
       <div class="post-meta">
         <span class="post-time"> 2022-12-01 </span>
         
-          <span class="more-meta"> 约 363 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 549 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -198,6 +198,9 @@
       <ol>
         <li><a href="#启动-live-环境">启动 Live 环境</a></li>
         <li><a href="#安装系统">安装系统</a></li>
+        <li><a href="#yay">yay</a></li>
+        <li><a href="#i3wm">i3wm</a></li>
+        <li><a href="#lightdm">LightDM</a></li>
       </ol>
     </li>
     <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
@@ -206,7 +209,7 @@
   </div>
 </div>
     <div class="post-content">
-      <p>安装 + lightDM + i3wm</p>
+      <p>安装 + yay + lightDM + i3wm</p>
 <div>
 	<h2>Table Of Contents</h2>
 	<nav id="TableOfContents">
@@ -215,6 +218,9 @@
       <ol>
         <li><a href="#启动-live-环境">启动 Live 环境</a></li>
         <li><a href="#安装系统">安装系统</a></li>
+        <li><a href="#yay">yay</a></li>
+        <li><a href="#i3wm">i3wm</a></li>
+        <li><a href="#lightdm">LightDM</a></li>
       </ol>
     </li>
     <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
@@ -324,9 +330,54 @@ pacman -S wpa_supplican netctl neovim dhcpcd ranger
 kill wpa_supplican dhcpcd
 reboot
 </code></pre>
+<h3 id="yay">yay</h3>
+<ol>
+<li>安装依赖 <code>sudo pacman -S --needed base-devel git</code></li>
+<li>克隆仓库 <code>git clone https://aur.archlinux.org/yay.git</code></li>
+<li>安装 <code>cd yay &amp;&amp; makepkg -si</code></li>
+</ol>
+<h3 id="i3wm">i3wm</h3>
+<ul>
+<li>安装 <code>sudo pacman -S i3wm rofi xorg xorg-xinit alacritty</code></li>
+<li>安装输入法 <code>sudo pacman -S fcitx5-im fcitx5-rime fcitx5-configtool</code></li>
+<li>安装桌面壁纸应用 <code>sudo pacman -S feh variety</code></li>
+<li>安装字体 <code>sudo pacman -S ttf-droid wqy-microhei wqy-zenhei noto-fonts-emoji ttf-font-awesome </code></li>
+<li>配置 xinitrc <code>cp /etc/X11/xinit/xinitrc ~/.xinitrc</code></li>
+<li>编辑 .xinitrc 文件</li>
+</ul>
+<pre><code># twm &amp;
+# xclock -geometry 50x50-1+1 &amp;
+# xterm -geometry 80x50+494+51 &amp;
+# xterm -geometry 80x20+494-0 &amp;
+# exec xterm -geometry 80x66+0+0 -name login
+
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS=&quot;@im=fcitx5&quot;
+fcitx5 &amp;
+exec i3
+</code></pre>
+<p>此时输入 <code>startx</code> 即可进入 i3wm</p>
+<h3 id="lightdm">LightDM</h3>
+<ol>
+<li>安装 lightDM <code>sudo pacman -S lightdm</code></li>
+<li>安装 greeter <code>sudo pacman -S lightdm-webkit2-greeter</code> 或者其他 greeter</li>
+<li>修改配置文件 /etc/lightdm/lightdm.conf</li>
+</ol>
+<pre><code>[Seat:*]
+...
+greeter-session=lightdm-webkit2-greeter
+...
+</code></pre>
+<ol start="4">
+<li>开机自启 <code>sudo systemctl enable lightdm.service &amp;&amp; sudo systemctl start lightdm.service </code></li>
+<li>可选修改主题 /etc/lightdm/lightdm-webkit2-greeter.conf</li>
+</ol>
 <h2 id="参考资料和推荐阅读">参考资料和推荐阅读</h2>
 <ul>
 <li><a href="https://wiki.archlinux.org/title/Installation_guide">https://wiki.archlinux.org/title/Installation_guide</a></li>
+<li><a href="https://wiki.archlinux.org/title/I3">https://wiki.archlinux.org/title/I3</a></li>
+<li><a href="https://wiki.archlinux.org/title/LightDM">https://wiki.archlinux.org/title/LightDM</a></li>
 </ul>
     </div>
 
