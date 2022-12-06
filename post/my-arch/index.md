@@ -1,5 +1,5 @@
 
-安装 + yay + lightDM + i3wm
+安装 + yay + lightDM + i3wm + 软件包备份
 
 <!--more-->
 {{< toc >}}
@@ -130,11 +130,12 @@ greeter-session=lightdm-webkit2-greeter
 5. 可选修改主题 /etc/lightdm/lightdm-webkit2-greeter.conf
 
 
-### 应用备份
+### 软件备份
 
-- 备份 `	comm -23 <(pacman -Qeq|sort) <(pacman -Qmq|sort) > arch-pkglist
+- 备份安装的非本地软件至 arch-pkglist 文件 `comm -23 <(pacman -Qeq|sort) <(pacman -Qmq|sort) > arch-pkglist
 `
-- 安装 `sudo pacman -S $(< arch-pkglist)`
+- *或*备份包括从官方和 AUR 安装的所有软件 `(yay -Qeq|sort) > arch-pkglist`
+- 从 arch-pkglist 安装 `sudo pacman -S $(< arch-pkglist)`
 - 我的软件包备份 https://raw.githubusercontent.com/JiagengDing/.config/main/arch-pkglist
 
 
