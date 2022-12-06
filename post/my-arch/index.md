@@ -130,6 +130,14 @@ greeter-session=lightdm-webkit2-greeter
 5. 可选修改主题 /etc/lightdm/lightdm-webkit2-greeter.conf
 
 
+### 应用备份
+
+- 备份 `	comm -23 <(pacman -Qeq|sort) <(pacman -Qmq|sort) > arch-pkglist
+`
+- 安装 `sudo pacman -S $(< arch-pkglist)`
+- 我的软件包备份 https://raw.githubusercontent.com/JiagengDing/.config/main/arch-pkglist
+
+
 ## 参考资料和推荐阅读
 
 - https://wiki.archlinux.org/title/Installation_guide

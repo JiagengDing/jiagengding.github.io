@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.107.0 with theme even" />
+<meta name="generator" content="Hugo 0.108.0 with theme even" />
 
 
 <link rel="canonical" href="https://blog.diing.uk/post/my-arch/" />
@@ -46,11 +46,10 @@
 <meta property="og:url" content="https://blog.diing.uk/post/my-arch/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-12-01T23:05:04+00:00" />
 <meta property="article:modified_time" content="2022-12-01T23:05:04+00:00" />
-
 <meta itemprop="name" content="Arch Linux 安装指南">
 <meta itemprop="description" content="安装 &#43; yay &#43; lightDM &#43; i3wm"><meta itemprop="datePublished" content="2022-12-01T23:05:04+00:00" />
 <meta itemprop="dateModified" content="2022-12-01T23:05:04+00:00" />
-<meta itemprop="wordCount" content="551">
+<meta itemprop="wordCount" content="584">
 <meta itemprop="keywords" content="linux,arch," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Arch Linux 安装指南"/>
 <meta name="twitter:description" content="安装 &#43; yay &#43; lightDM &#43; i3wm"/>
@@ -183,7 +182,7 @@
       <div class="post-meta">
         <span class="post-time"> 2022-12-01 </span>
         
-          <span class="more-meta"> 约 551 字 </span>
+          <span class="more-meta"> 约 584 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -201,6 +200,7 @@
         <li><a href="#yay">yay</a></li>
         <li><a href="#i3wm">i3wm</a></li>
         <li><a href="#lightdm">LightDM</a></li>
+        <li><a href="#应用备份">应用备份</a></li>
       </ol>
     </li>
     <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
@@ -221,6 +221,7 @@
         <li><a href="#yay">yay</a></li>
         <li><a href="#i3wm">i3wm</a></li>
         <li><a href="#lightdm">LightDM</a></li>
+        <li><a href="#应用备份">应用备份</a></li>
       </ol>
     </li>
     <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
@@ -374,6 +375,12 @@ greeter-session=lightdm-webkit2-greeter
 <li>开机自启 <code>sudo systemctl enable lightdm.service &amp;&amp; sudo systemctl start lightdm.service </code></li>
 <li>可选修改主题 /etc/lightdm/lightdm-webkit2-greeter.conf</li>
 </ol>
+<h3 id="应用备份">应用备份</h3>
+<ul>
+<li>备份 <code>	comm -23 &lt;(pacman -Qeq|sort) &lt;(pacman -Qmq|sort) &gt; arch-pkglist </code></li>
+<li>安装 <code>sudo pacman -S $(&lt; arch-pkglist)</code></li>
+<li>我的软件包备份 <a href="https://raw.githubusercontent.com/JiagengDing/.config/main/arch-pkglist">https://raw.githubusercontent.com/JiagengDing/.config/main/arch-pkglist</a></li>
+</ul>
 <h2 id="参考资料和推荐阅读">参考资料和推荐阅读</h2>
 <ul>
 <li><a href="https://wiki.archlinux.org/title/Installation_guide">https://wiki.archlinux.org/title/Installation_guide</a></li>
