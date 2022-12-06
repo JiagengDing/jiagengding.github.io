@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Arch Linux 安装指南">
 <meta itemprop="description" content="安装 &#43; yay &#43; lightDM &#43; i3wm &#43; 软件包备份"><meta itemprop="datePublished" content="2022-12-01T23:05:04+00:00" />
 <meta itemprop="dateModified" content="2022-12-01T23:05:04+00:00" />
-<meta itemprop="wordCount" content="625">
+<meta itemprop="wordCount" content="624">
 <meta itemprop="keywords" content="linux,arch," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Arch Linux 安装指南"/>
 <meta name="twitter:description" content="安装 &#43; yay &#43; lightDM &#43; i3wm &#43; 软件包备份"/>
@@ -182,7 +182,7 @@
       <div class="post-meta">
         <span class="post-time"> 2022-12-01 </span>
         
-          <span class="more-meta"> 约 625 字 </span>
+          <span class="more-meta"> 约 624 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -197,12 +197,12 @@
       <ol>
         <li><a href="#启动-live-环境">启动 Live 环境</a></li>
         <li><a href="#安装系统">安装系统</a></li>
-        <li><a href="#yay">yay</a></li>
-        <li><a href="#i3wm">i3wm</a></li>
-        <li><a href="#lightdm">LightDM</a></li>
-        <li><a href="#软件备份">软件备份</a></li>
       </ol>
     </li>
+    <li><a href="#yay">yay</a></li>
+    <li><a href="#i3wm">i3wm</a></li>
+    <li><a href="#lightdm">LightDM</a></li>
+    <li><a href="#软件备份">软件备份</a></li>
     <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
   </ol>
 </nav>
@@ -218,12 +218,12 @@
       <ol>
         <li><a href="#启动-live-环境">启动 Live 环境</a></li>
         <li><a href="#安装系统">安装系统</a></li>
-        <li><a href="#yay">yay</a></li>
-        <li><a href="#i3wm">i3wm</a></li>
-        <li><a href="#lightdm">LightDM</a></li>
-        <li><a href="#软件备份">软件备份</a></li>
       </ol>
     </li>
+    <li><a href="#yay">yay</a></li>
+    <li><a href="#i3wm">i3wm</a></li>
+    <li><a href="#lightdm">LightDM</a></li>
+    <li><a href="#软件备份">软件备份</a></li>
     <li><a href="#参考资料和推荐阅读">参考资料和推荐阅读</a></li>
   </ol>
 </nav>
@@ -332,13 +332,13 @@ pacman -S wpa_supplican netctl neovim dhcpcd ranger
 kill wpa_supplican dhcpcd
 reboot
 </code></pre>
-<h3 id="yay">yay</h3>
+<h2 id="yay">yay</h2>
 <ol>
 <li>安装依赖 <code>sudo pacman -S --needed base-devel git</code></li>
 <li>克隆仓库 <code>git clone https://aur.archlinux.org/yay.git</code></li>
 <li>安装 <code>cd yay &amp;&amp; makepkg -si</code></li>
 </ol>
-<h3 id="i3wm">i3wm</h3>
+<h2 id="i3wm">i3wm</h2>
 <ul>
 <li>安装 <code>sudo pacman -S i3wm rofi xorg xorg-xinit alacritty</code></li>
 <li>安装输入法 <code>sudo pacman -S fcitx5-im fcitx5-rime fcitx5-configtool</code></li>
@@ -360,7 +360,7 @@ fcitx5 &amp;
 exec i3
 </code></pre>
 <p>此时输入 <code>startx</code> 即可进入 i3wm</p>
-<h3 id="lightdm">LightDM</h3>
+<h2 id="lightdm">LightDM</h2>
 <ol>
 <li>安装 lightDM <code>sudo pacman -S lightdm</code></li>
 <li>安装 greeter <code>sudo pacman -S lightdm-webkit2-greeter</code> 或者其他 greeter</li>
@@ -375,13 +375,19 @@ greeter-session=lightdm-webkit2-greeter
 <li>开机自启 <code>sudo systemctl enable lightdm.service &amp;&amp; sudo systemctl start lightdm.service </code></li>
 <li>可选修改主题 /etc/lightdm/lightdm-webkit2-greeter.conf</li>
 </ol>
-<h3 id="软件备份">软件备份</h3>
+<h2 id="软件备份">软件备份</h2>
 <ul>
-<li>备份安装的非本地软件至 arch-pkglist 文件 <code>comm -23 &lt;(pacman -Qeq|sort) &lt;(pacman -Qmq|sort) &gt; arch-pkglist </code></li>
-<li><em>或</em>备份包括从官方和 AUR 安装的所有软件 <code>(yay -Qeq|sort) &gt; arch-pkglist</code></li>
-<li>从 arch-pkglist 安装 <code>sudo pacman -S $(&lt; arch-pkglist)</code></li>
-<li>我的软件包备份 <a href="https://raw.githubusercontent.com/JiagengDing/.config/main/arch-pkglist">https://raw.githubusercontent.com/JiagengDing/.config/main/arch-pkglist</a></li>
+<li>备份安装的非本地软件</li>
 </ul>
+<p><code>comm -23 &lt;(pacman -Qeq|sort) &lt;(pacman -Qmq|sort) &gt; arch-pkglist </code></p>
+<p>(<strong>或</strong>备份包括从官方和 AUR 安装的所有软件 <code>(yay -Qeq|sort) &gt; arch-pkglist</code>)</p>
+<ul>
+<li>从 arch-pkglist 文件安装</li>
+</ul>
+<p><code>sudo pacman -S $(&lt; arch-pkglist)</code></p>
+<blockquote>
+<p>我的软件包备份 <a href="https://raw.githubusercontent.com/JiagengDing/.config/main/arch-pkglist">https://raw.githubusercontent.com/JiagengDing/.config/main/arch-pkglist</a></p>
+</blockquote>
 <h2 id="参考资料和推荐阅读">参考资料和推荐阅读</h2>
 <ul>
 <li><a href="https://wiki.archlinux.org/title/Installation_guide">https://wiki.archlinux.org/title/Installation_guide</a></li>

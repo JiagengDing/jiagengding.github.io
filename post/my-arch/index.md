@@ -85,13 +85,13 @@ kill wpa_supplican dhcpcd
 reboot
 ```
 
-### yay
+## yay
 
 1. 安装依赖 `sudo pacman -S --needed base-devel git`
 2. 克隆仓库 `git clone https://aur.archlinux.org/yay.git`
 3. 安装 `cd yay && makepkg -si`
 
-### i3wm
+## i3wm
 
 - 安装 `sudo pacman -S i3wm rofi xorg xorg-xinit alacritty`
 - 安装输入法 `sudo pacman -S fcitx5-im fcitx5-rime fcitx5-configtool`
@@ -115,7 +115,7 @@ exec i3
 
 此时输入 `startx` 即可进入 i3wm
 
-### LightDM
+## LightDM
 
 1. 安装 lightDM `sudo pacman -S lightdm`
 2. 安装 greeter `sudo pacman -S lightdm-webkit2-greeter` 或者其他 greeter
@@ -130,13 +130,20 @@ greeter-session=lightdm-webkit2-greeter
 5. 可选修改主题 /etc/lightdm/lightdm-webkit2-greeter.conf
 
 
-### 软件备份
+## 软件备份
 
-- 备份安装的非本地软件至 arch-pkglist 文件 `comm -23 <(pacman -Qeq|sort) <(pacman -Qmq|sort) > arch-pkglist
+- 备份安装的非本地软件 
+
+`comm -23 <(pacman -Qeq|sort) <(pacman -Qmq|sort) > arch-pkglist
 `
-- *或*备份包括从官方和 AUR 安装的所有软件 `(yay -Qeq|sort) > arch-pkglist`
-- 从 arch-pkglist 安装 `sudo pacman -S $(< arch-pkglist)`
-- 我的软件包备份 https://raw.githubusercontent.com/JiagengDing/.config/main/arch-pkglist
+
+(**或**备份包括从官方和 AUR 安装的所有软件 `(yay -Qeq|sort) > arch-pkglist`)
+
+- 从 arch-pkglist 文件安装 
+
+`sudo pacman -S $(< arch-pkglist)`
+
+> 我的软件包备份 https://raw.githubusercontent.com/JiagengDing/.config/main/arch-pkglist
 
 
 ## 参考资料和推荐阅读
