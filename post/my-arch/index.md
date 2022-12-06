@@ -4,6 +4,8 @@
 <!--more-->
 {{< toc >}}
 
+![Desktop](https://github.com/JiagengDing/pictures/blob/main/uPic/desktop2.png?raw=true)
+
 ## 系统安装
 
 ### 启动 Live 环境
@@ -61,7 +63,7 @@ mount /dev/nvme0n1p1 /mnt/boot
 
 - 进入系统　`arch-chroot /mnt`
 - 生成 local 信息　`local-gen`
-- 编辑　/etc/locale.gen 文件　`LANG=en_US.UTF-8`
+- 编辑　/etc/locale.gen 文件　`LANG=en_US.UTF-8` `zh_CN.UTF-8 UTF-8  `
 - 编辑　/etc/hostname 文件并写入主机名　`myhomename`
 - 配置 localhost , 编辑　/etc/host `127.0.0.1 localhost` `::1 localhost`
 - 设置密码 `passwd`
