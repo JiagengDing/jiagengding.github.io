@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Thu, 01 Dec 2022 23:05:04 +0000</lastBuildDate><atom:link href="https://blog.diing.uk/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Dec 2022 22:28:34 +0000</lastBuildDate><atom:link href="https://blog.diing.uk/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装 Nextcloud 并使用 Caddy v2 反向代理</title>
+      <link>https://blog.diing.uk/post/nextcloud-install/</link>
+      <pubDate>Sun, 11 Dec 2022 22:28:34 +0000</pubDate>
+      
+      <guid>https://blog.diing.uk/post/nextcloud-install/</guid>
+      <description>&lt;p&gt;本文以 Ubuntu Vps 为例，使用 snap 安装 Nextcloud，并使用 Caddy v2 反向代理，力求部署最简。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Arch Linux 安装指南</title>
       <link>https://blog.diing.uk/post/my-arch/</link>
