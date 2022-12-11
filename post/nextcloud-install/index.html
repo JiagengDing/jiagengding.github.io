@@ -193,8 +193,8 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ol>
-    <li><a href="#安装-caddy-v2">安装 Caddy v2</a></li>
     <li><a href="#安装-nextcloud">安装 Nextcloud</a></li>
+    <li><a href="#安装-caddy-v2">安装 Caddy v2</a></li>
     <li><a href="#修改配置">修改配置</a>
       <ol>
         <li><a href="#配置-nextcloud">配置 Nextcloud</a></li>
@@ -215,8 +215,8 @@
 	<h2>Table Of Contents</h2>
 	<nav id="TableOfContents">
   <ol>
-    <li><a href="#安装-caddy-v2">安装 Caddy v2</a></li>
     <li><a href="#安装-nextcloud">安装 Nextcloud</a></li>
+    <li><a href="#安装-caddy-v2">安装 Caddy v2</a></li>
     <li><a href="#修改配置">修改配置</a>
       <ol>
         <li><a href="#配置-nextcloud">配置 Nextcloud</a></li>
@@ -231,6 +231,16 @@
 </nav>
 </div>
 
+<h2 id="安装-nextcloud">安装 Nextcloud</h2>
+<ol>
+<li>安装 snap <code>sudo apt install snap</code></li>
+<li>安装 nextcloud <code>sudo snap install nextcloud</code></li>
+<li>修改默认端口 <code>sudo snap set nextcloud ports.http=8080</code></li>
+<li>启动 nextcloud <code>sudo snap start nextcloud</code></li>
+</ol>
+<blockquote>
+<p>到目前为止已经可以使用 http 访问 nextcloud 页面，下面配置 https 反向代理</p>
+</blockquote>
 <h2 id="安装-caddy-v2">安装 Caddy v2</h2>
 <pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt upgrade
 sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
@@ -241,16 +251,6 @@ sudo apt install caddy
 </code></pre>
 <blockquote>
 <p>默认配置文件：<code>/etc/caddy/Caddyfile</code></p>
-</blockquote>
-<h2 id="安装-nextcloud">安装 Nextcloud</h2>
-<ol>
-<li>安装 snap <code>sudo apt install snap</code></li>
-<li>安装 nextcloud <code>sudo snap install nextcloud</code></li>
-<li>修改默认端口 <code>sudo snap set nextcloud ports.http=8080</code></li>
-<li>启动 nextcloud <code>sudo snap start nextcloud</code></li>
-</ol>
-<blockquote>
-<p>到目前为止已经可以使用 http 访问 nextcloud 页面，下面配置 https 反向代理</p>
 </blockquote>
 <h2 id="修改配置">修改配置</h2>
 <h3 id="配置-nextcloud">配置 Nextcloud</h3>

@@ -4,6 +4,16 @@
 <!--more-->
 {{< toc >}}
 
+
+## 安装 Nextcloud
+
+1. 安装 snap `sudo apt install snap`
+2. 安装 nextcloud `sudo snap install nextcloud`
+3. 修改默认端口 `sudo snap set nextcloud ports.http=8080`
+4. 启动 nextcloud `sudo snap start nextcloud`
+
+> 到目前为止已经可以使用 http 访问 nextcloud 页面，下面配置 https 反向代理
+
 ## 安装 Caddy v2
 
 ```bash
@@ -16,16 +26,6 @@ sudo apt install caddy
 ```
 
 > 默认配置文件：`/etc/caddy/Caddyfile`
-
-
-## 安装 Nextcloud
-
-1. 安装 snap `sudo apt install snap`
-2. 安装 nextcloud `sudo snap install nextcloud`
-3. 修改默认端口 `sudo snap set nextcloud ports.http=8080`
-4. 启动 nextcloud `sudo snap start nextcloud`
-
-> 到目前为止已经可以使用 http 访问 nextcloud 页面，下面配置 https 反向代理
 
 ## 修改配置 
 
