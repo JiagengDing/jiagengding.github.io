@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.diing.uk/</loc>
+    <lastmod>2023-01-12T23:21:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/tags/linux/</loc>
+    <lastmod>2023-01-12T23:21:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/post/linux-compress/</loc>
+    <lastmod>2023-01-12T23:21:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/post/</loc>
+    <lastmod>2023-01-12T23:21:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/tags/</loc>
+    <lastmod>2023-01-12T23:21:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/tags/%E5%8E%8B%E7%BC%A9/</loc>
+    <lastmod>2023-01-12T23:21:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.diing.uk/tags/caddy/</loc>
     <lastmod>2022-12-11T22:28:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -9,28 +51,7 @@
   </url>
   
   <url>
-    <loc>https://blog.diing.uk/</loc>
-    <lastmod>2022-12-11T22:28:34+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.diing.uk/tags/nextcloud/</loc>
-    <lastmod>2022-12-11T22:28:34+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/post/</loc>
-    <lastmod>2022-12-11T22:28:34+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/tags/</loc>
     <lastmod>2022-12-11T22:28:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -52,13 +73,6 @@
   
   <url>
     <loc>https://blog.diing.uk/post/my-arch/</loc>
-    <lastmod>2022-12-01T23:05:04+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/tags/linux/</loc>
     <lastmod>2022-12-01T23:05:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

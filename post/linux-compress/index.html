@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>macOS 应用推荐 - Jiageng&#39;s Blog</title>
+  <title>Linux 常用压缩工具及用法 - Jiageng&#39;s Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Jiageng.Ding" /><meta name="description" content="这是我推荐的Mac应用，持续更新
+<meta name="author" content="Jiageng Ding" /><meta name="description" content="本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。
 " /><meta name="keywords" content="share knowledge, record life" />
 
 
@@ -27,7 +27,7 @@
 <meta name="generator" content="Hugo 0.109.0 with theme even" />
 
 
-<link rel="canonical" href="https://blog.diing.uk/post/mac-app/" />
+<link rel="canonical" href="https://blog.diing.uk/post/linux-compress/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,19 +40,19 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="macOS 应用推荐" />
-<meta property="og:description" content="这是我推荐的Mac应用，持续更新" />
+<meta property="og:title" content="Linux 常用压缩工具及用法" />
+<meta property="og:description" content="本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.diing.uk/post/mac-app/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-10-17T16:08:59+08:00" />
-<meta property="article:modified_time" content="2022-03-27T00:00:00+00:00" />
-<meta itemprop="name" content="macOS 应用推荐">
-<meta itemprop="description" content="这是我推荐的Mac应用，持续更新"><meta itemprop="datePublished" content="2021-10-17T16:08:59+08:00" />
-<meta itemprop="dateModified" content="2022-03-27T00:00:00+00:00" />
-<meta itemprop="wordCount" content="687">
-<meta itemprop="keywords" content="Apple," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="macOS 应用推荐"/>
-<meta name="twitter:description" content="这是我推荐的Mac应用，持续更新"/>
+<meta property="og:url" content="https://blog.diing.uk/post/linux-compress/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-12T23:21:44+00:00" />
+<meta property="article:modified_time" content="2023-01-12T23:21:44+00:00" />
+<meta itemprop="name" content="Linux 常用压缩工具及用法">
+<meta itemprop="description" content="本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。"><meta itemprop="datePublished" content="2023-01-12T23:21:44+00:00" />
+<meta itemprop="dateModified" content="2023-01-12T23:21:44+00:00" />
+<meta itemprop="wordCount" content="167">
+<meta itemprop="keywords" content="Linux,压缩," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux 常用压缩工具及用法"/>
+<meta name="twitter:description" content="本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -100,7 +100,7 @@
 
 		<li class="language-item active">
 			
-			<a href="https://blog.diing.uk/post/mac-app/">中文</a>
+			<a href="https://blog.diing.uk/post/linux-compress/">中文</a>
 			
 		</li>
 		
@@ -109,7 +109,7 @@
 
 		<li class="language-item ">
 			
-			<a href="https://blog.diing.uk/en/post/mac-app/">English</a>
+			<a href="https://blog.diing.uk/en/">English</a>
 			
 		</li>
 		
@@ -135,7 +135,7 @@
 
 		<li class="language-item active">
 			
-			<a href="https://blog.diing.uk/post/mac-app/">中文</a>
+			<a href="https://blog.diing.uk/post/linux-compress/">中文</a>
 			
 		</li>
 		
@@ -144,7 +144,7 @@
 
 		<li class="language-item ">
 			
-			<a href="https://blog.diing.uk/en/post/mac-app/">English</a>
+			<a href="https://blog.diing.uk/en/">English</a>
 			
 		</li>
 		
@@ -177,15 +177,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">macOS 应用推荐</h1>
+      <h1 class="post-title">Linux 常用压缩工具及用法</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-10-17 </span>
-        <div class="post-category">
-            <a href="/categories/%E8%BD%AF%E4%BB%B6/"> 软件 </a>
-            </div>
-          <span class="more-meta"> 约 687 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span class="post-time"> 2023-01-12 </span>
+        
+          <span class="more-meta"> 约 167 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -195,92 +193,94 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ol>
-    <li><a href="#工具">工具</a></li>
-    <li><a href="#文档">文档</a></li>
-    <li><a href="#效率">效率</a></li>
-    <li><a href="#编程">编程</a></li>
-    <li><a href="#通讯">通讯</a></li>
+    <li><a href="#7z">7z</a>
+      <ol>
+        <li><a href="#添加文件">添加文件</a></li>
+        <li><a href="#移除文件">移除文件</a></li>
+        <li><a href="#解压">解压</a></li>
+      </ol>
+    </li>
+    <li><a href="#zip">zip</a>
+      <ol>
+        <li><a href="#压缩">压缩</a></li>
+        <li><a href="#移除文件-1">移除文件</a></li>
+        <li><a href="#解压-1">解压</a></li>
+      </ol>
+    </li>
+    <li><a href="#tar">Tar</a>
+      <ol>
+        <li><a href="#添加文件-1">添加文件</a></li>
+        <li><a href="#移除文件-2">移除文件</a></li>
+        <li><a href="#解压-2">解压</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
   </div>
 </div>
-  <div class="post-outdated">
-    <div class="warn">
-      <p>【注意】最后更新于 <span class="timeago" datetime="2022-03-27T00:00:00" title="三月 27, 2022">三月 27, 2022</span>，文中内容可能已过时，请谨慎使用。</p>
-    </div>
-  </div>
     <div class="post-content">
-      <p>这是我推荐的Mac应用，持续更新</p>
-<p><strong>推荐使用<a href="https://brew.sh"> Homebrew </a> 来安装和管理 MacOS 上的应用(e.g. <code>brew install vim</code>)</strong></p>
-<blockquote>
-<p>我的应用选择标准，重要性依次降低：</p>
-<ol>
-<li>开源应用（可以付费）</li>
-<li>开发者长期维护</li>
-<li>只保留一个同功能的应用</li>
-<li>简洁且漂亮的界面</li>
-</ol>
-</blockquote>
-<h2 id="工具">工具</h2>
-<p><a href="https://brew.sh"> Homebrew </a>: MacOS 上的包管理器</p>
-<p><a href="https://www.zsh.org"> Zsh </a>: 用于替代Bash的交互式shell</p>
-<p><a href="https://iterm2.com">iTerm2</a>: 用于替代Terminal的终端模拟器</p>
-<p><a href="https://github.com/exelban/stats">Stats</a>: 菜单栏上的状态监控器</p>
-<p><a href="tracesof.net/uebersicht/"> Ubersicht </a>: 用于在桌面上显示自定义widgets</p>
-<p><del><a href="https://github.com/yichengchen/clashX"> ClashX </a>: Clash客户端，用于学习？免费且开源</del></p>
-<p><a href="https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public"> ClashX Pro </a>: Clash Premium 客户端，ClashX 进阶版本，免费但不开源</p>
-<blockquote>
-<p><a href="https://github.com/JiagengDing/config-for-clash-shadowrocket"> Config-for-Clash </a>: 我使用的 Clash Premium 配置，包括分流和轻度广告过滤</p>
-</blockquote>
-<p><a href="https://karabiner-elements.pqrs.org"> Karabiner </a>: 键盘键位修改器</p>
-<p><a href="https://gpgtools.org"> GPG tools </a>: 管理 GPG 密钥</p>
-<p><a href="https://keeweb.info"> KeeWeb </a>: 基于KeePass的密码管理器</p>
-<p><a href="https://kdeconnect.kde.org"> Kdeconnect </a>: 多设备间传送文件和消息同步</p>
-<p><a href="https://github.com/jesseduffield/lazygit"> Lazygit </a>: Git命令的终端UI</p>
-<p><a href="https://iina.io"> IINA </a>: 媒体播放器</p>
-<p><a href="https://www.keka.io/en/"> Keka </a>: 高性能文件压缩应用</p>
-<p><a href="https://github.com/dwarvesf/hidden/"> Hidden Bar </a>: 隐藏菜单栏图标</p>
-<p><a href="https://www.freedownloadmanager.org"> Free Download Manager </a>: 多线程下载软件</p>
-<p><a href="https://github.com/objective-see/LuLu"> LuLu </a>: MacOS 开源防火墙</p>
-<p><a href="https://www.smartisan.com/apps/#/handshaker"> HandShaker </a>: 管理和传输 Android 中的文件</p>
-<h2 id="文档">文档</h2>
-<p><a href="https://skim-app.sourceforge.io"> Skim </a>: PDF 阅读器</p>
-<p><a href="https://typora.io"> Typora </a>: 所见即所想的 markdown 编辑器</p>
-<p><a href="https://obsidian.md"> Obsidian </a>: 有非常多插件的双链笔记软件（我同时用来做日程管理）</p>
-<p><a href="https://cubox.pro"> Cubox </a>: 收集、阅读、管理和回顾网络碎片（我用作Obsidian的上游）</p>
-<h2 id="效率">效率</h2>
-<p><a href="https://www.raycast.com"> Raycast </a>: Spotlight 和 <a href="https://www.alfredapp.com"> Alfred </a> 的替代品</p>
-<p><a href="https://toggl.com"> Toggl Track </a>: 时间跟踪软件</p>
-<p><a href="https://www.hammerspoon.org"> Hammerspoon </a>: 自动化工具，用于简化操作</p>
-<blockquote>
-<p><a href="https://github.com/JiagengDing/hammerspoon-config"> Hammerspoon-config </a>: 我使用的 Hammerspoon 配置</p>
-</blockquote>
-<p><a href="https://www.noodlesoft.com"> Hazel </a>: 自动化工具，主要用在文件管理</p>
-<p><a href="https://syncthing.net"> Syncthing </a>:  简单安全的多设备文件同步软件</p>
-<p><a href="https://github.com/ianyh/Amethyst"> Amethyst </a>: 自动平铺窗口管理器，类似LINUX上的i3wm</p>
-<p><a href="https://github.com/maxgoedjen/secretive"> Secretive </a>: 用来存储和管理 SSH 密钥的应用，并可以使用指纹快速登陆</p>
-<h2 id="编程">编程</h2>
-<p><a href="https://neovim.io"> NeoVim </a>: 支持更多插件的 vim 编辑器</p>
-<blockquote>
-<p><a href="https://github.com/JiagengDing/nvim"> NeoVim-Config </a>: 基于 Colemak 布局的 Nvim 配置</p>
-</blockquote>
-<p><a href="https://code.visualstudio.com"> VS code </a>: 可以通过插件几乎扩展成IDE的编辑器</p>
-<p><a href="https://github.com/ranger/ranger">Ranger</a>: 终端类似 vim 的文件管理器</p>
-<h2 id="通讯">通讯</h2>
-<p>Mail: Mac自带的邮件应用，简单又足够用</p>
-<p><a href="https://telegram.org"> Telegram </a>: E2EE（需要在加密通讯下）即时通讯应用</p>
-<p><a href="https://keybase.io"> Keybase </a>: E2EE 文件传输和通讯（所有情况下）</p>
+      <p>本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。</p>
+<div>
+	<h2>Table Of Contents</h2>
+	<nav id="TableOfContents">
+  <ol>
+    <li><a href="#7z">7z</a>
+      <ol>
+        <li><a href="#添加文件">添加文件</a></li>
+        <li><a href="#移除文件">移除文件</a></li>
+        <li><a href="#解压">解压</a></li>
+      </ol>
+    </li>
+    <li><a href="#zip">zip</a>
+      <ol>
+        <li><a href="#压缩">压缩</a></li>
+        <li><a href="#移除文件-1">移除文件</a></li>
+        <li><a href="#解压-1">解压</a></li>
+      </ol>
+    </li>
+    <li><a href="#tar">Tar</a>
+      <ol>
+        <li><a href="#添加文件-1">添加文件</a></li>
+        <li><a href="#移除文件-2">移除文件</a></li>
+        <li><a href="#解压-2">解压</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+</div>
+
+<h2 id="7z">7z</h2>
+<h3 id="添加文件">添加文件</h3>
+<p><code>7z a test.7z test_folder/</code></p>
+<h3 id="移除文件">移除文件</h3>
+<p><code>7z d test.7z test_file</code></p>
+<p><code>7z d -r test.7z *.png</code></p>
+<h3 id="解压">解压</h3>
+<p><code>7z x test.7z [-o test_folder]</code></p>
+<h2 id="zip">zip</h2>
+<h3 id="压缩">压缩</h3>
+<p><code>zip -r test.zip test_folder</code></p>
+<h3 id="移除文件-1">移除文件</h3>
+<p><code>zip -d tset.zip test.png</code></p>
+<h3 id="解压-1">解压</h3>
+<p><code>unzip test.zip</code></p>
+<h2 id="tar">Tar</h2>
+<p>以 test.tar.gz 为例，tar为打包文件格式，gz为压缩文件格式</p>
+<h3 id="添加文件-1">添加文件</h3>
+<h3 id="移除文件-2">移除文件</h3>
+<h3 id="解压-2">解压</h3>
+<!-- ## 参考资料和推荐阅读 -->
     </div>
 
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">文章作者</span>
-    <span class="item-content">Jiageng.Ding</span>
+    <span class="item-content">Jiageng Ding</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-03-27
+        2023-01-12
         
     </span>
   </p>
@@ -292,15 +292,16 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/apple/">Apple</a>
+          <a href="/tags/linux/">Linux</a>
+          <a href="/tags/%E5%8E%8B%E7%BC%A9/">压缩</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/git-guide/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Git 入门指南</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
         
+        <a class="next" href="/post/nextcloud-install/">
+            <span class="next-text nav-default">安装 Nextcloud 并使用 Caddy v2 反向代理</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
       </nav>
     </footer>
   </article>

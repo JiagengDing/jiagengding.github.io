@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sun, 11 Dec 2022 22:28:34 +0000</lastBuildDate><atom:link href="https://blog.diing.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Jan 2023 23:21:44 +0000</lastBuildDate><atom:link href="https://blog.diing.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 常用压缩工具及用法</title>
+      <link>https://blog.diing.uk/post/linux-compress/</link>
+      <pubDate>Thu, 12 Jan 2023 23:21:44 +0000</pubDate>
+      
+      <guid>https://blog.diing.uk/post/linux-compress/</guid>
+      <description>&lt;p&gt;本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>安装 Nextcloud 并使用 Caddy v2 反向代理</title>
       <link>https://blog.diing.uk/post/nextcloud-install/</link>
