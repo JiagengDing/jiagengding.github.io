@@ -49,7 +49,7 @@
 <meta itemprop="name" content="访问服务器 Jupyter Lab 或 Notebook 并使用 Nginx/Caddy 反向代理">
 <meta itemprop="description" content="安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。"><meta itemprop="datePublished" content="2022-09-22T15:18:49+08:00" />
 <meta itemprop="dateModified" content="2023-01-24T15:18:49+08:00" />
-<meta itemprop="wordCount" content="689">
+<meta itemprop="wordCount" content="735">
 <meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="访问服务器 Jupyter Lab 或 Notebook 并使用 Nginx/Caddy 反向代理"/>
 <meta name="twitter:description" content="安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。"/>
@@ -184,7 +184,7 @@
         <div class="post-category">
             <a href="/categories/%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"> 简单教程 </a>
             </div>
-          <span class="more-meta"> 约 689 字 </span>
+          <span class="more-meta"> 约 735 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -294,6 +294,9 @@ WantedBy=multi-user.target
 <pre><code>systemctl enable jupyter-notebook
 systemctl start jupyter-notebook
 </code></pre>
+<ol start="5">
+<li>反向代理参考https访问章节</li>
+</ol>
 <h2 id="jupyter-lab">Jupyter Lab</h2>
 <h3 id="安装-jupyterlab">安装 JupyterLab</h3>
 <ol>
@@ -373,7 +376,21 @@ location /jupyter {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection &quot;upgrade&quot;;
         proxy_redirect off;
-    }
+    };
+location /notebook {
+        proxy_pass   http://127.0.0.1:8888;
+        proxy_connect_timeout 3s;
+        proxy_read_timeout 5s;
+        proxy_send_timeout 3s;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection &quot;upgrade&quot;;
+        proxy_redirect off;
+    };
+
 </code></pre>
 <h3 id="caddy">Caddy</h3>
 <p>将下列代码添加到 Caddyfile</p>
