@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>访问服务器 Jupyter Lab 并使用 Nginx/Caddy 反向代理 - Jiageng&#39;s Blog</title>
+  <title>访问服务器 Jupyter Lab 或 Notebook 并使用 Nginx/Caddy 反向代理 - Jiageng&#39;s Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -40,18 +40,18 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="访问服务器 Jupyter Lab 并使用 Nginx/Caddy 反向代理" />
+<meta property="og:title" content="访问服务器 Jupyter Lab 或 Notebook 并使用 Nginx/Caddy 反向代理" />
 <meta property="og:description" content="安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.diing.uk/post/jupyter/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-09-22T15:18:49+08:00" />
-<meta property="article:modified_time" content="2022-09-22T15:18:49+08:00" />
-<meta itemprop="name" content="访问服务器 Jupyter Lab 并使用 Nginx/Caddy 反向代理">
+<meta property="article:modified_time" content="2023-01-24T15:18:49+08:00" />
+<meta itemprop="name" content="访问服务器 Jupyter Lab 或 Notebook 并使用 Nginx/Caddy 反向代理">
 <meta itemprop="description" content="安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。"><meta itemprop="datePublished" content="2022-09-22T15:18:49+08:00" />
-<meta itemprop="dateModified" content="2022-09-22T15:18:49+08:00" />
-<meta itemprop="wordCount" content="534">
+<meta itemprop="dateModified" content="2023-01-24T15:18:49+08:00" />
+<meta itemprop="wordCount" content="689">
 <meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="访问服务器 Jupyter Lab 并使用 Nginx/Caddy 反向代理"/>
+<meta name="twitter:title" content="访问服务器 Jupyter Lab 或 Notebook 并使用 Nginx/Caddy 反向代理"/>
 <meta name="twitter:description" content="安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。"/>
 
 <!--[if lte IE 9]>
@@ -177,14 +177,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">访问服务器 Jupyter Lab 并使用 Nginx/Caddy 反向代理</h1>
+      <h1 class="post-title">访问服务器 Jupyter Lab 或 Notebook 并使用 Nginx/Caddy 反向代理</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2022-09-22 </span>
         <div class="post-category">
             <a href="/categories/%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"> 简单教程 </a>
             </div>
-          <span class="more-meta"> 约 534 字 </span>
+          <span class="more-meta"> 约 689 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -195,10 +195,15 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ol>
-    <li><a href="#安装-jupyterlab">安装 JupyterLab</a></li>
-    <li><a href="#安装较新版本-nodejs">安装较新版本 nodejs</a></li>
-    <li><a href="#配置-jupyterlab">配置 JupyterLab</a></li>
-    <li><a href="#构建-jupyterlab-并启动">构建 JupyterLab 并启动</a></li>
+    <li><a href="#jupyter-notebook">Jupyter Notebook</a></li>
+    <li><a href="#jupyter-lab">Jupyter Lab</a>
+      <ol>
+        <li><a href="#安装-jupyterlab">安装 JupyterLab</a></li>
+        <li><a href="#安装较新版本-nodejs">安装较新版本 nodejs</a></li>
+        <li><a href="#配置-jupyterlab">配置 JupyterLab</a></li>
+        <li><a href="#构建-jupyterlab-并启动">构建 JupyterLab 并启动</a></li>
+      </ol>
+    </li>
     <li><a href="#https-访问">https 访问</a>
       <ol>
         <li><a href="#nginx">Nginx</a></li>
@@ -211,21 +216,21 @@
 </nav>
   </div>
 </div>
-  <div class="post-outdated">
-    <div class="hint">
-      <p>【注意】最后更新于 <span class="timeago" datetime="2022-09-22T15:18:49" title="九月 22, 2022">九月 22, 2022</span>，文中内容可能已过时，请谨慎使用。</p>
-    </div>
-  </div>
     <div class="post-content">
       <p>安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。</p>
 <div>
 	<h2>Table Of Contents</h2>
 	<nav id="TableOfContents">
   <ol>
-    <li><a href="#安装-jupyterlab">安装 JupyterLab</a></li>
-    <li><a href="#安装较新版本-nodejs">安装较新版本 nodejs</a></li>
-    <li><a href="#配置-jupyterlab">配置 JupyterLab</a></li>
-    <li><a href="#构建-jupyterlab-并启动">构建 JupyterLab 并启动</a></li>
+    <li><a href="#jupyter-notebook">Jupyter Notebook</a></li>
+    <li><a href="#jupyter-lab">Jupyter Lab</a>
+      <ol>
+        <li><a href="#安装-jupyterlab">安装 JupyterLab</a></li>
+        <li><a href="#安装较新版本-nodejs">安装较新版本 nodejs</a></li>
+        <li><a href="#配置-jupyterlab">配置 JupyterLab</a></li>
+        <li><a href="#构建-jupyterlab-并启动">构建 JupyterLab 并启动</a></li>
+      </ol>
+    </li>
     <li><a href="#https-访问">https 访问</a>
       <ol>
         <li><a href="#nginx">Nginx</a></li>
@@ -241,7 +246,56 @@
 <blockquote>
 <p>本文以 <strong>Debian/Ubuntu</strong> 为例</p>
 </blockquote>
-<h2 id="安装-jupyterlab">安装 JupyterLab</h2>
+<h2 id="jupyter-notebook">Jupyter Notebook</h2>
+<ol>
+<li>安装</li>
+</ol>
+<p><code>pip install notebook</code></p>
+<ol start="2">
+<li>配置</li>
+</ol>
+<p>生成默认配置 <code>jupyter notebook --generate-config</code></p>
+<p>打开 <code>vim .jupyter/jupyter_notebook_config.py</code> 配置文件</p>
+<p>修改并取消注释（可以用vim搜索关键词）</p>
+<pre><code>c.NotebookApp.allow_root = True
+c.NotebookApp.base_url = '/notebook'
+c.NotebookApp.ip = '0.0.0.0'
+c.NotebookApp.notebook_dir = 'JupyterLab'
+c.NotebookApp.open_browser = False
+c.NotebookApp.password = '&lt;上面保存的sha1值&gt;'
+c.NotebookApp.port = 8888
+</code></pre>
+<ol start="3">
+<li>启动</li>
+</ol>
+<p><code>python3 -m notebook</code></p>
+<ol start="4">
+<li>自启动</li>
+</ol>
+<p><code>vim /etc/systemd/system/jupyter-notebook.service</code></p>
+<p>写入如下代码</p>
+<pre><code class="language-bash">[Unit]
+Description=Jupyter Notebook
+After=network.target
+[Service]
+Type=simple
+ExecStart=/home/aaa/.local/bin/jupyter-notebook --config=/home/aaa/.jupyter/jupyter_notebook_config.py
+User=aaa
+WorkingDirectory=/home/aaa/
+Restart=always
+RestartSec=10
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<blockquote>
+<p>将aaa改为自己的用户名，路径等自行修改</p>
+</blockquote>
+<p>启动 Jupyter Notebook</p>
+<pre><code>systemctl enable jupyter-notebook
+systemctl start jupyter-notebook
+</code></pre>
+<h2 id="jupyter-lab">Jupyter Lab</h2>
+<h3 id="安装-jupyterlab">安装 JupyterLab</h3>
 <ol>
 <li>安装 pip 与 JupyterLab</li>
 </ol>
@@ -255,7 +309,7 @@ pip3 install jupyterlab
 </ol>
 <p><code>export PATH=$PATH:/path/to/jupyterlab</code></p>
 <p><code>echo $PATH</code></p>
-<h2 id="安装较新版本-nodejs">安装较新版本 nodejs</h2>
+<h3 id="安装较新版本-nodejs">安装较新版本 nodejs</h3>
 <ol>
 <li>添加 apt 源文件并更新源:</li>
 </ol>
@@ -268,7 +322,7 @@ pip3 install jupyterlab
 <li>查看 nodejs 版本</li>
 </ol>
 <p><code>npm --version</code></p>
-<h2 id="配置-jupyterlab">配置 JupyterLab</h2>
+<h3 id="配置-jupyterlab">配置 JupyterLab</h3>
 <ol>
 <li>生成配置文件</li>
 </ol>
@@ -288,16 +342,16 @@ passwd(algorithm='sha1')
 <p>打开配置文件</p>
 <p><code>vim ~/.jupyter/jupyter_lab_config.py</code></p>
 <p>修改并取消注释（可以用vim搜索关键词）</p>
-<pre><code>c.NotebookApp.allow_root = True
-c.NotebookApp.base_url = '/jupyter'
-c.NotebookApp.ip = '0.0.0.0'
-c.NotebookApp.notebook_dir = 'JupyterLab'
-c.NotebookApp.open_browser = False
-c.NotebookApp.password = '&lt;上面保存的sha1值&gt;'
-c.NotebookApp.port = 8080
+<pre><code>c.ServerApp.allow_root = True
+c.ServerApp.base_url = '/jupyter'
+c.ServerApp.ip = '0.0.0.0'
+c.ServerApp.notebook_dir = 'JupyterLab'
+c.ServerApp.open_browser = False
+c.ServerApp.password = '&lt;上面保存的sha1值&gt;'
+c.ServerApp.port = 8080
 </code></pre>
 <p><code>:wq</code> 保存并退出</p>
-<h2 id="构建-jupyterlab-并启动">构建 JupyterLab 并启动</h2>
+<h3 id="构建-jupyterlab-并启动">构建 JupyterLab 并启动</h3>
 <p><code>jupyter lab build --dev-build=False --minimize=False</code></p>
 <p><code>nohup jupyter lab &amp;</code></p>
 <blockquote>
@@ -326,6 +380,7 @@ location /jupyter {
 <pre><code>your_domain_name
 
 reverse_proxy /jupyter/* 127.0.0.1:8080
+reverse_proxy /notebook/* 127.0.0.1:8888
 </code></pre>
 <p>重新读取 Caddyfile 并启动 Caddy</p>
 <p><code>caddy reload &amp;&amp; caddy start</code></p>
@@ -365,7 +420,7 @@ systemctl start jupyter
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-09-22
+        2023-01-24
         
     </span>
   </p>

@@ -65,7 +65,7 @@
     </item>
     
     <item>
-      <title>访问服务器 Jupyter Lab 并使用 Nginx/Caddy 反向代理</title>
+      <title>访问服务器 Jupyter Lab 或 Notebook 并使用 Nginx/Caddy 反向代理</title>
       <link>https://blog.diing.uk/post/jupyter/</link>
       <pubDate>Thu, 22 Sep 2022 15:18:49 +0800</pubDate>
       

@@ -36,7 +36,7 @@
 
 `unzip test.zip`
 
-## Tar
+## Tar ( tape archive )
 
 以 test.tar.gz 为例，tar为打包文件格式，gz为压缩文件格式
 

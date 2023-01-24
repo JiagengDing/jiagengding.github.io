@@ -6,7 +6,67 @@
 
 > 本文以 **Debian/Ubuntu** 为例
 
-## 安装 JupyterLab
+## Jupyter Notebook
+
+1. 安装
+
+`pip install notebook`
+
+2. 配置
+
+生成默认配置 `jupyter notebook --generate-config`
+
+打开 `vim .jupyter/jupyter_notebook_config.py` 配置文件
+
+修改并取消注释（可以用vim搜索关键词）
+
+```
+c.NotebookApp.allow_root = True
+c.NotebookApp.base_url = '/notebook'
+c.NotebookApp.ip = '0.0.0.0'
+c.NotebookApp.notebook_dir = 'JupyterLab'
+c.NotebookApp.open_browser = False
+c.NotebookApp.password = '<上面保存的sha1值>'
+c.NotebookApp.port = 8888
+```
+
+3. 启动
+
+`python3 -m notebook`
+
+4. 自启动
+
+`vim /etc/systemd/system/jupyter-notebook.service`
+
+写入如下代码
+
+```bash
+[Unit]
+Description=Jupyter Notebook
+After=network.target
+[Service]
+Type=simple
+ExecStart=/home/aaa/.local/bin/jupyter-notebook --config=/home/aaa/.jupyter/jupyter_notebook_config.py
+User=aaa
+WorkingDirectory=/home/aaa/
+Restart=always
+RestartSec=10
+[Install]
+WantedBy=multi-user.target
+```
+
+> 将aaa改为自己的用户名，路径等自行修改
+
+启动 Jupyter Notebook
+
+```
+systemctl enable jupyter-notebook
+systemctl start jupyter-notebook
+```
+
+## Jupyter Lab
+
+### 安装 JupyterLab
 
 1. 安装 pip 与 JupyterLab
 
@@ -23,7 +83,7 @@ pip3 install jupyterlab
 
 `echo $PATH`
 
-## 安装较新版本 nodejs
+### 安装较新版本 nodejs
 
 1. 添加 apt 源文件并更新源:
 
@@ -37,7 +97,7 @@ pip3 install jupyterlab
 
 `npm --version`
 
-## 配置 JupyterLab
+### 配置 JupyterLab
 
 1. 生成配置文件
 
@@ -64,18 +124,18 @@ passwd(algorithm='sha1')
 修改并取消注释（可以用vim搜索关键词）
 
 ```
-c.NotebookApp.allow_root = True
-c.NotebookApp.base_url = '/jupyter'
-c.NotebookApp.ip = '0.0.0.0'
-c.NotebookApp.notebook_dir = 'JupyterLab'
-c.NotebookApp.open_browser = False
-c.NotebookApp.password = '<上面保存的sha1值>'
-c.NotebookApp.port = 8080
+c.ServerApp.allow_root = True
+c.ServerApp.base_url = '/jupyter'
+c.ServerApp.ip = '0.0.0.0'
+c.ServerApp.notebook_dir = 'JupyterLab'
+c.ServerApp.open_browser = False
+c.ServerApp.password = '<上面保存的sha1值>'
+c.ServerApp.port = 8080
 ```
 
 `:wq` 保存并退出
 
-## 构建 JupyterLab 并启动
+### 构建 JupyterLab 并启动
 
 `jupyter lab build --dev-build=False --minimize=False`
 
@@ -113,6 +173,7 @@ location /jupyter {
 your_domain_name
 
 reverse_proxy /jupyter/* 127.0.0.1:8080
+reverse_proxy /notebook/* 127.0.0.1:8888
 ```
 
 重新读取 Caddyfile 并启动 Caddy
