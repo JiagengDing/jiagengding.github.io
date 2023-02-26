@@ -49,7 +49,7 @@
 <meta itemprop="name" content="todo.txt 基于纯文本的 GTD 工具">
 <meta itemprop="description" content="todo.txt 是一种使用纯文本管理代办事项的工具，它的优点是轻便且易于跨系统。本文将介绍 todo.txt 的基本格式和在 Mac、Linux、Android 上的使用方法。"><meta itemprop="datePublished" content="2023-02-25T00:50:35+00:00" />
 <meta itemprop="dateModified" content="2023-02-26T00:50:35+00:00" />
-<meta itemprop="wordCount" content="662">
+<meta itemprop="wordCount" content="684">
 <meta itemprop="keywords" content="GTD," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="todo.txt 基于纯文本的 GTD 工具"/>
 <meta name="twitter:description" content="todo.txt 是一种使用纯文本管理代办事项的工具，它的优点是轻便且易于跨系统。本文将介绍 todo.txt 的基本格式和在 Mac、Linux、Android 上的使用方法。"/>
@@ -182,7 +182,7 @@
       <div class="post-meta">
         <span class="post-time"> 2023-02-25 </span>
         
-          <span class="more-meta"> 约 662 字 </span>
+          <span class="more-meta"> 约 684 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -269,11 +269,27 @@ vim .todo.cfg
 </code></pre>
 <p>常用命令(<code>ITEM#</code>表示 ls 命令中显示的序号）：</p>
 <ul>
-<li>列出代办事项 <code>todo.sh ls</code></li>
-<li>添加代办事项 <code>todo.sh add &quot;THING @context&quot;</code></li>
-<li>标记为完成 <code>todo.sh do ITEM#[, ITEM#, ITEM#, ...]</code></li>
-<li>将完成事项移动到 done.txt 文件 <code>todo.sh archive</code></li>
-<li>删除代办事项 <code>todo.sh rm ITEM# [TERM]</code></li>
+<li>
+<p>列出代办事项 <code>todo.sh ls</code></p>
+</li>
+<li>
+<p>添加代办事项 <code>todo.sh add &quot;THING @context&quot;</code></p>
+</li>
+<li>
+<p>标记为完成 <code>todo.sh do ITEM#[, ITEM#, ITEM#, ...]</code></p>
+</li>
+<li>
+<p>将完成事项移动到 done.txt 文件 <code>todo.sh archive</code></p>
+</li>
+<li>
+<p>删除代办事项 <code>todo.sh rm ITEM# [TERM]</code></p>
+</li>
+<li>
+<p>修改任务内容 <code>todo.sh replace ITEM# &quot;UPDATED TODO&quot;</code></p>
+</li>
+<li>
+<p>修改任务优先级 <code>todo.sh pri ITEM# PRIORITY</code></p>
+</li>
 </ul>
 <h2 id="android-应用与同步">Android 应用与同步</h2>
 <p>我使用的是 <a href="https://play.google.com/store/apps/details?id=net.c306.ttsuper&amp;utm_source=c306_apps&amp;utm_campaign=c306">todo.txt for Android</a>，其他支持的应用和其他平台的应用可以在<a href="http://todotxt.org/">官网</a>查看。</p>

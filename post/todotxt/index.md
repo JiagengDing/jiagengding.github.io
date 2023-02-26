@@ -60,6 +60,9 @@ vim .todo.cfg
 - 将完成事项移动到 done.txt 文件 `todo.sh archive`
 - 删除代办事项 `todo.sh rm ITEM# [TERM]`
 
+- 修改任务内容 `todo.sh replace ITEM# "UPDATED TODO"`
+- 修改任务优先级 `todo.sh pri ITEM# PRIORITY`
+
 
 ## Android 应用与同步
 
