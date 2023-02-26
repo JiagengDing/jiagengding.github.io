@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>todo.txt - Jiageng&#39;s Blog</title>
+  <title>todo.txt 基于纯文本的 GTD 工具 - Jiageng&#39;s Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -40,18 +40,18 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="todo.txt" />
+<meta property="og:title" content="todo.txt 基于纯文本的 GTD 工具" />
 <meta property="og:description" content="todo.txt 是一种使用纯文本管理代办事项的工具，它的优点是轻便且易于跨系统。本文将介绍 todo.txt 的基本格式和在 Mac、Linux、Android 上的使用方法。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.diing.uk/post/todotxt/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-02-25T00:50:35+00:00" />
-<meta property="article:modified_time" content="2023-02-25T00:50:35+00:00" />
-<meta itemprop="name" content="todo.txt">
+<meta property="article:modified_time" content="2023-02-26T00:50:35+00:00" />
+<meta itemprop="name" content="todo.txt 基于纯文本的 GTD 工具">
 <meta itemprop="description" content="todo.txt 是一种使用纯文本管理代办事项的工具，它的优点是轻便且易于跨系统。本文将介绍 todo.txt 的基本格式和在 Mac、Linux、Android 上的使用方法。"><meta itemprop="datePublished" content="2023-02-25T00:50:35+00:00" />
-<meta itemprop="dateModified" content="2023-02-25T00:50:35+00:00" />
-<meta itemprop="wordCount" content="431">
+<meta itemprop="dateModified" content="2023-02-26T00:50:35+00:00" />
+<meta itemprop="wordCount" content="662">
 <meta itemprop="keywords" content="GTD," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="todo.txt"/>
+<meta name="twitter:title" content="todo.txt 基于纯文本的 GTD 工具"/>
 <meta name="twitter:description" content="todo.txt 是一种使用纯文本管理代办事项的工具，它的优点是轻便且易于跨系统。本文将介绍 todo.txt 的基本格式和在 Mac、Linux、Android 上的使用方法。"/>
 
 <!--[if lte IE 9]>
@@ -177,13 +177,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">todo.txt</h1>
+      <h1 class="post-title">todo.txt 基于纯文本的 GTD 工具</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2023-02-25 </span>
         
-          <span class="more-meta"> 约 431 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 662 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -254,10 +254,35 @@
 <li><code>pri:A</code> 再完成事项中保留原始优先级</li>
 </ul>
 <h2 id="todotxt-cli">todo.txt-cli</h2>
+<pre><code class="language-bash"># Mac OS 安装
+brew install todo-txt
+
+# Arch Linux 安装
+yay install todotxt
+
+# 其他平台安装方式可以查看官方仓库
+# https://github.com/todotxt/todo.txt-cli
+
+# 下载配置文件并修改文件夹路径
+wget https://raw.githubusercontent.com/todotxt/todo.txt-cli/master/todo.cfg ~/.todo.cfg
+vim .todo.cfg
+</code></pre>
+<p>常用命令(<code>ITEM#</code>表示 ls 命令中显示的序号）：</p>
+<ul>
+<li>列出代办事项 <code>todo.sh ls</code></li>
+<li>添加代办事项 <code>todo.sh add &quot;THING @context&quot;</code></li>
+<li>标记为完成 <code>todo.sh do ITEM#[, ITEM#, ITEM#, ...]</code></li>
+<li>将完成事项移动到 done.txt 文件 <code>todo.sh archive</code></li>
+<li>删除代办事项 <code>todo.sh rm ITEM# [TERM]</code></li>
+</ul>
 <h2 id="android-应用与同步">Android 应用与同步</h2>
+<p>我使用的是 <a href="https://play.google.com/store/apps/details?id=net.c306.ttsuper&amp;utm_source=c306_apps&amp;utm_campaign=c306">todo.txt for Android</a>，其他支持的应用和其他平台的应用可以在<a href="http://todotxt.org/">官网</a>查看。</p>
+<p>可以将 todotxt-cli 配置文件中的路径修改为 Dropbox/GoogleDrive/syncthing/坚果云 等备份路径实现多设备同步。</p>
 <h2 id="参考资料和推荐阅读">参考资料和推荐阅读</h2>
 <ul>
 <li><a href="https://github.com/todotxt/todo.txt">https://github.com/todotxt/todo.txt</a></li>
+<li><a href="https://github.com/todotxt/todo.txt-cli">todo.txt-cli</a></li>
+<li><a href="http://todotxt.org/">http://todotxt.org/</a></li>
 </ul>
     </div>
 
@@ -269,7 +294,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2023-02-25
+        2023-02-26
         
     </span>
   </p>

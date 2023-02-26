@@ -37,10 +37,39 @@ todo.txt 是一种使用纯文本管理代办事项的工具，它的优点是�
 
 ## todo.txt-cli
 
+```bash
+# Mac OS 安装
+brew install todo-txt
+
+# Arch Linux 安装
+yay install todotxt
+
+# 其他平台安装方式可以查看官方仓库
+# https://github.com/todotxt/todo.txt-cli
+
+# 下载配置文件并修改文件夹路径
+wget https://raw.githubusercontent.com/todotxt/todo.txt-cli/master/todo.cfg ~/.todo.cfg
+vim .todo.cfg
+```
+
+常用命令(`ITEM#`表示 ls 命令中显示的序号）：
+
+- 列出代办事项 `todo.sh ls`
+- 添加代办事项 `todo.sh add "THING @context"`
+- 标记为完成 `todo.sh do ITEM#[, ITEM#, ITEM#, ...]`
+- 将完成事项移动到 done.txt 文件 `todo.sh archive`
+- 删除代办事项 `todo.sh rm ITEM# [TERM]`
+
 
 ## Android 应用与同步
+
+我使用的是 [todo.txt for Android](https://play.google.com/store/apps/details?id=net.c306.ttsuper&utm_source=c306_apps&utm_campaign=c306)，其他支持的应用和其他平台的应用可以在[官网](http://todotxt.org/)查看。
+
+可以将 todotxt-cli 配置文件中的路径修改为 Dropbox/GoogleDrive/syncthing/坚果云 等备份路径实现多设备同步。
 
 
 ## 参考资料和推荐阅读
 
 - https://github.com/todotxt/todo.txt
+- [todo.txt-cli](https://github.com/todotxt/todo.txt-cli)
+- http://todotxt.org/
