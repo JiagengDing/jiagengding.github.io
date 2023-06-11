@@ -2,18 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Jiageng&#39;s Blog</title>
-    <link>https://jiagengding.github.io/en/categories/</link>
+    <link>https://blog.diing.uk/en/categories/</link>
     <description>Recent content in Categories on Jiageng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sun, 17 Oct 2021 16:09:06 +0800</lastBuildDate><atom:link href="https://jiagengding.github.io/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Sep 2022 21:14:23 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple-Guide</title>
+      <link>https://blog.diing.uk/en/categories/simple-guide/</link>
+      <pubDate>Tue, 27 Sep 2022 21:14:23 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/en/categories/simple-guide/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>software</title>
-      <link>https://jiagengding.github.io/en/categories/software/</link>
+      <link>https://blog.diing.uk/en/categories/software/</link>
       <pubDate>Sun, 17 Oct 2021 16:09:06 +0800</pubDate>
       
-      <guid>https://jiagengding.github.io/en/categories/software/</guid>
+      <guid>https://blog.diing.uk/en/categories/software/</guid>
       <description></description>
     </item>
     

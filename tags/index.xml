@@ -2,27 +2,99 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jiageng&#39;s Blog</title>
-    <link>https://jiagengding.pages.dev/tags/</link>
+    <link>https://blog.diing.uk/tags/</link>
     <description>Recent content in Tags on Jiageng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sat, 23 Oct 2021 11:06:21 +0800</lastBuildDate><atom:link href="https://jiagengding.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Feb 2023 00:50:35 +0000</lastBuildDate><atom:link href="https://blog.diing.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GTD</title>
+      <link>https://blog.diing.uk/tags/gtd/</link>
+      <pubDate>Sat, 25 Feb 2023 00:50:35 +0000</pubDate>
+      
+      <guid>https://blog.diing.uk/tags/gtd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://blog.diing.uk/tags/linux/</link>
+      <pubDate>Thu, 12 Jan 2023 23:21:44 +0000</pubDate>
+      
+      <guid>https://blog.diing.uk/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>压缩</title>
+      <link>https://blog.diing.uk/tags/%E5%8E%8B%E7%BC%A9/</link>
+      <pubDate>Thu, 12 Jan 2023 23:21:44 +0000</pubDate>
+      
+      <guid>https://blog.diing.uk/tags/%E5%8E%8B%E7%BC%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>caddy</title>
+      <link>https://blog.diing.uk/tags/caddy/</link>
+      <pubDate>Sun, 11 Dec 2022 22:28:34 +0000</pubDate>
+      
+      <guid>https://blog.diing.uk/tags/caddy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nextcloud</title>
+      <link>https://blog.diing.uk/tags/nextcloud/</link>
+      <pubDate>Sun, 11 Dec 2022 22:28:34 +0000</pubDate>
+      
+      <guid>https://blog.diing.uk/tags/nextcloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arch</title>
+      <link>https://blog.diing.uk/tags/arch/</link>
+      <pubDate>Thu, 01 Dec 2022 23:05:04 +0000</pubDate>
+      
+      <guid>https://blog.diing.uk/tags/arch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dns</title>
+      <link>https://blog.diing.uk/tags/dns/</link>
+      <pubDate>Sat, 24 Sep 2022 17:51:04 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://blog.diing.uk/tags/python/</link>
+      <pubDate>Thu, 22 Sep 2022 15:18:49 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/tags/python/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Git</title>
-      <link>https://jiagengding.pages.dev/tags/git/</link>
-      <pubDate>Sat, 23 Oct 2021 11:06:21 +0800</pubDate>
+      <link>https://blog.diing.uk/tags/git/</link>
+      <pubDate>Sat, 23 Oct 2021 11:06:14 +0800</pubDate>
       
-      <guid>https://jiagengding.pages.dev/tags/git/</guid>
+      <guid>https://blog.diing.uk/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apple</title>
-      <link>https://jiagengding.pages.dev/tags/apple/</link>
-      <pubDate>Sun, 17 Oct 2021 16:09:06 +0800</pubDate>
+      <link>https://blog.diing.uk/tags/apple/</link>
+      <pubDate>Sun, 17 Oct 2021 16:08:59 +0800</pubDate>
       
-      <guid>https://jiagengding.pages.dev/tags/apple/</guid>
+      <guid>https://blog.diing.uk/tags/apple/</guid>
       <description></description>
     </item>
     

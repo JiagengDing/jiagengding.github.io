@@ -2,18 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jiageng&#39;s Blog</title>
-    <link>https://jiagengding.github.io/en/tags/</link>
+    <link>https://blog.diing.uk/en/tags/</link>
     <description>Recent content in Tags on Jiageng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sun, 17 Oct 2021 16:09:06 +0800</lastBuildDate><atom:link href="https://jiagengding.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Sep 2022 21:14:23 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://blog.diing.uk/en/tags/linux/</link>
+      <pubDate>Tue, 27 Sep 2022 21:14:23 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/en/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://blog.diing.uk/en/tags/python/</link>
+      <pubDate>Tue, 27 Sep 2022 21:14:23 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/en/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dns</title>
+      <link>https://blog.diing.uk/en/tags/dns/</link>
+      <pubDate>Sun, 25 Sep 2022 15:32:21 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/en/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://blog.diing.uk/en/tags/git/</link>
+      <pubDate>Sat, 23 Oct 2021 11:06:21 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/en/tags/git/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Apple</title>
-      <link>https://jiagengding.github.io/en/tags/apple/</link>
+      <link>https://blog.diing.uk/en/tags/apple/</link>
       <pubDate>Sun, 17 Oct 2021 16:09:06 +0800</pubDate>
       
-      <guid>https://jiagengding.github.io/en/tags/apple/</guid>
+      <guid>https://blog.diing.uk/en/tags/apple/</guid>
       <description></description>
     </item>
     
