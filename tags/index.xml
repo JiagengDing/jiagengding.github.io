@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>JiagengDing</copyright>
+<<<<<<< HEAD
     <lastBuildDate>Sat, 25 Feb 2023 00:50:35 +0000</lastBuildDate><atom:link href="https://blog.diing.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+=======
+    <lastBuildDate>Wed, 20 Sep 2023 16:29:52 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>proxy</title>
+      <link>https://blog.diing.uk/tags/proxy/</link>
+      <pubDate>Wed, 20 Sep 2023 16:29:52 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/tags/proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://blog.diing.uk/tags/ssh/</link>
+      <pubDate>Wed, 20 Sep 2023 16:29:52 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+>>>>>>> 5662564 (rebuilding site Wed Sep 20 16:59:29 CST 2023)
     <item>
       <title>GTD</title>
       <link>https://blog.diing.uk/tags/gtd/</link>

@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sat, 25 Feb 2023 00:50:35 +0000</lastBuildDate><atom:link href="https://blog.diing.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Sep 2023 16:29:52 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>通过代理使用SSH</title>
+      <link>https://blog.diing.uk/post/ssh-via-socks5/</link>
+      <pubDate>Wed, 20 Sep 2023 16:29:52 +0800</pubDate>
+      
+      <guid>https://blog.diing.uk/post/ssh-via-socks5/</guid>
+      <description>&lt;p&gt;之前通过开放 Home Lab 端口到公网的操作总觉得不过方便和安全，最近配置了 Xray-core 访问内网，顺便记录一下 ssh 的配置。&lt;/p&gt;
+&lt;p&gt;P.S. 事实上使用 Wireguard 更优雅和安全
+&lt;del&gt;，但是 Xray-core 可以同时实现流量分流所以似乎是唯一选择&lt;/del&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>todo.txt 基于纯文本的 GTD 工具</title>
       <link>https://blog.diing.uk/post/todotxt/</link>
