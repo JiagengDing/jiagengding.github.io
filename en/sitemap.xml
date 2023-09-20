@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.diing.uk/en/</loc>
+    <lastmod>2023-09-20T17:15:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/en/post/</loc>
+    <lastmod>2023-09-20T17:15:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/en/tags/proxy/</loc>
+    <lastmod>2023-09-20T17:15:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/en/tags/ssh/</loc>
+    <lastmod>2023-09-20T17:15:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/en/post/ssh-via-socks5/</loc>
+    <lastmod>2023-09-20T17:15:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/en/tags/</loc>
+    <lastmod>2023-09-20T17:15:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.diing.uk/en/post/jupyter/</loc>
     <lastmod>2022-09-27T21:14:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -16,21 +58,7 @@
   </url>
   
   <url>
-    <loc>https://blog.diing.uk/en/</loc>
-    <lastmod>2022-09-27T21:14:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.diing.uk/en/tags/linux/</loc>
-    <lastmod>2022-09-27T21:14:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/en/post/</loc>
     <lastmod>2022-09-27T21:14:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -45,13 +73,6 @@
   
   <url>
     <loc>https://blog.diing.uk/en/categories/simple-guide/</loc>
-    <lastmod>2022-09-27T21:14:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/en/tags/</loc>
     <lastmod>2022-09-27T21:14:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

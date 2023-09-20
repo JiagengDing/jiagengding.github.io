@@ -1,15 +1,16 @@
 
 之前通过开放 Home Lab 端口到公网的操作总觉得不够方便和安全，最近配置了 Xray-core 访问内网，顺便记录一下 ssh 的配置。
 
-P.S. 事实上使用 Wireguard 更优雅和安全
+P.S. 事实上使用 [Wireguard](https://www.wireguard.com) 更优雅和安全
 ~~，但是 Xray-core 可以同时实现流量分流所以似乎是唯一选择~~
+。
 
 <!--more-->
 {{< toc >}}
 
 ## Linux 和 MacOS
 
-Linux 和 Mac 下默认安装了 netcat 所以可以在 ssh 时直接使用代理。
+Linux 和 Mac 下默认安装了 [netcat](https://netcat.sourceforge.net) 所以可以在 ssh 时直接使用代理。
 
 ```bash
 ssh -o ProxyCommand="nc -X 5 -x 127.0.0.1:port %h %p" root@address
