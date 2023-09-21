@@ -15,11 +15,11 @@
 >
 > Keyboard layout: Colemak
 >
-> 汉语输入法：微软双拼
+> 汉语输入法：小鹤音形
 
 ## 关于网站
 
-我使用[Hugo](https://gohugo.io)来生成这个网站，采用[even 主题](https://github.com/olOwOlo/hugo-theme-even)并托管在 Cloudflare Pages。
+我使用[Hugo](https://gohugo.io)来生成这个网站，采用[ even 主题](https://github.com/jiagengding/hugo-theme-even)并托管在 Cloudflare Pages。
 
 空余时间会用这个网站来记录自己的学习和生活。
 

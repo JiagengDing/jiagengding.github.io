@@ -17,11 +17,11 @@ I am a nerd who loves Maths, Linux, Macintosh and Vim, interested in learning ne
 >
 > Keyboard Layout: Colemak
 >
-> Chinese Input Method: Weiruan Shuangpin
+> Chinese Input Method: Flypy
 
 ## About the Website
 
-This blog I built with [hugo](https://gohugo.io), theme by [even](https://github.com/olOwOlo/hugo-theme-even) and hosted by Cloudflare Pages.
+This blog I built with [hugo](https://gohugo.io), theme by [even](https://github.com/jiagengding/hugo-theme-even) and hosted by Cloudflare Pages.
 
 ## Contact
 
