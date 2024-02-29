@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dns on Jiageng&#39;s Blog</title>
+    <title>Dns on Jiageng&#39;s Blog</title>
     <link>https://blog.diing.uk/tags/dns/</link>
-    <description>Recent content in dns on Jiageng&#39;s Blog</description>
+    <description>Recent content in Dns on Jiageng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Sat, 24 Sep 2022 17:51:04 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Sep 2022 17:51:04 +0800</lastBuildDate>
+    <atom:link href="https://blog.diing.uk/tags/dns/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 Linux、Mac、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）</title>
       <link>https://blog.diing.uk/post/doh/</link>
       <pubDate>Sat, 24 Sep 2022 17:51:04 +0800</pubDate>
-      
       <guid>https://blog.diing.uk/post/doh/</guid>
-      <description>&lt;p&gt;传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。
-后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。&lt;/p&gt;
-&lt;p&gt;使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。&lt;/p&gt;</description>
+      <description>&lt;p&gt;传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。&#xA;后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。&lt;/p&gt;&#xA;&lt;p&gt;使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

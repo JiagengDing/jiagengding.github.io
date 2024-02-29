@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Jiageng&#39;s Blog</title>
+    <title>Linux on Jiageng&#39;s Blog</title>
     <link>https://blog.diing.uk/en/tags/linux/</link>
-    <description>Recent content in linux on Jiageng&#39;s Blog</description>
+    <description>Recent content in Linux on Jiageng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Tue, 27 Sep 2022 21:14:23 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/en/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Sep 2022 21:14:23 +0800</lastBuildDate>
+    <atom:link href="https://blog.diing.uk/en/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title> Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy</title>
       <link>https://blog.diing.uk/en/post/jupyter/</link>
       <pubDate>Tue, 27 Sep 2022 21:14:23 +0800</pubDate>
-      
       <guid>https://blog.diing.uk/en/post/jupyter/</guid>
-      <description></description>
+      <description>Table Of Contents Install JupyterLab Install the latest version of nodejs Configure JupyterLab Build JupyterLab and start Access by https Nginx Caddy Auto start References and Recommended Articles This article uses Debian/Ubuntu as an example. Install JupyterLab Install pip &amp;amp; JupyterLab sudo apt update sudo apt install python3 sudo apt install pip3 pip3 install jupyterlab Add PATH export PATH=$PATH:/path/to/jupyterlab echo $PATH Install the latest version of nodejs Add apt repository</description>
     </item>
-    
   </channel>
 </rss>

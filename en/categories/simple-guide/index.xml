@@ -7,35 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Tue, 27 Sep 2022 21:14:23 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/en/categories/simple-guide/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Sep 2022 21:14:23 +0800</lastBuildDate>
+    <atom:link href="https://blog.diing.uk/en/categories/simple-guide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title> Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy</title>
       <link>https://blog.diing.uk/en/post/jupyter/</link>
       <pubDate>Tue, 27 Sep 2022 21:14:23 +0800</pubDate>
-      
       <guid>https://blog.diing.uk/en/post/jupyter/</guid>
-      <description></description>
+      <description>Table Of Contents Install JupyterLab Install the latest version of nodejs Configure JupyterLab Build JupyterLab and start Access by https Nginx Caddy Auto start References and Recommended Articles This article uses Debian/Ubuntu as an example. Install JupyterLab Install pip &amp;amp; JupyterLab sudo apt update sudo apt install python3 sudo apt install pip3 pip3 install jupyterlab Add PATH export PATH=$PATH:/path/to/jupyterlab echo $PATH Install the latest version of nodejs Add apt repository</description>
     </item>
-    
     <item>
       <title>How to use encrypted DNS</title>
       <link>https://blog.diing.uk/en/post/doh/</link>
       <pubDate>Sun, 25 Sep 2022 15:32:21 +0800</pubDate>
-      
       <guid>https://blog.diing.uk/en/post/doh/</guid>
-      <description>&lt;p&gt;A simple guide about using encrypted dns in Linux、Mac、iOS and Android.&lt;/p&gt;
-&lt;p&gt;Traditional DNS queries and responses are sent over UDP or TCP without encryption. This is vulnerable to eavesdropping and spoofing (including DNS-based Internet filtering).&lt;/p&gt;
-&lt;p&gt;Encrypted DNS can make DNS queries and responses more safe.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A simple guide about using encrypted dns in Linux、Mac、iOS and Android.&lt;/p&gt;&#xA;&lt;p&gt;Traditional DNS queries and responses are sent over UDP or TCP without encryption. This is vulnerable to eavesdropping and spoofing (including DNS-based Internet filtering).&lt;/p&gt;&#xA;&lt;p&gt;Encrypted DNS can make DNS queries and responses more safe.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A Simple Guide for Git</title>
       <link>https://blog.diing.uk/en/post/git-guide/</link>
       <pubDate>Sat, 23 Oct 2021 11:06:21 +0800</pubDate>
-      
       <guid>https://blog.diing.uk/en/post/git-guide/</guid>
       <description>&lt;p&gt;Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Simple use just need to master about 10 commands.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Jiageng&#39;s Blog</title>
+    <title>Python on Jiageng&#39;s Blog</title>
     <link>https://blog.diing.uk/tags/python/</link>
-    <description>Recent content in python on Jiageng&#39;s Blog</description>
+    <description>Recent content in Python on Jiageng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Thu, 22 Sep 2022 15:18:49 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Jan 2023 15:18:49 +0800</lastBuildDate>
+    <atom:link href="https://blog.diing.uk/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>访问服务器 Jupyter Lab 或 Notebook 并使用 Nginx/Caddy 反向代理</title>
       <link>https://blog.diing.uk/post/jupyter/</link>
       <pubDate>Thu, 22 Sep 2022 15:18:49 +0800</pubDate>
-      
       <guid>https://blog.diing.uk/post/jupyter/</guid>
       <description>&lt;p&gt;安装并访问服务器上的 JupyterLab，易错点在于 nodejs 需要较新版本和添加 sha1 密钥，可选自启动和基于 Nginx 的反向代理。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

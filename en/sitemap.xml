@@ -3,14 +3,21 @@
   
   <url>
     <loc>https://blog.diing.uk/en/</loc>
-    <lastmod>2023-09-20T17:15:25+08:00</lastmod>
+    <lastmod>2024-02-29T20:33:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.diing.uk/en/post/</loc>
-    <lastmod>2023-09-20T17:15:25+08:00</lastmod>
+    <lastmod>2024-02-29T20:33:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/en/post/rip_aron/</loc>
+    <lastmod>2024-02-29T20:33:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
