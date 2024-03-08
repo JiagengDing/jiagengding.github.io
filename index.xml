@@ -7,15 +7,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>JiagengDing</copyright>
-    <lastBuildDate>Thu, 29 Feb 2024 20:45:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 Sep 2023 16:29:52 +0800</lastBuildDate>
     <atom:link href="https://blog.diing.uk/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>R.I.P. Aaron</title>
-      <link>https://blog.diing.uk/post/rip_aron/</link>
-      <pubDate>Thu, 29 Feb 2024 20:45:11 +0800</pubDate>
-      <guid>https://blog.diing.uk/post/rip_aron/</guid>
-      <description></description>
-    </item>
     <item>
       <title>通过代理使用SSH</title>
       <link>https://blog.diing.uk/post/ssh-via-socks5/</link>
