@@ -15,6 +15,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec" />
 
+<meta name="baidu-site-verification" content="codeva-GQ1brmFXeW" />
 
 <meta
 	name="author"
@@ -30,7 +31,7 @@
  
 
 
-<meta name="generator" content="Hugo 0.123.7 with theme even" />
+<meta name="generator" content="Hugo 0.126.3 with theme even" />
 
 
 <link rel="canonical" href="https://blog.diing.uk/post/doh/" />
@@ -43,25 +44,29 @@ rel="manifest" href="/manifest.json"> <link rel="mask-icon" href="/safari-pinned
 
 <link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
- <meta property="og:title" content="在 Linux、Mac、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）" />
-<meta property="og:description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。
-后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
-使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.diing.uk/post/doh/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-09-24T17:51:04+08:00" />
-<meta property="article:modified_time" content="2022-09-24T17:51:04+08:00" />
+ <meta property="og:url" content="https://blog.diing.uk/post/doh/">
+  <meta property="og:site_name" content="Jiageng&#39;s Blog">
+  <meta property="og:title" content="在 Linux、Mac、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）">
+  <meta property="og:description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。 后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
+使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-09-24T17:51:04+08:00">
+    <meta property="article:modified_time" content="2022-09-24T17:51:04+08:00">
+    <meta property="article:tag" content="Dns">
 
-<meta itemprop="name" content="在 Linux、Mac、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）">
-<meta itemprop="description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。
-后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
-使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。"><meta itemprop="datePublished" content="2022-09-24T17:51:04+08:00" />
-<meta itemprop="dateModified" content="2022-09-24T17:51:04+08:00" />
-<meta itemprop="wordCount" content="733">
-<meta itemprop="keywords" content="dns," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="在 Linux、Mac、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）"/>
-<meta name="twitter:description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。
-后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
-使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。"/>
+  <meta itemprop="name" content="在 Linux、Mac、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）">
+  <meta itemprop="description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。 后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
+使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。">
+  <meta itemprop="datePublished" content="2022-09-24T17:51:04+08:00">
+  <meta itemprop="dateModified" content="2022-09-24T17:51:04+08:00">
+  <meta itemprop="wordCount" content="733">
+  <meta itemprop="keywords" content="Dns">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="在 Linux、Mac、iOS 和 Android 上使用加密 Dns（DOH 和 DOT）">
+  <meta name="twitter:description" content="传统 DNS 使用 UDP/TCP 查询和响应, 这很容易被中间人（特别是 ISP）监听和篡改。 后来基于 DNSSEC 机制的引入解决了 DNS 篡改的问题，但是依旧没有解决监听的可能。
+使用 dns-over-https(doh) 和 dns-over-tls(dot) 可以彻底解决监听和篡改的问题，这两者的主要区别在于传输协议（https 或 tls）和端口。">
 
 <!--[if lte IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script> <!
@@ -69,8 +74,6 @@ rel="manifest" href="/manifest.json"> <link rel="mask-icon" href="/safari-pinned
 	<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script> <!
 [endif]-->
-
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 </head>
 <body>
@@ -531,17 +534,6 @@ nameserver 127.0.0.1
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-L4JEL31P5F', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

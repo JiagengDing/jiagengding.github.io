@@ -15,6 +15,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec" />
 
+<meta name="baidu-site-verification" content="codeva-GQ1brmFXeW" />
 
 <meta
 	name="author"
@@ -29,7 +30,7 @@
  
 
 
-<meta name="generator" content="Hugo 0.123.7 with theme even" />
+<meta name="generator" content="Hugo 0.126.3 with theme even" />
 
 
 <link rel="canonical" href="https://blog.diing.uk/post/linux-compress/" />
@@ -42,19 +43,27 @@ rel="manifest" href="/manifest.json"> <link rel="mask-icon" href="/safari-pinned
 
 <link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
- <meta property="og:title" content="Linux 常用压缩工具及用法" />
-<meta property="og:description" content="本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.diing.uk/post/linux-compress/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-01-12T23:21:44+00:00" />
-<meta property="article:modified_time" content="2023-01-12T23:21:44+00:00" />
+ <meta property="og:url" content="https://blog.diing.uk/post/linux-compress/">
+  <meta property="og:site_name" content="Jiageng&#39;s Blog">
+  <meta property="og:title" content="Linux 常用压缩工具及用法">
+  <meta property="og:description" content="本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-01-12T23:21:44+00:00">
+    <meta property="article:modified_time" content="2023-01-12T23:21:44+00:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="压缩">
 
-<meta itemprop="name" content="Linux 常用压缩工具及用法">
-<meta itemprop="description" content="本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。"><meta itemprop="datePublished" content="2023-01-12T23:21:44+00:00" />
-<meta itemprop="dateModified" content="2023-01-12T23:21:44+00:00" />
-<meta itemprop="wordCount" content="175">
-<meta itemprop="keywords" content="Linux,压缩," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Linux 常用压缩工具及用法"/>
-<meta name="twitter:description" content="本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。"/>
+  <meta itemprop="name" content="Linux 常用压缩工具及用法">
+  <meta itemprop="description" content="本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。">
+  <meta itemprop="datePublished" content="2023-01-12T23:21:44+00:00">
+  <meta itemprop="dateModified" content="2023-01-12T23:21:44+00:00">
+  <meta itemprop="wordCount" content="175">
+  <meta itemprop="keywords" content="Linux,压缩">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Linux 常用压缩工具及用法">
+  <meta name="twitter:description" content="本文介绍了7z，tar，zip命令的使用方法，其中zip操作最简单，tar操作最为复杂但扩展性高。">
 
 <!--[if lte IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script> <!
@@ -62,8 +71,6 @@ rel="manifest" href="/manifest.json"> <link rel="mask-icon" href="/safari-pinned
 	<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script> <!
 [endif]-->
-
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 </head>
 <body>
@@ -408,17 +415,6 @@ rel="manifest" href="/manifest.json"> <link rel="mask-icon" href="/safari-pinned
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-L4JEL31P5F', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 
