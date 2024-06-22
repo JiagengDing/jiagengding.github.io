@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Jiageng&#39;s Blog</title>
+    <link>https://blog.diing.uk/tags/docker/</link>
+    <description>Recent content in Docker on Jiageng&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <copyright>JiagengDing</copyright>
+    <lastBuildDate>Sun, 23 Jun 2024 00:12:10 +0800</lastBuildDate>
+    <atom:link href="https://blog.diing.uk/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我在 NAS 上使用的服务</title>
+      <link>https://blog.diing.uk/post/services-used-in-nas/</link>
+      <pubDate>Sun, 23 Jun 2024 00:12:10 +0800</pubDate>
+      <guid>https://blog.diing.uk/post/services-used-in-nas/</guid>
+      <description>&lt;p&gt;我在 NAS 底层安装了 PVE 系统用于虚拟化，主要使用的虚拟机是 OpenWRT 和 Debian。&#xA;OpenWRT 用于拨号和路由，分配了两个 CPUs 和 1G 内存，并且直通了一个网口用于 WAN 口链接光猫。&#xA;Debian 系统上负责运行我日常使用的大多数服务，包括提供 DNS，RSS 和影视服务等。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
