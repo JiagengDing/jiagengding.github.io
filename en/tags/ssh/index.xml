@@ -1,20 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Ssh on Jiageng&#39;s Blog</title>
-    <link>https://blog.diing.uk/en/tags/ssh/</link>
-    <description>Recent content in Ssh on Jiageng&#39;s Blog</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>JiagengDing</copyright>
-    <lastBuildDate>Wed, 20 Sep 2023 17:15:25 +0800</lastBuildDate>
-    <atom:link href="https://blog.diing.uk/en/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>SSH via Socks5 Proxy</title>
-      <link>https://blog.diing.uk/en/post/ssh-via-socks5/</link>
-      <pubDate>Wed, 20 Sep 2023 17:15:25 +0800</pubDate>
-      <guid>https://blog.diing.uk/en/post/ssh-via-socks5/</guid>
-      <description>&lt;p&gt;I used to find the process of opening Home Lab ports to the public network inconvenient and insecure. Recently, I configured Xray-core to access the internal network and decided to document the SSH configuration along the way.&lt;/p&gt;&#xA;&lt;p&gt;P.S. In fact, using &lt;a href=&#34;https://www.wireguard.com&#34;&gt;Wireguard&lt;/a&gt; is a more elegant and secure solution, but Xray-core can simultaneously implement traffic routing, making it seem like the only choice.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ssh on Jiageng's Blog</title><link>https://blog.diing.uk/en/tags/ssh/</link><description>Recent content in Ssh on Jiageng's Blog</description><generator>Hugo</generator><language>en</language><copyright>JiagengDing</copyright><lastBuildDate>Wed, 20 Sep 2023 17:15:25 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/en/tags/ssh/index.xml" rel="self" type="application/rss+xml"/><item><title>SSH via Socks5 Proxy</title><link>https://blog.diing.uk/en/post/ssh-via-socks5/</link><pubDate>Wed, 20 Sep 2023 17:15:25 +0800</pubDate><guid>https://blog.diing.uk/en/post/ssh-via-socks5/</guid><description>&lt;p>I used to find the process of opening Home Lab ports to the public network inconvenient and insecure. Recently, I configured Xray-core to access the internal network and decided to document the SSH configuration along the way.&lt;/p>
+&lt;p>P.S. In fact, using &lt;a href="https://www.wireguard.com">Wireguard&lt;/a> is a more elegant and secure solution, but Xray-core can simultaneously implement traffic routing, making it seem like the only choice.&lt;/p></description></item></channel></rss>

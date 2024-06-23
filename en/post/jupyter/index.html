@@ -1,319 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy - Jiageng&#39;s Blog</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec" />
-
-<meta name="baidu-site-verification" content="codeva-GQ1brmFXeW" />
-
-<meta
-	name="author"
-	content="Jiageng Ding"
-/><meta name="description" content="" /><meta
-	name="keywords"
-	content="share knowledge, record life"
-/>
-
-
- 
-
-
-<meta name="generator" content="Hugo 0.127.0 with theme even" />
-
-
-<link rel="canonical" href="https://blog.diing.uk/en/post/jupyter/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> <link
-rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <link
-rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> <link
-rel="manifest" href="/manifest.json"> <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
- <meta property="og:url" content="https://blog.diing.uk/en/post/jupyter/">
-  <meta property="og:site_name" content="Jiageng&#39;s Blog">
-  <meta property="og:title" content=" Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy">
-  <meta property="og:description" content="JiagengDing&#39;s personal website">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2022-09-27T21:14:23+08:00">
-    <meta property="article:modified_time" content="2022-09-27T21:14:23+08:00">
-    <meta property="article:tag" content="Python">
-    <meta property="article:tag" content="Linux">
-
-  <meta itemprop="name" content=" Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy">
-  <meta itemprop="description" content="JiagengDing&#39;s personal website">
-  <meta itemprop="datePublished" content="2022-09-27T21:14:23+08:00">
-  <meta itemprop="dateModified" content="2022-09-27T21:14:23+08:00">
-  <meta itemprop="wordCount" content="314">
-  <meta itemprop="keywords" content="Python,Linux">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content=" Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy">
-  <meta name="twitter:description" content="JiagengDing&#39;s personal website">
-
-<!--[if lte IE 9]>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy - Jiageng's Blog</title>
+<meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=Cache-Control content="no-transform"><meta http-equiv=Cache-Control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=baidu-site-verification content="codeva-GQ1brmFXeW"><meta name=author content="Jiageng Ding"><meta name=description content><meta name=keywords content="share knowledge,record life"><meta name=generator content="Hugo 0.127.0 with theme even"><link rel=canonical href=https://blog.diing.uk/en/post/jupyter/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><script defer src=https://cn.vercount.one/js></script><link href=/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:url" content="https://blog.diing.uk/en/post/jupyter/"><meta property="og:site_name" content="Jiageng's Blog"><meta property="og:title" content=" Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy"><meta property="og:description" content="JiagengDing's personal website"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-09-27T21:14:23+08:00"><meta property="article:modified_time" content="2022-09-27T21:14:23+08:00"><meta property="article:tag" content="Python"><meta property="article:tag" content="Linux"><meta itemprop=name content=" Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy"><meta itemprop=description content="JiagengDing's personal website"><meta itemprop=datePublished content="2022-09-27T21:14:23+08:00"><meta itemprop=dateModified content="2022-09-27T21:14:23+08:00"><meta itemprop=wordCount content="314"><meta itemprop=keywords content="Python,Linux"><meta name=twitter:card content="summary"><meta name=twitter:title content=" Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy"><meta name=twitter:description content="JiagengDing's personal website"><!--[if lte IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script> <!
-[endif]--> <!--[if lt IE 9]>
+[endif]--><!--[if lt IE 9]>
 	<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script> <!
-[endif]-->
-
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/en/" class="logo">Jiageng&#39;s Blog</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/en">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/en/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a><a href="/en/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/en/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/en/about/">
-        <li class="mobile-menu-item">About</li>
-      </a>
-  </ul>
-
-  
-
-<div class="language-selector">
-	<ul class="languages-list">
-		
-		
-		
-
-		<li class="language-item active">
-			
-			<a href="https://blog.diing.uk/en/post/jupyter/">English</a>
-			
-		</li>
-		
-		
-		
-
-		<li class="language-item ">
-			
-			<a href="https://blog.diing.uk/post/jupyter/">中文</a>
-			
-		</li>
-		
-	</ul>
-</div>
-
-
-</nav>
-
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/en/" class="logo">Jiageng&#39;s Blog</a>
-</div>
-
-
-
-<div class="language-selector">
-	<ul class="languages-list">
-		
-		
-		
-
-		<li class="language-item active">
-			
-			<a href="https://blog.diing.uk/en/post/jupyter/">English</a>
-			
-		</li>
-		
-		
-		
-
-		<li class="language-item ">
-			
-			<a href="https://blog.diing.uk/post/jupyter/">中文</a>
-			
-		</li>
-		
-	</ul>
-</div>
-
-
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/en">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/en/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/en/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/en/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/en/about/">About</a>
-      </li>
-  </ul>
-</nav>
-
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title"> Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2022-09-27 </span>
-        <div class="post-category">
-            <a href="/en/categories/simple-guide/"> simple-guide </a>
-            </div>
-          <span class="more-meta"> 314 words </span>
-          <span class="more-meta"> 1 min read </span>
-        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-  <ol>
-    <li><a href="#install-jupyterlab">Install JupyterLab</a></li>
-    <li><a href="#install-the-latest-version-of-nodejs">Install the latest version of nodejs</a></li>
-    <li><a href="#configure-jupyterlab">Configure JupyterLab</a></li>
-    <li><a href="#build-jupyterlab-and-start">Build JupyterLab and start</a></li>
-    <li><a href="#access-by-https">Access by https</a>
-      <ol>
-        <li><a href="#nginx">Nginx</a></li>
-        <li><a href="#caddy">Caddy</a></li>
-      </ol>
-    </li>
-    <li><a href="#auto-start">Auto start</a></li>
-    <li><a href="#references-and-recommended-articles">References and Recommended Articles</a></li>
-  </ol>
-</nav>
-  </div>
-</div>
-  <div class="post-outdated">
-    <div class="warn">
-      <p>[NOTE] Updated <span class="timeago" datetime="2022-09-27T21:14:23" title="September 27, 2022">September 27, 2022</span>. This article may have outdated content or subject matter.</p>
-    </div>
-  </div>
-    <div class="post-content">
-      <div>
-	<h2>Table Of Contents</h2>
-	<nav id="TableOfContents">
-  <ol>
-    <li><a href="#install-jupyterlab">Install JupyterLab</a></li>
-    <li><a href="#install-the-latest-version-of-nodejs">Install the latest version of nodejs</a></li>
-    <li><a href="#configure-jupyterlab">Configure JupyterLab</a></li>
-    <li><a href="#build-jupyterlab-and-start">Build JupyterLab and start</a></li>
-    <li><a href="#access-by-https">Access by https</a>
-      <ol>
-        <li><a href="#nginx">Nginx</a></li>
-        <li><a href="#caddy">Caddy</a></li>
-      </ol>
-    </li>
-    <li><a href="#auto-start">Auto start</a></li>
-    <li><a href="#references-and-recommended-articles">References and Recommended Articles</a></li>
-  </ol>
-</nav>
-</div>
-
-<blockquote>
-<p>This article uses <strong>Debian/Ubuntu</strong> as an example.</p>
-</blockquote>
-<h2 id="install-jupyterlab">Install JupyterLab</h2>
-<ol>
-<li>Install pip &amp; JupyterLab</li>
-</ol>
-<pre><code>sudo apt update
+[endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/en/ class=logo>Jiageng's Blog</a></div><div class=mobile-navbar-icon><span></span>
+<span></span>
+<span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/en><li class=mobile-menu-item>Home</li></a><a href=/en/categories/><li class=mobile-menu-item>Categories</li></a><a href=/en/tags/><li class=mobile-menu-item>Tags</li></a><a href=/en/post/><li class=mobile-menu-item>Archives</li></a><a href=/en/about/><li class=mobile-menu-item>About</li></a></ul><div class=language-selector><ul class=languages-list><li class="language-item active"><a href=https://blog.diing.uk/en/post/jupyter/>English</a></li><li class=language-item><a href=https://blog.diing.uk/post/jupyter/>中文</a></li></ul></div></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/en/ class=logo>Jiageng's Blog</a></div><div class=language-selector><ul class=languages-list><li class="language-item active"><a href=https://blog.diing.uk/en/post/jupyter/>English</a></li><li class=language-item><a href=https://blog.diing.uk/post/jupyter/>中文</a></li></ul></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/en>Home</a></li><li class=menu-item><a class=menu-item-link href=/en/categories/>Categories</a></li><li class=menu-item><a class=menu-item-link href=/en/tags/>Tags</a></li><li class=menu-item><a class=menu-item-link href=/en/post/>Archives</a></li><li class=menu-item><a class=menu-item-link href=/en/about/>About</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy</h1><div class=post-meta><span class=post-time>2022-09-27</span><div class=post-category><a href=/en/categories/simple-guide/>simple-guide</a></div><span class=more-meta>314 words </span><span class=more-meta>1 min read </span><span id=busuanzi_container_page_pv class=more-meta><span id=busuanzi_value_page_pv><img src=/img/spinner.svg alt=spinner.svg></span> times read</span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>Contents</h2><div class="post-toc-content always-active"><nav id=TableOfContents><ol><li><a href=#install-jupyterlab>Install JupyterLab</a></li><li><a href=#install-the-latest-version-of-nodejs>Install the latest version of nodejs</a></li><li><a href=#configure-jupyterlab>Configure JupyterLab</a></li><li><a href=#build-jupyterlab-and-start>Build JupyterLab and start</a></li><li><a href=#access-by-https>Access by https</a><ol><li><a href=#nginx>Nginx</a></li><li><a href=#caddy>Caddy</a></li></ol></li><li><a href=#auto-start>Auto start</a></li><li><a href=#references-and-recommended-articles>References and Recommended Articles</a></li></ol></nav></div></div><div class=post-outdated><div class=warn><p>[NOTE] Updated <span class=timeago datetime=2022-09-27T21:14:23 title="September 27, 2022">September 27, 2022</span>. This article may have outdated content or subject matter.</p></div></div><div class=post-content><div><h2>Table Of Contents</h2><nav id=TableOfContents><ol><li><a href=#install-jupyterlab>Install JupyterLab</a></li><li><a href=#install-the-latest-version-of-nodejs>Install the latest version of nodejs</a></li><li><a href=#configure-jupyterlab>Configure JupyterLab</a></li><li><a href=#build-jupyterlab-and-start>Build JupyterLab and start</a></li><li><a href=#access-by-https>Access by https</a><ol><li><a href=#nginx>Nginx</a></li><li><a href=#caddy>Caddy</a></li></ol></li><li><a href=#auto-start>Auto start</a></li><li><a href=#references-and-recommended-articles>References and Recommended Articles</a></li></ol></nav></div><blockquote><p>This article uses <strong>Debian/Ubuntu</strong> as an example.</p></blockquote><h2 id=install-jupyterlab>Install JupyterLab</h2><ol><li>Install pip & JupyterLab</li></ol><pre><code>sudo apt update
 sudo apt install python3
 sudo apt install pip3
 pip3 install jupyterlab
-</code></pre>
-<ol start="2">
-<li>Add PATH</li>
-</ol>
-<p><code>export PATH=$PATH:/path/to/jupyterlab</code></p>
-<p><code>echo $PATH</code></p>
-<h2 id="install-the-latest-version-of-nodejs">Install the latest version of nodejs</h2>
-<ol>
-<li>Add apt repository and update:</li>
-</ol>
-<p><code>curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - </code></p>
-<ol start="2">
-<li>Install nodejs &amp; npm</li>
-</ol>
-<p><code>sudo apt install nodejs</code></p>
-<ol start="3">
-<li>Check nodejs version</li>
-</ol>
-<p><code>npm --version</code></p>
-<h2 id="configure-jupyterlab">Configure JupyterLab</h2>
-<ol>
-<li>Generate config file</li>
-</ol>
-<p><code>jupyter lab --generate-config</code></p>
-<ol start="2">
-<li>Generate HASH key</li>
-</ol>
-<p>Use <code>ipython</code> generate</p>
-<pre><code class="language-python">from jupyter_server.auth import passwd
+</code></pre><ol start=2><li>Add PATH</li></ol><p><code>export PATH=$PATH:/path/to/jupyterlab</code></p><p><code>echo $PATH</code></p><h2 id=install-the-latest-version-of-nodejs>Install the latest version of nodejs</h2><ol><li>Add apt repository and update:</li></ol><p><code>curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -</code></p><ol start=2><li>Install nodejs & npm</li></ol><p><code>sudo apt install nodejs</code></p><ol start=3><li>Check nodejs version</li></ol><p><code>npm --version</code></p><h2 id=configure-jupyterlab>Configure JupyterLab</h2><ol><li>Generate config file</li></ol><p><code>jupyter lab --generate-config</code></p><ol start=2><li>Generate HASH key</li></ol><p>Use <code>ipython</code> generate</p><pre><code class=language-python>from jupyter_server.auth import passwd
 passwd(algorithm='sha1')
 # input password twice and save the HASH key
-</code></pre>
-<ol start="3">
-<li>Modify JupyterLab config file</li>
-</ol>
-<p><code>mkdir ~/JupyterLab</code></p>
-<p>open config file by vim or nano</p>
-<p><code>vim ~/.jupyter/jupyter_lab_config.py</code></p>
-<p>modify and uncomment ( Using vim to search keyword )</p>
-<pre><code>c.NotebookApp.allow_root = True
+</code></pre><ol start=3><li>Modify JupyterLab config file</li></ol><p><code>mkdir ~/JupyterLab</code></p><p>open config file by vim or nano</p><p><code>vim ~/.jupyter/jupyter_lab_config.py</code></p><p>modify and uncomment ( Using vim to search keyword )</p><pre><code>c.NotebookApp.allow_root = True
 c.NotebookApp.base_url = '/jupyter'
 c.NotebookApp.ip = '0.0.0.0'
 c.NotebookApp.notebook_dir = 'JupyterLab'
 c.NotebookApp.open_browser = False
 c.NotebookApp.password = '&lt;HASH key&gt;'
 c.NotebookApp.port = 8080
-</code></pre>
-<p><code>:wq</code> save and quit</p>
-<h2 id="build-jupyterlab-and-start">Build JupyterLab and start</h2>
-<p><code>jupyter lab build --dev-build=False --minimize=False</code></p>
-<p><code>nohup jupyter lab &amp;</code></p>
-<blockquote>
-<p>So far JupyterLab can be accessed using http://public-ip:8080, access using https and auto-start will be described later.</p>
-</blockquote>
-<h2 id="access-by-https">Access by https</h2>
-<h3 id="nginx">Nginx</h3>
-<p>Add the followed config into nginx-config-file (<code>/etc/nginx/nginx.conf</code>)</p>
-<pre><code>client_max_body_size 1G;
+</code></pre><p><code>:wq</code> save and quit</p><h2 id=build-jupyterlab-and-start>Build JupyterLab and start</h2><p><code>jupyter lab build --dev-build=False --minimize=False</code></p><p><code>nohup jupyter lab &</code></p><blockquote><p>So far JupyterLab can be accessed using http://public-ip:8080, access using https and auto-start will be described later.</p></blockquote><h2 id=access-by-https>Access by https</h2><h3 id=nginx>Nginx</h3><p>Add the followed config into nginx-config-file (<code>/etc/nginx/nginx.conf</code>)</p><pre><code>client_max_body_size 1G;
 location /jupyter {
         proxy_pass   http://127.0.0.1:8080;
         proxy_connect_timeout 3s;
@@ -327,20 +34,10 @@ location /jupyter {
         proxy_set_header Connection &quot;upgrade&quot;;
         proxy_redirect off;
     }
-</code></pre>
-<h3 id="caddy">Caddy</h3>
-<p>Appending this codes to Caddyfile</p>
-<pre><code>your_domain_name
+</code></pre><h3 id=caddy>Caddy</h3><p>Appending this codes to Caddyfile</p><pre><code>your_domain_name
 
 reverse_proxy /jupyter/* 127.0.0.1:8080
-</code></pre>
-<p>Reload Caddyfile and start Caddy</p>
-<p><code>caddy reload &amp;&amp; caddy start</code></p>
-<h2 id="auto-start">Auto start</h2>
-<p>Manage by systemctl</p>
-<p><code>vim /etc/systemd/system/jupyter.service</code></p>
-<p>Write followed codes</p>
-<pre><code class="language-bash">[Unit]
+</code></pre><p>Reload Caddyfile and start Caddy</p><p><code>caddy reload && caddy start</code></p><h2 id=auto-start>Auto start</h2><p>Manage by systemctl</p><p><code>vim /etc/systemd/system/jupyter.service</code></p><p>Write followed codes</p><pre><code class=language-bash>[Unit]
 Description=Jupyter Lab
 After=network.target
 [Service]
@@ -352,157 +49,16 @@ Restart=always
 RestartSec=10
 [Install]
 WantedBy=multi-user.target
-</code></pre>
-<blockquote>
-<p>Change aaa to your own username, and change the path to yourself.</p>
-</blockquote>
-<p>Start JupyterLab</p>
-<pre><code>systemctl enable jupyter
+</code></pre><blockquote><p>Change aaa to your own username, and change the path to yourself.</p></blockquote><p>Start JupyterLab</p><pre><code>systemctl enable jupyter
 systemctl start jupyter
-</code></pre>
-<h2 id="references-and-recommended-articles">References and Recommended Articles</h2>
-    </div>
-
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">Jiageng Ding</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">LastMod</span>
-    <span class="item-content">
-        2022-09-27
-        
-    </span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">License</span>
-    <span class="item-content"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></span>
-  </p>
-</div>
-<footer class="post-footer">
-      <div class="post-tags">
-          <a href="/en/tags/python/">python</a>
-          <a href="/en/tags/linux/">linux</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/en/post/ssh-via-socks5/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">SSH via Socks5 Proxy</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/en/post/doh/">
-            <span class="next-text nav-default">How to use encrypted DNS</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-
-  
-
-  
-    <script src="https://utteranc.es/client.js"
-            repo="jiagengding/jiagengding.github.io"
-            issue-term="pathname"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-	<a href="mailto:jiageng@mail.diing.uk" class="iconfont icon-email" title="email"></a>
-	<a href="https://www.linkedin.com/in/jiagengding/" class="iconfont icon-linkedin" title="linkedin"></a>
-	<a href="https://github.com/jiagengding" class="iconfont icon-github" title="github"></a>
-	<a href="https://www.zhihu.com/people/dingjiageng" class="iconfont icon-zhihu" title="zhihu"></a>
-	<a href="https://www.instagram.com/ding.jg/" class="iconfont icon-instagram" title="instagram"></a>
-	<a href="https://space.bilibili.com/37440196" class="iconfont icon-bilibili" title="bilibili"></a> <a
-		href="https://blog.diing.uk/en/index.xml"
-		type="application/rss+xml"
-		class="iconfont icon-rss"
-		title="rss"
-	></a>
-</div>
-
-<div class="copyright">
-	<div class="busuanzi-footer">
-		<span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"
-			><img src="/img/spinner.svg" alt="spinner.svg" /></span
-		> </span>
-		<span class="division">|</span> <span id="busuanzi_container_site_uv"> site uv: <span
-			id="busuanzi_value_site_uv"
-			><img src="/img/spinner.svg" alt="spinner.svg" /></span
-		> </span>
-	</div>
-
-	<span class="copyright-year"> &copy; 2021 - 2024<span class="heart"><i class="iconfont icon-heart"></i></span>
-		<span
-			>JiagengDing</span
-		>
-		<br />All rights reserved, unless otherwise specified
-	</span>
-
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-</div>
-
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script>
-    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
-    timeago().render(document.querySelectorAll('.timeago'), languageCode);
-    timeago.cancel();  
-  </script>
-
-
-
-<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        tags: 'ams',
-        }
-    };
-  </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
-
-
-
-
-
-
-
-
-</body>
-</html>
+</code></pre><h2 id=references-and-recommended-articles>References and Recommended Articles</h2></div><div class=post-copyright><p class=copyright-item><span class=item-title>Author</span>
+<span class=item-content>Jiageng Ding</span></p><p class=copyright-item><span class=item-title>LastMod</span>
+<span class=item-content>2022-09-27</span></p><p class=copyright-item><span class=item-title>License</span>
+<span class=item-content><a rel=license href=http://creativecommons.org/licenses/by-nc-nd/4.0/>CC BY-NC-ND 4.0</a></span></p></div><footer class=post-footer><div class=post-tags><a href=/en/tags/python/>python</a>
+<a href=/en/tags/linux/>linux</a></div><nav class=post-nav><a class=prev href=/en/post/ssh-via-socks5/><i class="iconfont icon-left"></i>
+<span class="prev-text nav-default">SSH via Socks5 Proxy</span>
+<span class="prev-text nav-mobile">Prev</span>
+</a><a class=next href=/en/post/doh/><span class="next-text nav-default">How to use encrypted DNS</span>
+<span class="next-text nav-mobile">Next</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div><script src=https://utteranc.es/client.js repo=jiagengding/jiagengding.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script><noscript>Please enable JavaScript to view the <a href=https://github.com/utterance>comments powered by utterances.</a></noscript></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:jiageng@mail.diing.uk class="iconfont icon-email" title=email></a><a href=https://www.linkedin.com/in/jiagengding/ class="iconfont icon-linkedin" title=linkedin></a><a href=https://github.com/jiagengding class="iconfont icon-github" title=github></a><a href=https://www.zhihu.com/people/dingjiageng class="iconfont icon-zhihu" title=zhihu></a><a href=https://www.instagram.com/ding.jg/ class="iconfont icon-instagram" title=instagram></a><a href=https://space.bilibili.com/37440196 class="iconfont icon-bilibili" title=bilibili></a><a href=https://blog.diing.uk/en/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><div class=busuanzi-footer><span id=busuanzi_container_site_pv>site pv: <span id=busuanzi_value_site_pv><img src=/img/spinner.svg alt=spinner.svg></span> </span><span class=division>|</span> <span id=busuanzi_container_site_uv>site uv: <span id=busuanzi_value_site_uv><img src=/img/spinner.svg alt=spinner.svg></span></span></div><span class=copyright-year>&copy; 2021 - 2024<span class=heart><i class="iconfont icon-heart"></i></span>
+<span>JiagengDing</span><br>All rights reserved, unless otherwise specified</span></div></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin=anonymous></script><script>var languageCode="en".replace(/-/g,"_").replace(/_(.*)/,function(e,t){return e.replace(t,t.toUpperCase())});timeago().render(document.querySelectorAll(".timeago"),languageCode),timeago.cancel()</script><script type=text/javascript src=/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js></script><script type=text/javascript>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],tags:"ams"}}</script><script async src=https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin=anonymous></script></body></html>

@@ -1,34 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Simple-Guide on Jiageng&#39;s Blog</title>
-    <link>https://blog.diing.uk/en/categories/simple-guide/</link>
-    <description>Recent content in Simple-Guide on Jiageng&#39;s Blog</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>JiagengDing</copyright>
-    <lastBuildDate>Tue, 27 Sep 2022 21:14:23 +0800</lastBuildDate>
-    <atom:link href="https://blog.diing.uk/en/categories/simple-guide/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title> Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy</title>
-      <link>https://blog.diing.uk/en/post/jupyter/</link>
-      <pubDate>Tue, 27 Sep 2022 21:14:23 +0800</pubDate>
-      <guid>https://blog.diing.uk/en/post/jupyter/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>How to use encrypted DNS</title>
-      <link>https://blog.diing.uk/en/post/doh/</link>
-      <pubDate>Sun, 25 Sep 2022 15:32:21 +0800</pubDate>
-      <guid>https://blog.diing.uk/en/post/doh/</guid>
-      <description>&lt;p&gt;A simple guide about using encrypted dns in Linux、Mac、iOS and Android.&lt;/p&gt;&#xA;&lt;p&gt;Traditional DNS queries and responses are sent over UDP or TCP without encryption. This is vulnerable to eavesdropping and spoofing (including DNS-based Internet filtering).&lt;/p&gt;&#xA;&lt;p&gt;Encrypted DNS can make DNS queries and responses more safe.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Simple Guide for Git</title>
-      <link>https://blog.diing.uk/en/post/git-guide/</link>
-      <pubDate>Sat, 23 Oct 2021 11:06:21 +0800</pubDate>
-      <guid>https://blog.diing.uk/en/post/git-guide/</guid>
-      <description>&lt;p&gt;Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Simple use just need to master about 10 commands.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simple-Guide on Jiageng's Blog</title><link>https://blog.diing.uk/en/categories/simple-guide/</link><description>Recent content in Simple-Guide on Jiageng's Blog</description><generator>Hugo</generator><language>en</language><copyright>JiagengDing</copyright><lastBuildDate>Tue, 27 Sep 2022 21:14:23 +0800</lastBuildDate><atom:link href="https://blog.diing.uk/en/categories/simple-guide/index.xml" rel="self" type="application/rss+xml"/><item><title> Build Remote JupyterLab and Reverse Proxy by Nginx or Caddy</title><link>https://blog.diing.uk/en/post/jupyter/</link><pubDate>Tue, 27 Sep 2022 21:14:23 +0800</pubDate><guid>https://blog.diing.uk/en/post/jupyter/</guid><description/></item><item><title>How to use encrypted DNS</title><link>https://blog.diing.uk/en/post/doh/</link><pubDate>Sun, 25 Sep 2022 15:32:21 +0800</pubDate><guid>https://blog.diing.uk/en/post/doh/</guid><description>&lt;p>A simple guide about using encrypted dns in Linux、Mac、iOS and Android.&lt;/p>
+&lt;p>Traditional DNS queries and responses are sent over UDP or TCP without encryption. This is vulnerable to eavesdropping and spoofing (including DNS-based Internet filtering).&lt;/p>
+&lt;p>Encrypted DNS can make DNS queries and responses more safe.&lt;/p></description></item><item><title>A Simple Guide for Git</title><link>https://blog.diing.uk/en/post/git-guide/</link><pubDate>Sat, 23 Oct 2021 11:06:21 +0800</pubDate><guid>https://blog.diing.uk/en/post/git-guide/</guid><description>&lt;p>Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Simple use just need to master about 10 commands.&lt;/p></description></item></channel></rss>
