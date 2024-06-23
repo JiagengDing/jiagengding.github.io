@@ -2,15 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.diing.uk/en/tags/docker/</loc>
+    <lastmod>2024-06-23T11:46:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.diing.uk/en/</loc>
-    <lastmod>2024-02-29T20:33:34+08:00</lastmod>
+    <lastmod>2024-06-23T11:46:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/en/tags/nas/</loc>
+    <lastmod>2024-06-23T11:46:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.diing.uk/en/post/</loc>
-    <lastmod>2024-02-29T20:33:34+08:00</lastmod>
+    <lastmod>2024-06-23T11:46:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/en/post/services-used-in-nas/</loc>
+    <lastmod>2024-06-23T11:46:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.diing.uk/en/tags/</loc>
+    <lastmod>2024-06-23T11:46:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38,13 +66,6 @@
   
   <url>
     <loc>https://blog.diing.uk/en/post/ssh-via-socks5/</loc>
-    <lastmod>2023-09-20T17:15:25+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.diing.uk/en/tags/</loc>
     <lastmod>2023-09-20T17:15:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

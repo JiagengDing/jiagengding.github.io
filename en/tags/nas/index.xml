@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nas on Jiageng&#39;s Blog</title>
+    <link>https://blog.diing.uk/en/tags/nas/</link>
+    <description>Recent content in Nas on Jiageng&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>JiagengDing</copyright>
+    <lastBuildDate>Sun, 23 Jun 2024 11:46:39 +0800</lastBuildDate>
+    <atom:link href="https://blog.diing.uk/en/tags/nas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Services Used in Nas</title>
+      <link>https://blog.diing.uk/en/post/services-used-in-nas/</link>
+      <pubDate>Sun, 23 Jun 2024 11:46:39 +0800</pubDate>
+      <guid>https://blog.diing.uk/en/post/services-used-in-nas/</guid>
+      <description>&lt;p&gt;I installed the PVE system on the base layer of my NAS for virtualization, primarily using OpenWRT and Debian virtual machines.&#xA;OpenWRT is used for dialing and routing, allocated two CPUs and 1GB of memory, with a passthrough network port for WAN connection to the optical modem.&#xA;The Debian system is responsible for running most of the services I use daily, including providing DNS, RSS, and media services.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
