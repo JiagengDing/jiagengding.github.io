@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>青州 on Jiageng&#39;s Blog</title>
+    <link>http://localhost:1313/tags/%E9%9D%92%E5%B7%9E/</link>
+    <description>Recent content in 青州 on Jiageng&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <copyright>JiagengDing</copyright>
+    <lastBuildDate>Mon, 26 Aug 2024 15:38:30 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%9D%92%E5%B7%9E/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Time Honored Shops</title>
+      <link>http://localhost:1313/post/time-honored-shops/</link>
+      <pubDate>Mon, 26 Aug 2024 15:38:30 +0800</pubDate>
+      <guid>http://localhost:1313/post/time-honored-shops/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
